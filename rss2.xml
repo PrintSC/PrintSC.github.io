@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ShiC&#39;s cool</title>
+    <link>http://example.com/</link>
+    
+    <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>Think little，Do more</description>
+    <pubDate>Sat, 11 Dec 2021 15:15:44 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hello MyFirst Page</title>
+      <link>http://example.com/2021/12/11/FirstPage/</link>
+      <guid>http://example.com/2021/12/11/FirstPage/</guid>
+      <pubDate>Sat, 11 Dec 2021 15:02:16 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;Hello-Hexo&quot;&gt;&lt;a href=&quot;#Hello-Hexo&quot; class=&quot;headerlink&quot; title=&quot;Hello Hexo&quot;&gt;&lt;/a&gt;Hello Hexo&lt;/h1&gt;&lt;p&gt;Hello i am SC,This is My FirstGitHub P</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="Hello-Hexo"><a href="#Hello-Hexo" class="headerlink" title="Hello Hexo"></a>Hello Hexo</h1><p>Hello i am SC,This is My FirstGitHub Page!</p><p>Hello BaoBaolin! This is me ,SC Nice to meet you!</p>]]></content:encoded>
+      
+      
+      
+      
+      <comments>http://example.com/2021/12/11/FirstPage/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
