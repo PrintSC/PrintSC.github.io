@@ -191,10 +191,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-12-13 17:02:10 / 修改时间：17:19:53" itemprop="dateCreated datePublished" datetime="2021-12-13T17:02:10+08:00">2021-12-13</time>
+              <time title="创建时间：2021-12-13 17:02:10" itemprop="dateCreated datePublished" datetime="2021-12-13T17:02:10+08:00">2021-12-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-15 13:07:30" itemprop="dateModified" datetime="2021-12-15T13:07:30+08:00">2021-12-15</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -229,11 +235,13 @@
 </blockquote>
 <p>右键<code>此电脑</code>→<code>属性</code>，点击<code>高级系统设置</code></p>
 <p>点击<code>环境变量</code></p>
-<p>在<code>系统变量</code>中找到并<strong>双击</strong><code>Path</code></p>
+<p><img src="/2021/12/13/MySQL%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/1.png"></p>
 <p>点击<code>新建</code> </p>
+<p><img src="/2021/12/13/MySQL%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/2.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MYSQL_HOME:你的路径 例如我的是:E:\StudyTools\MySql\mysql-5.7.24-winx64</span><br><span class="line">那么我的路径就是MYSQL_HOME:E:\StudyTools\MySql\mysql-5.7.24-winx64</span><br></pre></td></tr></table></figure>
 
 <p>在[系统环境的Path]下编辑</p>
+<p><img src="/2021/12/13/MySQL%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/3.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">点击编辑：</span><br><span class="line">添加：%MYSQL_HOME%bin</span><br></pre></td></tr></table></figure>
 
 <p>最后点击确定。</p>
@@ -298,7 +306,7 @@
 <ol start="3">
 <li>最后删除MySQL目录及相关的环境变量。</li>
 </ol>
-<p><strong>至此，MySQL卸载完成！</strong></p>
+<p><strong>至此，MySQL卸载完成！</strong> </p>
 
       
     </div>
@@ -456,9 +464,9 @@
 
 
 
-<h1 id="Linux高级指令"><a href="#Linux高级指令" class="headerlink" title="Linux高级指令"></a>Linux高级指令</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="hostname-操作服务器主机名（读取或设置…）"><a href="#hostname-操作服务器主机名（读取或设置…）" class="headerlink" title="hostname(操作服务器主机名（读取或设置…）)"></a>hostname(操作服务器主机名（读取或设置…）)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法格式：</span><br><span class="line">1. hostname -表示输出完整的主机名</span><br><span class="line">	输出了Linux_SC</span><br><span class="line">2. hostname -f -表示输出当前主机名中的-f -&gt; FQDN （全限定域名）</span><br><span class="line">	Linux_SC</span><br></pre></td></tr></table></figure>
+<h1 id="Linux高级指令"><a href="#Linux高级指令" class="headerlink" title="Linux高级指令"></a>Linux高级指令</h1><h1 id><a href="#" class="headerlink" title></a></h1><h1 id="hostname-操作服务器主机名（读取或设置…）"><a href="#hostname-操作服务器主机名（读取或设置…）" class="headerlink" title="hostname(操作服务器主机名（读取或设置…）)"></a>hostname(操作服务器主机名（读取或设置…）)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法格式：</span><br><span class="line">1. hostname -表示输出完整的主机名</span><br><span class="line">	输出了Linux_SC</span><br><span class="line">2. hostname -f -表示输出当前主机名中的-f -&gt; FQDN （全限定域名）</span><br><span class="line">	Linux_SC</span><br></pre></td></tr></table></figure>
 
-<h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><h1 id="id指令-查看一个用户的基本信息-包含用户id-—用户组id—-附加组id…-该指令如果不指定用户则默认当前用户"><a href="#id指令-查看一个用户的基本信息-包含用户id-—用户组id—-附加组id…-该指令如果不指定用户则默认当前用户" class="headerlink" title="id指令(查看一个用户的基本信息 包含用户id —用户组id—- 附加组id…) 该指令如果不指定用户则默认当前用户"></a>id指令(查看一个用户的基本信息 包含用户id —用户组id—- 附加组id…) 该指令如果不指定用户则默认当前用户</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">id card 身份证</span><br><span class="line">语法格式：</span><br><span class="line">	1. id 不指定则默认当前用户</span><br><span class="line">	2. id 用户名 显示指定用户的基本信息</span><br></pre></td></tr></table></figure>
+<h1 id="-1"><a href="#-1" class="headerlink" title></a></h1><h1 id="id指令-查看一个用户的基本信息-包含用户id-—用户组id—-附加组id…-该指令如果不指定用户则默认当前用户"><a href="#id指令-查看一个用户的基本信息-包含用户id-—用户组id—-附加组id…-该指令如果不指定用户则默认当前用户" class="headerlink" title="id指令(查看一个用户的基本信息 包含用户id —用户组id—- 附加组id…) 该指令如果不指定用户则默认当前用户"></a>id指令(查看一个用户的基本信息 包含用户id —用户组id—- 附加组id…) 该指令如果不指定用户则默认当前用户</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">id card 身份证</span><br><span class="line">语法格式：</span><br><span class="line">	1. id 不指定则默认当前用户</span><br><span class="line">	2. id 用户名 显示指定用户的基本信息</span><br></pre></td></tr></table></figure>
 
 <h1 id="whoami-我是谁？显示当前登录的用户名"><a href="#whoami-我是谁？显示当前登录的用户名" class="headerlink" title="whoami(我是谁？显示当前登录的用户名)"></a>whoami(我是谁？显示当前登录的用户名)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">whoami 返回root 一般用户shell脚本</span><br><span class="line">用于获取当前的操作用户的名字方便记录日志</span><br></pre></td></tr></table></figure>
 
