@@ -9,8 +9,34 @@
     <atom:link href="http://shicheng.cool/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>Think little，Do more</description>
-    <pubDate>Wed, 15 Dec 2021 05:07:30 GMT</pubDate>
+    <pubDate>Wed, 15 Dec 2021 05:20:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>如果有什么问题请加我微信，(●&#39;◡&#39;●)</title>
+      <link>http://shicheng.cool/2021/12/15/Weixin/</link>
+      <guid>http://shicheng.cool/2021/12/15/Weixin/</guid>
+      <pubDate>Wed, 15 Dec 2021 05:10:15 GMT</pubDate>
+      
+        
+        
+      <description>&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Email:1041151583@qq.com</span><br><span class="line">vx:</span><br><span class="line">注意：添加好友时请备注来历</span><br></pre></td></tr></table></figure><p><img src="/2021/12/15/Weixin/weixin.png"></p>]]></content:encoded>
+      
+      
+      <category domain="http://shicheng.cool/categories/%E6%88%91%E7%9A%84%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F-%E2%97%8F-%E2%97%A1-%E2%97%8F/">我的联系方式(●&#39;◡&#39;●)</category>
+      
+      
+      <category domain="http://shicheng.cool/tags/%E5%85%B3%E4%BA%8E/">关于</category>
+      
+      
+      <comments>http://shicheng.cool/2021/12/15/Weixin/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Mysql的安装与卸载</title>
