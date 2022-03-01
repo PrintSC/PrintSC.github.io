@@ -3,13 +3,13 @@
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ShiC&#39;s cool</title>
+    <title>SC&#39;s 神奇的JavaWeb</title>
     <link>http://shicheng.cool/</link>
     
     <atom:link href="http://shicheng.cool/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>Think little，Do more</description>
-    <pubDate>Thu, 23 Dec 2021 10:33:51 GMT</pubDate>
+    <pubDate>Tue, 01 Mar 2022 00:45:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,7 @@
       
       
       
-      <content:encoded><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Email:1041151583@qq.com</span><br><span class="line">vx:</span><br><span class="line">注意：添加好友时请备注来历</span><br></pre></td></tr></table></figure><p><img src="/2022/03/01/Weixin/weixin.png"></p>]]></content:encoded>
+      <content:encoded><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Email:1041151583@qq.com</span><br><span class="line">vx:</span><br><span class="line">注意：添加好友时请备注来历</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="/2022/03/01/Weixin/weixin.png"></p>]]></content:encoded>
       
       
       <category domain="http://shicheng.cool/categories/%E6%88%91%E7%9A%84%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F-%E2%97%8F-%E2%97%A1-%E2%97%8F/">-我的联系方式(●&#39;◡&#39;●)</category>
