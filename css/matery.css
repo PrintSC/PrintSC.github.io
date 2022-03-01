@@ -34,12 +34,13 @@
 }
 
 body {
-    background-color: #eaeaea;
+    /* background-color: #eaeaea; */
+    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://www.helloimg.com/images/2022/02/28/GVdLLK.png"), url("https://www.helloimg.com/images/2022/02/28/GVdLLK.png") 0px 0px;
+    background-attachment: fixed;
     margin: 0;
-    color: #34495e;
-    overflow-x: hidden;
-    overflow-y: auto;
+    color: #7F95D1;
 }
+
 
 h1 {
     margin: 48px 0 22px -5px;
@@ -241,7 +242,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #fff 0%, #fff 100%);
+    background-image: linear-gradient(to right, rgb(46, 44, 44) 0%, rgb(48, 45, 45) 100%);
 }
 
 .text-color {
@@ -549,11 +550,12 @@ header .go-back i {
 .post-cover {
     height: 40vh !important;
 }
-
+/*
 .bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
 }
+*/
 
 .bg-cover:before,
 .bg-cover:after {

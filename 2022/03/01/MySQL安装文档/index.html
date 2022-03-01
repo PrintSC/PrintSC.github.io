@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Mysql的安装与卸载, SC&#39;s 神奇的JavaWeb">
+    <meta name="keywords" content="Mysql的安装与卸载, Think little，Do more">
     <meta name="description" content="
 安装环境:Win10 64位软件版本:MySQL 5.7.24 解压版
 
@@ -477,6 +477,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -498,53 +501,64 @@
 <p><img src="/2022/03/01/MySQL%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/1.png"></p>
 <p>点击<code>新建</code> </p>
 <p><img src="/2022/03/01/MySQL%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/2.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MYSQL_HOME:你的路径 例如我的是:E:\StudyTools\MySql\mysql-5.7.24-winx64</span><br><span class="line">那么我的路径就是MYSQL_HOME:E:\StudyTools\MySql\mysql-5.7.24-winx64</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">MYSQL_HOME:你的路径 例如我的是:E:\StudyTools\MySql\mysql-5.7.24-winx64
+那么我的路径就是MYSQL_HOME:E:\StudyTools\MySql\mysql-5.7.24-winx64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>在[系统环境的Path]下编辑</p>
 <p><img src="/2022/03/01/MySQL%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/3.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">点击编辑：</span><br><span class="line">添加：%MYSQL_HOME%bin</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">点击编辑：
+添加：%MYSQL_HOME%bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>最后点击确定。</p>
 <p><strong>如何验证是否添加成功？</strong></p>
 <p>右键开始菜单(就是屏幕左下角)，选择<code>命令提示符(管理员)</code>，打开黑框，敲入<code>mysql</code>，回车。<br>如果提示<code>Can&#39;t connect to MySQL server on &#39;localhost&#39;</code>则证明添加成功；<br>如果提示<code>mysql不是内部或外部命令，也不是可运行的程序或批处理文件</code>则表示添加添加失败，请重新检查步骤并重试。</p>
 <h3 id="2-新建配置文件"><a href="#2-新建配置文件" class="headerlink" title="2. 新建配置文件"></a>2. 新建配置文件</h3><p>在mysql-5.7.24-winx64下新建一个文本文件，内容如下：</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">[mysql]</span></span><br><span class="line"><span class="meta">default-character-set</span>=<span class="string">utf8</span></span><br><span class="line"></span><br><span class="line"><span class="attr">[mysqld]</span></span><br><span class="line"><span class="meta">character-set-server</span>=<span class="string">utf8</span></span><br><span class="line"><span class="meta">default-storage-engine</span>=<span class="string">INNODB</span></span><br><span class="line"><span class="attr">sql_mode</span>=<span class="string">STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties">[mysql]
+<span class="token attr-name">default-character-set</span><span class="token punctuation">=</span><span class="token attr-value">utf8</span>
+
+[mysqld]
+<span class="token attr-name">character-set-server</span><span class="token punctuation">=</span><span class="token attr-value">utf8</span>
+<span class="token attr-name">default-storage-engine</span><span class="token punctuation">=</span><span class="token attr-value">INNODB</span>
+<span class="token attr-name">sql_mode</span><span class="token punctuation">=</span><span class="token attr-value">STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>把上面的文本文件另存为，在保存类型里选<code>所有文件 (*.*)</code>，文件名叫<code>my.ini</code>，存放的路径为MySQL的<code>根目录</code>(例如我的是<code>E:\StudyTools\mysql-5.7.24-winx64</code>,根据自己的MySQL目录位置修改)。</p>
 <p>上面代码意思就是配置数据库的默认编码集为utf-8和默认存储引擎为INNODB。</p>
 <h3 id="3-初始化MySQL"><a href="#3-初始化MySQL" class="headerlink" title="3. 初始化MySQL"></a>3. 初始化MySQL</h3><p>在[cmd](<a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=cmd%E6%80%8E%E4%B9%88%E6%89%93%E5%BC%80&rsv_spt=1&rsv_iqid=0xcc736c1100096bda&issp=1&f=3&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=baiduhome_pg&rsv_enter=1&rsv_dl=ts_0&oq=cmd&rsv_btype=t&rsv_t=0ad8BpIWOl+BYcr7XxInZzlqPbRPUNURUCczyCFXg/RVi76sKNbeQoXUiOcRpqfm9XuE&rsv_sug3=5&rsv_sug1=5&rsv_sug7=100&rsv_pq=94712f61000034f2&rsv_sug2=1&prefixsug=cmd&rsp=0&rsv_sug4=1362">cmd怎么打开_百度搜索 (baidu.com)</a>)的黑框中敲入<code>mysqld --initialize-insecure</code>，回车，稍微等待一会，如果出现没有出现报错信息(如下图)则证明data目录初始化没有问题，此时再查看MySQL目录下已经有data目录生成。注意CMD以管理员身份运行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize-insecure</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">mysqld --initialize-insecure<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <h3 id="4-注册MySQL服务"><a href="#4-注册MySQL服务" class="headerlink" title="4. 注册MySQL服务"></a>4. 注册MySQL服务</h3><p>在黑框里敲入<code>mysqld -install</code>，回车。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -install</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">mysqld -install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>现在的计算机上已经安装好了MySQL服务了。</p>
 <p>MySQL服务器</p>
 <h3 id="5-启动MySQL服务"><a href="#5-启动MySQL服务" class="headerlink" title="5. 启动MySQL服务"></a>5. 启动MySQL服务</h3><p>在黑框里敲入<code>net start mysql</code>，回车。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net start mysql  <span class="comment">// 启动mysql服务</span></span><br><span class="line">    </span><br><span class="line">net stop mysql  <span class="comment">// 停止mysql服务</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">net start mysql  <span class="token comment">// 启动mysql服务</span>
+    
+net stop mysql  <span class="token comment">// 停止mysql服务</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
 <h3 id="6-修改默认账户密码"><a href="#6-修改默认账户密码" class="headerlink" title="6. 修改默认账户密码"></a>6. 修改默认账户密码</h3><p>在黑框里敲入<code>mysqladmin -u root password 1234</code>，这里的<code>1234</code>就是指默认管理员(即root账户)的密码，可以自行修改成你喜欢的。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u root password 1234</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">mysqladmin -u root password 1234<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <p><strong>至此，MySQL 5.7 解压版安装完毕！</strong></p>
 <hr>
 <h2 id="四、登录MySQL"><a href="#四、登录MySQL" class="headerlink" title="四、登录MySQL"></a>四、登录MySQL</h2><p>右键开始菜单，选择<code>命令提示符</code>，打开黑框。<br>在黑框中输入，<code>mysql -uroot -p1234</code>，回车，出现下图且左下角为<code>mysql&gt;</code>，则登录成功。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p1234</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">mysql -uroot -p1234<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <p><strong>到这里你就可以开始你的MySQL之旅了！</strong></p>
 <p>退出mysql：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">exit
+quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>登陆参数：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u用户名 -p密码 -h要连接的mysql服务器的ip地址(默认127.0.0.1) -P端口号(默认3306)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">mysql -u用户名 -p密码 -h要连接的mysql服务器的ip地址(默认127.0.0.1) -P端口号(默认3306)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -556,12 +570,12 @@
 <ol>
 <li>敲入<code>net stop mysql</code>，回车。</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net stop mysql</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">net stop mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ol start="2">
 <li>再敲入<code>mysqld -remove mysql</code>，回车。</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -remove mysql</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">mysqld -remove mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ol start="3">
 <li>最后删除MySQL目录及相关的环境变量。</li>

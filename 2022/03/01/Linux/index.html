@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="常用Linux操作命令, SC&#39;s 神奇的JavaWeb">
+    <meta name="keywords" content="常用Linux操作命令, Think little，Do more">
     <meta name="description" content="操作系统的常用指令:ls : (list) 列出当前的所有文件路径:绝对路径与相对路径​        相对路径：指定是当前目录下的….
 ​        绝对路径：一般都是/开始…不需要参照物
-123456789101112ls /roo">
+ls &amp;#x2F;root ---&amp;gt;绝">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -475,6 +475,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -482,71 +485,195 @@
             <div id="articleContent">
                 <h1 id="操作系统的常用指令"><a href="#操作系统的常用指令" class="headerlink" title="操作系统的常用指令:"></a><strong>操作系统的常用指令:</strong></h1><h1 id="ls-list-列出当前的所有文件"><a href="#ls-list-列出当前的所有文件" class="headerlink" title="ls : (list) 列出当前的所有文件"></a>ls : (list) 列出当前的所有文件</h1><h2 id="路径-绝对路径与相对路径"><a href="#路径-绝对路径与相对路径" class="headerlink" title="路径:绝对路径与相对路径"></a>路径:绝对路径与相对路径</h2><p>​        相对路径：指定是当前目录下的….</p>
 <p>​        绝对路径：一般都是/开始…不需要参照物</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">ls /root ---&gt;绝对路径 在根目录下找root</span><br><span class="line">ls root  ----&gt;在当前目录下寻找root</span><br><span class="line">./ 当前上级目录</span><br><span class="line">.//当前上上级目录</span><br><span class="line">ls 选项 路径：</span><br><span class="line">	ls -l 路径：列出所有的文件以及详细信息</span><br><span class="line">	ls -la 路径：列出所有的文件包括隐藏文件</span><br><span class="line">	ls -lh 路径：列出所有的文件并以可读性较高的方式呈现(可在中间加a ---&gt; ls -lah)</span><br><span class="line">	</span><br><span class="line">注意: ls列出的结果颜色说明，其中蓝色的名称表示文件夹，黑色的表示文件，绿色的其权</span><br><span class="line">限为拥有所有权限。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">ls &#x2F;root ---&gt;绝对路径 在根目录下找root
+ls root  ----&gt;在当前目录下寻找root
+.&#x2F; 当前上级目录
+.&#x2F;&#x2F;当前上上级目录
+ls 选项 路径：
+	ls -l 路径：列出所有的文件以及详细信息
+	ls -la 路径：列出所有的文件包括隐藏文件
+	ls -lh 路径：列出所有的文件并以可读性较高的方式呈现(可在中间加a ---&gt; ls -lah)
+	
+注意: ls列出的结果颜色说明，其中蓝色的名称表示文件夹，黑色的表示文件，绿色的其权
+限为拥有所有权限。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>​    上述列表中的第一列字符表示文档的类型，其中“-”表示该行对应的文档类型为文件,“d”表示文档类型为文件夹。（linux目录的文件大小显示的都是4k不代表是4k大小。并且文件大小的单位灵活）</p>
-<h1 id="pwd-（打印当前工作目录）"><a href="#pwd-（打印当前工作目录）" class="headerlink" title="pwd:（打印当前工作目录）"></a>pwd:（打印当前工作目录）</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print working directory :</span><br></pre></td></tr></table></figure>
+<h1 id="pwd-（打印当前工作目录）"><a href="#pwd-（打印当前工作目录）" class="headerlink" title="pwd:（打印当前工作目录）"></a>pwd:（打印当前工作目录）</h1><pre class="line-numbers language-none"><code class="language-none">print working directory :<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
-<h1 id="cd-chang-diretory-切换当前的工作目录的"><a href="#cd-chang-diretory-切换当前的工作目录的" class="headerlink" title="cd:(chang diretory 切换当前的工作目录的)"></a>cd:(chang diretory 切换当前的工作目录的)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd 路径（支持相对和绝对路径 只要它存在）</span><br><span class="line"></span><br><span class="line">cd /root/java/（后面的“/”可加可不加 没有影响）</span><br><span class="line"></span><br><span class="line">在linux中有一个特殊的符号&quot;~&quot;表示当前用户的家目录，怎么切换过去呢！cd ~</span><br></pre></td></tr></table></figure>
+<h1 id="cd-chang-diretory-切换当前的工作目录的"><a href="#cd-chang-diretory-切换当前的工作目录的" class="headerlink" title="cd:(chang diretory 切换当前的工作目录的)"></a>cd:(chang diretory 切换当前的工作目录的)</h1><pre class="line-numbers language-none"><code class="language-none">cd 路径（支持相对和绝对路径 只要它存在）
 
-<h1 id="mkdir-make-diretory-创建目录"><a href="#mkdir-make-diretory-创建目录" class="headerlink" title="mkdir:(make diretory 创建目录)"></a>mkdir:(make diretory 创建目录)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. mkdir 路径</span><br><span class="line">2. mkdir 文件夹名字 （在当前的目录下创建一个目录）</span><br><span class="line">	在指定目录下创建文件夹或者目录代码：</span><br><span class="line">	mkdir /root/SC/baobaolin（在当前root的目录下执行mkdir对在/root/SC/的目录下创建一个baobaolin文件夹）</span><br><span class="line">3. mkdir -p 路径</span><br><span class="line">	含义:当一次性创建多层不存在的目录的时候，添加-p 参数，否则会报错</span><br><span class="line">	mkdir -p /a/b/c/d 一次性创建a b c d四个文件夹否则会报错的</span><br><span class="line">4. mkdir 路径1 路径2 路径3 .....</span><br><span class="line">	一次性创建多个文件夹</span><br></pre></td></tr></table></figure>
+cd &#x2F;root&#x2F;java&#x2F;（后面的“&#x2F;”可加可不加 没有影响）
 
-<h1 id="touch-创建文件）"><a href="#touch-创建文件）" class="headerlink" title="touch:(创建文件）"></a>touch:(创建文件）</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">touch：创建文件</span><br><span class="line">1. touch 文件路径 [路径可以是直接的文件名也可以是路径]</span><br><span class="line">	可以创建多个文件空格隔开即可 即：touch linux1.txt linux2.txt</span><br><span class="line">2. 在特定路径下创建文件</span><br><span class="line">	图2 注意没空格touch /root/SC/baobaolin/linux.txt	</span><br></pre></td></tr></table></figure>
+在linux中有一个特殊的符号&quot;~&quot;表示当前用户的家目录，怎么切换过去呢！cd ~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="mkdir-make-diretory-创建目录"><a href="#mkdir-make-diretory-创建目录" class="headerlink" title="mkdir:(make diretory 创建目录)"></a>mkdir:(make diretory 创建目录)</h1><pre class="line-numbers language-none"><code class="language-none">1. mkdir 路径
+2. mkdir 文件夹名字 （在当前的目录下创建一个目录）
+	在指定目录下创建文件夹或者目录代码：
+	mkdir &#x2F;root&#x2F;SC&#x2F;baobaolin（在当前root的目录下执行mkdir对在&#x2F;root&#x2F;SC&#x2F;的目录下创建一个baobaolin文件夹）
+3. mkdir -p 路径
+	含义:当一次性创建多层不存在的目录的时候，添加-p 参数，否则会报错
+	mkdir -p &#x2F;a&#x2F;b&#x2F;c&#x2F;d 一次性创建a b c d四个文件夹否则会报错的
+4. mkdir 路径1 路径2 路径3 .....
+	一次性创建多个文件夹<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="touch-创建文件）"><a href="#touch-创建文件）" class="headerlink" title="touch:(创建文件）"></a>touch:(创建文件）</h1><pre class="line-numbers language-none"><code class="language-none">touch：创建文件
+1. touch 文件路径 [路径可以是直接的文件名也可以是路径]
+	可以创建多个文件空格隔开即可 即：touch linux1.txt linux2.txt
+2. 在特定路径下创建文件
+	图2 注意没空格touch &#x2F;root&#x2F;SC&#x2F;baobaolin&#x2F;linux.txt	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h1 id="cp：-copy-复制文件-文件夹到指定的位置"><a href="#cp：-copy-复制文件-文件夹到指定的位置" class="headerlink" title="cp：(copy 复制文件/文件夹到指定的位置)"></a>cp：(copy 复制文件/文件夹到指定的位置)</h1><blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1. 复制文件/文件夹到指定的位置</span><br><span class="line">	文件：</span><br><span class="line">	cp 被复制的文档路径 文档被复制到的路径</span><br><span class="line">	cp /root/SC/baobaolin/linux.txt /root/hello/(这里可以写复制过后的文件名字)</span><br><span class="line">	cp /root/SC/baobaolin/linux.txt /root/hello/hello.txt</span><br><span class="line">	注意: Linux在复制过程中是可以重新对新位置的文件进行重命名的，但是如果不是必须的</span><br><span class="line">需要，则建议保持前后名称一致。</span><br><span class="line">	文件夹：</span><br><span class="line">	注意:当使用cp命令进行文件夹复制操作的时候需要添加选项&quot;-r&quot;否则会被略过不成功</span><br><span class="line">	&quot;-r&quot;表示递归 把文件夹里面的文件和文件夹全都拿过来</span><br><span class="line"></span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">1. 复制文件&#x2F;文件夹到指定的位置
+	文件：
+	cp 被复制的文档路径 文档被复制到的路径
+	cp &#x2F;root&#x2F;SC&#x2F;baobaolin&#x2F;linux.txt &#x2F;root&#x2F;hello&#x2F;(这里可以写复制过后的文件名字)
+	cp &#x2F;root&#x2F;SC&#x2F;baobaolin&#x2F;linux.txt &#x2F;root&#x2F;hello&#x2F;hello.txt
+	注意: Linux在复制过程中是可以重新对新位置的文件进行重命名的，但是如果不是必须的
+需要，则建议保持前后名称一致。
+	文件夹：
+	注意:当使用cp命令进行文件夹复制操作的时候需要添加选项&quot;-r&quot;否则会被略过不成功
+	&quot;-r&quot;表示递归 把文件夹里面的文件和文件夹全都拿过来
+
+	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 </blockquote>
-<h1 id="mv：移动文档到新的位置"><a href="#mv：移动文档到新的位置" class="headerlink" title="mv：移动文档到新的位置"></a>mv：移动文档到新的位置</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 其中文档包括（文件以及文件夹）</span><br><span class="line">	mv 需要移动的文档路径 需要保存的位置（路径）</span><br><span class="line">	移东之后old place是不存在的了 new place有了文件，其中大小名字以及内容是不会发生改变的</span><br><span class="line">2. mv还可以重新命名（文件和文件夹）</span><br><span class="line">	mv Linux1.txt linux13123.txt（把linux1.txt改成Linux13123.txt）</span><br></pre></td></tr></table></figure>
+<h1 id="mv：移动文档到新的位置"><a href="#mv：移动文档到新的位置" class="headerlink" title="mv：移动文档到新的位置"></a>mv：移动文档到新的位置</h1><pre class="line-numbers language-none"><code class="language-none">1. 其中文档包括（文件以及文件夹）
+	mv 需要移动的文档路径 需要保存的位置（路径）
+	移东之后old place是不存在的了 new place有了文件，其中大小名字以及内容是不会发生改变的
+2. mv还可以重新命名（文件和文件夹）
+	mv Linux1.txt linux13123.txt（把linux1.txt改成Linux13123.txt）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="rm-remove-删除-移除"><a href="#rm-remove-删除-移除" class="headerlink" title="rm:(remove 删除 移除)"></a>rm:(remove 删除 移除)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1. 移除/删除文档</span><br><span class="line">	rm 选项 需要移除的文档路径</span><br><span class="line">	在删除的时候如果不带选项，会提示是否删除，如果需要确认则输入“y/yes”， 否则输入n/no”按下回车。注意:如果在删除的时候不想频繁的确认，则可以在指令中添加选项“f”,表示force(强制)。即</span><br><span class="line">	rm -f xxx</span><br><span class="line"></span><br><span class="line">	选项：</span><br><span class="line">	-f (force)</span><br><span class="line">	-r</span><br><span class="line">	注意:删除一个目录的时候需要做递归删除，并且-般也不需要进行删除确认询问，所以移除目录的时候一般需要 使用-rf选项。</span><br><span class="line"></span><br><span class="line">2. 删除多个文件</span><br><span class="line">	rm -rf 文件夹名字 文件名字</span><br><span class="line">	</span><br><span class="line">3. 要删除一个目录下有公共特性的文档，例如都以Linux开头</span><br><span class="line">	rm -f linux*</span><br><span class="line">	其中*叫通配符，意思是表示任意的字符，linux*泽表示只要是linux开头，后续字符则不管了</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+<h1 id="rm-remove-删除-移除"><a href="#rm-remove-删除-移除" class="headerlink" title="rm:(remove 删除 移除)"></a>rm:(remove 删除 移除)</h1><pre class="line-numbers language-none"><code class="language-none">1. 移除&#x2F;删除文档
+	rm 选项 需要移除的文档路径
+	在删除的时候如果不带选项，会提示是否删除，如果需要确认则输入“y&#x2F;yes”， 否则输入n&#x2F;no”按下回车。注意:如果在删除的时候不想频繁的确认，则可以在指令中添加选项“f”,表示force(强制)。即
+	rm -f xxx
+
+	选项：
+	-f (force)
+	-r
+	注意:删除一个目录的时候需要做递归删除，并且-般也不需要进行删除确认询问，所以移除目录的时候一般需要 使用-rf选项。
+
+2. 删除多个文件
+	rm -rf 文件夹名字 文件名字
+	
+3. 要删除一个目录下有公共特性的文档，例如都以Linux开头
+	rm -f linux*
+	其中*叫通配符，意思是表示任意的字符，linux*泽表示只要是linux开头，后续字符则不管了
+	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h1 id="vim-vim是一款文本编辑器"><a href="#vim-vim是一款文本编辑器" class="headerlink" title="vim:(vim是一款文本编辑器)"></a>vim:(vim是一款文本编辑器)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. vim 文件路径和名字（没有文件夹）打开一个文件（可以不存在也可以存在）</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+<h1 id="vim-vim是一款文本编辑器"><a href="#vim-vim是一款文本编辑器" class="headerlink" title="vim:(vim是一款文本编辑器)"></a>vim:(vim是一款文本编辑器)</h1><pre class="line-numbers language-none"><code class="language-none">1. vim 文件路径和名字（没有文件夹）打开一个文件（可以不存在也可以存在）
+	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
-<h1 id="输出重定向"><a href="#输出重定向" class="headerlink" title="输出重定向"></a>输出重定向</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一般命名的输出都会显示在终端里面的，有时候需要将一些命名执行的结果想要保存到文件中进行后续的统计分析，则这个时候就需要使用到输出重定向技术</span><br><span class="line">1. &gt;  覆盖输出，会覆盖掉原先的文件内容</span><br><span class="line">2. &gt;&gt; 追加输出 ，不会覆盖原始文件的文件内容 会在原始内容末尾继续追加</span><br><span class="line">	&gt; and &gt;&gt; 都有执行新文件创建的功能</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="输出重定向"><a href="#输出重定向" class="headerlink" title="输出重定向"></a>输出重定向</h1><pre class="line-numbers language-none"><code class="language-none">一般命名的输出都会显示在终端里面的，有时候需要将一些命名执行的结果想要保存到文件中进行后续的统计分析，则这个时候就需要使用到输出重定向技术
+1. &gt;  覆盖输出，会覆盖掉原先的文件内容
+2. &gt;&gt; 追加输出 ，不会覆盖原始文件的文件内容 会在原始内容末尾继续追加
+	&gt; and &gt;&gt; 都有执行新文件创建的功能
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="cat指令"><a href="#cat指令" class="headerlink" title="cat指令"></a>cat指令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. cat有直接打开文件的功能</span><br><span class="line">	cat 文件的路径</span><br><span class="line">	（像比于vim cat更加具体而且不能编辑 就只是能看而已。查看所有的文件）</span><br><span class="line">2. cat还可对文件内容进行合并(后面的文件可以不存在 如果不存在就创建一个)</span><br><span class="line">	cat 待合并的文件路径1（文件名） 待合并的文件路径2（文件名） .... 待合并的文件路径n（文件名） &gt;(&gt;&gt;) 合并之后的文件路径（文件名）</span><br></pre></td></tr></table></figure>
+<h1 id="cat指令"><a href="#cat指令" class="headerlink" title="cat指令"></a>cat指令</h1><pre class="line-numbers language-none"><code class="language-none">1. cat有直接打开文件的功能
+	cat 文件的路径
+	（像比于vim cat更加具体而且不能编辑 就只是能看而已。查看所有的文件）
+2. cat还可对文件内容进行合并(后面的文件可以不存在 如果不存在就创建一个)
+	cat 待合并的文件路径1（文件名） 待合并的文件路径2（文件名） .... 待合并的文件路径n（文件名） &gt;(&gt;&gt;) 合并之后的文件路径（文件名）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>![](E:\StudyTools\Typora\File\Linux-imag\cat.png</p>
-<h1 id="df指令-查看磁盘空间"><a href="#df指令-查看磁盘空间" class="headerlink" title="df指令(查看磁盘空间)"></a>df指令(查看磁盘空间)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法格式：</span><br><span class="line">	df -h</span><br><span class="line">	(-h 以可读性较高的形式查看)</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+<h1 id="df指令-查看磁盘空间"><a href="#df指令-查看磁盘空间" class="headerlink" title="df指令(查看磁盘空间)"></a>df指令(查看磁盘空间)</h1><pre class="line-numbers language-none"><code class="language-none">语法格式：
+	df -h
+	(-h 以可读性较高的形式查看)
+	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h1 id="free指令-查看内存的使用情况"><a href="#free指令-查看内存的使用情况" class="headerlink" title="free指令(查看内存的使用情况)"></a>free指令(查看内存的使用情况)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">语法格式：</span><br><span class="line">	free -m</span><br><span class="line">	(-m表示的是以MB为单位进行查看)</span><br><span class="line">	</span><br><span class="line">剩余的真实可以用的内存为1445mb。</span><br><span class="line">Swap:用于临时内存，当系统真实内存不够用的时候可以临时使用磁盘空间来充当内存。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="free指令-查看内存的使用情况"><a href="#free指令-查看内存的使用情况" class="headerlink" title="free指令(查看内存的使用情况)"></a>free指令(查看内存的使用情况)</h1><pre class="line-numbers language-none"><code class="language-none">语法格式：
+	free -m
+	(-m表示的是以MB为单位进行查看)
+	
+剩余的真实可以用的内存为1445mb。
+Swap:用于临时内存，当系统真实内存不够用的时候可以临时使用磁盘空间来充当内存。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="head指令-查看一个文件的前n行，如果布置的n，则默认显示前10行"><a href="#head指令-查看一个文件的前n行，如果布置的n，则默认显示前10行" class="headerlink" title="head指令(查看一个文件的前n行，如果布置的n，则默认显示前10行)"></a>head指令(查看一个文件的前n行，如果布置的n，则默认显示前10行)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">语法格式：</span><br><span class="line">	head -n 文件路径和名字(n)表示数字</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+<h1 id="head指令-查看一个文件的前n行，如果布置的n，则默认显示前10行"><a href="#head指令-查看一个文件的前n行，如果布置的n，则默认显示前10行" class="headerlink" title="head指令(查看一个文件的前n行，如果布置的n，则默认显示前10行)"></a>head指令(查看一个文件的前n行，如果布置的n，则默认显示前10行)</h1><pre class="line-numbers language-none"><code class="language-none">语法格式：
+	head -n 文件路径和名字(n)表示数字
+	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h1 id="tail指令-查看一个文件的后n行，如果布置的n，则默认显示前10行"><a href="#tail指令-查看一个文件的后n行，如果布置的n，则默认显示前10行" class="headerlink" title="tail指令(查看一个文件的后n行，如果布置的n，则默认显示前10行)"></a>tail指令(查看一个文件的后n行，如果布置的n，则默认显示前10行)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">语法格式：</span><br><span class="line">	tail -n 文件路径和名字</span><br><span class="line">	</span><br><span class="line">可以通过tail指令来查看一个文件的动态变化</span><br><span class="line">语法格式：</span><br><span class="line">	tail -f 文件路径和名字</span><br><span class="line">	一般用来查看系统的日志比较多</span><br></pre></td></tr></table></figure>
+<h1 id="tail指令-查看一个文件的后n行，如果布置的n，则默认显示前10行"><a href="#tail指令-查看一个文件的后n行，如果布置的n，则默认显示前10行" class="headerlink" title="tail指令(查看一个文件的后n行，如果布置的n，则默认显示前10行)"></a>tail指令(查看一个文件的后n行，如果布置的n，则默认显示前10行)</h1><pre class="line-numbers language-none"><code class="language-none">语法格式：
+	tail -n 文件路径和名字
+	
+可以通过tail指令来查看一个文件的动态变化
+语法格式：
+	tail -f 文件路径和名字
+	一般用来查看系统的日志比较多<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="less-查看文件，以较少的内容进行输出，按下辅助键查看更多"><a href="#less-查看文件，以较少的内容进行输出，按下辅助键查看更多" class="headerlink" title="less(查看文件，以较少的内容进行输出，按下辅助键查看更多)"></a>less(查看文件，以较少的内容进行输出，按下辅助键查看更多)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">语法格式：</span><br><span class="line">	less 需要查看的文件路径</span><br><span class="line">	辅助键(数字+回车，空格，上下键)</span><br></pre></td></tr></table></figure>
+<h1 id="less-查看文件，以较少的内容进行输出，按下辅助键查看更多"><a href="#less-查看文件，以较少的内容进行输出，按下辅助键查看更多" class="headerlink" title="less(查看文件，以较少的内容进行输出，按下辅助键查看更多)"></a>less(查看文件，以较少的内容进行输出，按下辅助键查看更多)</h1><pre class="line-numbers language-none"><code class="language-none">语法格式：
+	less 需要查看的文件路径
+	辅助键(数字+回车，空格，上下键)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="wc-统计文件内容信息-行，单词个数，字节数"><a href="#wc-统计文件内容信息-行，单词个数，字节数" class="headerlink" title="wc(统计文件内容信息(行，单词个数，字节数))"></a>wc(统计文件内容信息(行，单词个数，字节数))</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法格式：</span><br><span class="line">	wc -lwc 需要统计的文件路径文件名</span><br><span class="line">	-l 表示lines 行数</span><br><span class="line">	-w 表示words 单词数 依照空格判断单词 [我 爱 你] 三个单词</span><br><span class="line">	-c 表示bytes 字节数 </span><br></pre></td></tr></table></figure>
+<h1 id="wc-统计文件内容信息-行，单词个数，字节数"><a href="#wc-统计文件内容信息-行，单词个数，字节数" class="headerlink" title="wc(统计文件内容信息(行，单词个数，字节数))"></a>wc(统计文件内容信息(行，单词个数，字节数))</h1><pre class="line-numbers language-none"><code class="language-none">语法格式：
+	wc -lwc 需要统计的文件路径文件名
+	-l 表示lines 行数
+	-w 表示words 单词数 依照空格判断单词 [我 爱 你] 三个单词
+	-c 表示bytes 字节数 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="date指令-重点"><a href="#date指令-重点" class="headerlink" title="date指令(重点)"></a>date指令(重点)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">作用:表示操作时间日期的(读取、设置) 主要用来读取的</span><br><span class="line">语法1. </span><br><span class="line">	date 输出格式 [2021年 11月 26日 星期五 09:17:40 CST]</span><br><span class="line"></span><br><span class="line">语法2. </span><br><span class="line">	date +%F (等价与date “%Y-%m-%d”)输出格式[2021-11-26]</span><br><span class="line"></span><br><span class="line">语法3. </span><br><span class="line">	date &quot;+%F %T&quot; 输出格式[2021-11-26 09:25:15] 年月日与时分秒成为一个不可分割的整体(等价于 date &quot;+%Y-%m-%d %H:%M:%S&quot;)</span><br><span class="line"></span><br><span class="line">语法4.获取之前或者之后的某个时间(备份)</span><br><span class="line">	（-1 day 表示昨天的）</span><br><span class="line">			[+/-][day month year]</span><br><span class="line">	date -d &quot;-1 day&quot; &quot;+%Y-%m-%d %H:%M:%S&quot;</span><br></pre></td></tr></table></figure>
+<h1 id="date指令-重点"><a href="#date指令-重点" class="headerlink" title="date指令(重点)"></a>date指令(重点)</h1><pre class="line-numbers language-none"><code class="language-none">作用:表示操作时间日期的(读取、设置) 主要用来读取的
+语法1. 
+	date 输出格式 [2021年 11月 26日 星期五 09:17:40 CST]
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">%F:表示完整的年月日</span><br><span class="line">%T:表示完整的时分秒</span><br><span class="line">%Y:表示四位年份</span><br><span class="line">%m:表示两位的月份（带前导零）</span><br><span class="line">%d:表示日期（带前导零）</span><br><span class="line">%H:表示小时（带前导零）</span><br><span class="line">%M:表示分钟（带前导零）</span><br><span class="line">%S:表示的秒数（带前导零）</span><br></pre></td></tr></table></figure>
+语法2. 
+	date +%F (等价与date “%Y-%m-%d”)输出格式[2021-11-26]
 
-<h1 id="cal指令"><a href="#cal指令" class="headerlink" title="cal指令"></a>cal指令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">作用：操作日历的</span><br><span class="line">语法1：</span><br><span class="line">	cal（直接输出当前月份的日历） = cal -1</span><br><span class="line">语法2：</span><br><span class="line">	cal -3（输出上一个月加本月加下个月的日历）</span><br><span class="line">语法3：</span><br><span class="line">	cal -y（输出一年的月份）</span><br></pre></td></tr></table></figure>
+语法3. 
+	date &quot;+%F %T&quot; 输出格式[2021-11-26 09:25:15] 年月日与时分秒成为一个不可分割的整体(等价于 date &quot;+%Y-%m-%d %H:%M:%S&quot;)
 
-<h1 id="clear-ctrl-l-指令"><a href="#clear-ctrl-l-指令" class="headerlink" title="clear/ctrl + l 指令"></a>clear/ctrl + l 指令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ctrl +l = clear：清除终端中以及存在的命令和结果</span><br><span class="line"></span><br><span class="line">需要注意的是,该命令并不是真的清除了之前的信息,而是把之前的信息的隐藏到了最上面，通过滚动条继续查看以前的信息。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+语法4.获取之前或者之后的某个时间(备份)
+	（-1 day 表示昨天的）
+			[+&#x2F;-][day month year]
+	date -d &quot;-1 day&quot; &quot;+%Y-%m-%d %H:%M:%S&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="管道（重要）"><a href="#管道（重要）" class="headerlink" title="管道（重要）"></a>管道（重要）</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">管道符：|</span><br><span class="line">作用：一般可以用于过滤，特殊，扩展处理。</span><br><span class="line">语法1：</span><br><span class="line">	管道不能单独使用，必须配合前面所讲的一些指令一起使用，管道起辅助作用</span><br><span class="line">	通过管道查询出当前目录下包含&quot;linux&quot;字母的文档名字</span><br><span class="line">	ls |grep linux</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">%F:表示完整的年月日
+%T:表示完整的时分秒
+%Y:表示四位年份
+%m:表示两位的月份（带前导零）
+%d:表示日期（带前导零）
+%H:表示小时（带前导零）
+%M:表示分钟（带前导零）
+%S:表示的秒数（带前导零）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h1 id="cal指令"><a href="#cal指令" class="headerlink" title="cal指令"></a>cal指令</h1><pre class="line-numbers language-none"><code class="language-none">作用：操作日历的
+语法1：
+	cal（直接输出当前月份的日历） &#x3D; cal -1
+语法2：
+	cal -3（输出上一个月加本月加下个月的日历）
+语法3：
+	cal -y（输出一年的月份）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h1 id="clear-ctrl-l-指令"><a href="#clear-ctrl-l-指令" class="headerlink" title="clear/ctrl + l 指令"></a>clear/ctrl + l 指令</h1><pre class="line-numbers language-none"><code class="language-none">ctrl +l &#x3D; clear：清除终端中以及存在的命令和结果
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">针对上面这个命令说明:</span><br><span class="line">1.以管道作为分界线，前面的命令有个输出，后面需要先输入，然后再过滤，最后再输出-[通俗的讲就是管道前面的输出就是后面指令的输入]</span><br><span class="line">2.grep:用于过滤</span><br><span class="line">3.ls |wc -l        [wc -w][wc -c]</span><br><span class="line">	统计文档个数</span><br></pre></td></tr></table></figure>
+需要注意的是,该命令并不是真的清除了之前的信息,而是把之前的信息的隐藏到了最上面，通过滚动条继续查看以前的信息。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<h1 id="管道（重要）"><a href="#管道（重要）" class="headerlink" title="管道（重要）"></a>管道（重要）</h1><pre class="line-numbers language-none"><code class="language-none">管道符：|
+作用：一般可以用于过滤，特殊，扩展处理。
+语法1：
+	管道不能单独使用，必须配合前面所讲的一些指令一起使用，管道起辅助作用
+	通过管道查询出当前目录下包含&quot;linux&quot;字母的文档名字
+	ls |grep linux<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
+<pre class="line-numbers language-none"><code class="language-none">针对上面这个命令说明:
+1.以管道作为分界线，前面的命令有个输出，后面需要先输入，然后再过滤，最后再输出-[通俗的讲就是管道前面的输出就是后面指令的输入]
+2.grep:用于过滤
+3.ls |wc -l        [wc -w][wc -c]
+	统计文档个数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -570,79 +697,245 @@
 
 
 
-<h1 id="Linux高级指令"><a href="#Linux高级指令" class="headerlink" title="Linux高级指令"></a>Linux高级指令</h1><h1 id><a href="#" class="headerlink" title></a></h1><h1 id="hostname-操作服务器主机名（读取或设置…）"><a href="#hostname-操作服务器主机名（读取或设置…）" class="headerlink" title="hostname(操作服务器主机名（读取或设置…）)"></a>hostname(操作服务器主机名（读取或设置…）)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法格式：</span><br><span class="line">1. hostname -表示输出完整的主机名</span><br><span class="line">	输出了Linux_SC</span><br><span class="line">2. hostname -f -表示输出当前主机名中的-f -&gt; FQDN （全限定域名）</span><br><span class="line">	Linux_SC</span><br></pre></td></tr></table></figure>
 
-<h1 id="-1"><a href="#-1" class="headerlink" title></a></h1><h1 id="id指令-查看一个用户的基本信息-包含用户id-—用户组id—-附加组id…-该指令如果不指定用户则默认当前用户"><a href="#id指令-查看一个用户的基本信息-包含用户id-—用户组id—-附加组id…-该指令如果不指定用户则默认当前用户" class="headerlink" title="id指令(查看一个用户的基本信息 包含用户id —用户组id—- 附加组id…) 该指令如果不指定用户则默认当前用户"></a>id指令(查看一个用户的基本信息 包含用户id —用户组id—- 附加组id…) 该指令如果不指定用户则默认当前用户</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">id card 身份证</span><br><span class="line">语法格式：</span><br><span class="line">	1. id 不指定则默认当前用户</span><br><span class="line">	2. id 用户名 显示指定用户的基本信息</span><br></pre></td></tr></table></figure>
 
-<h1 id="whoami-我是谁？显示当前登录的用户名"><a href="#whoami-我是谁？显示当前登录的用户名" class="headerlink" title="whoami(我是谁？显示当前登录的用户名)"></a>whoami(我是谁？显示当前登录的用户名)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">whoami 返回root 一般用户shell脚本</span><br><span class="line">用于获取当前的操作用户的名字方便记录日志</span><br></pre></td></tr></table></figure>
 
-<h1 id="ps-ef指令-用于查看服务器的进程信息"><a href="#ps-ef指令-用于查看服务器的进程信息" class="headerlink" title="ps -ef指令(****)(用于查看服务器的进程信息)"></a>ps -ef指令(****)(用于查看服务器的进程信息)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">选项含义</span><br><span class="line"> -e 等价于&quot;A&quot; 表示列出全部的进程</span><br><span class="line"> -f 显示全部的列| 全字段</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> UID:该进程执行的用户id</span><br><span class="line"> PID:进程id</span><br><span class="line"> PPID:该进程的父进程id 如果该ppid找不到那么该进程称之为僵尸进程</span><br><span class="line"> C:CPU的占用率 其形式是百分比</span><br><span class="line"> STIME:该进程的启动时间</span><br><span class="line"> TTY:终端设备，发起该进程的设备识别符号 如果显示?则表示该进程并不是由终端设备发起的</span><br><span class="line"> TIME:进程的执行时间</span><br><span class="line"> CMD:该进程的名称或者对应的路径</span><br><span class="line"> </span><br><span class="line"> 多用来查看自己安装的资源</span><br><span class="line"> 100%使用的命令：ps -ef|grep xxx 在ps的结果中过滤出想要查看（xxx）的进程状态</span><br></pre></td></tr></table></figure>
 
+<h1 id="Linux高级指令"><a href="#Linux高级指令" class="headerlink" title="Linux高级指令"></a>Linux高级指令</h1><h1 id><a href="#" class="headerlink" title></a></h1><h1 id="hostname-操作服务器主机名（读取或设置…）"><a href="#hostname-操作服务器主机名（读取或设置…）" class="headerlink" title="hostname(操作服务器主机名（读取或设置…）)"></a>hostname(操作服务器主机名（读取或设置…）)</h1><pre class="line-numbers language-none"><code class="language-none">语法格式：
+1. hostname -表示输出完整的主机名
+	输出了Linux_SC
+2. hostname -f -表示输出当前主机名中的-f -&gt; FQDN （全限定域名）
+	Linux_SC<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h1 id="-1"><a href="#-1" class="headerlink" title></a></h1><h1 id="id指令-查看一个用户的基本信息-包含用户id-—用户组id—-附加组id…-该指令如果不指定用户则默认当前用户"><a href="#id指令-查看一个用户的基本信息-包含用户id-—用户组id—-附加组id…-该指令如果不指定用户则默认当前用户" class="headerlink" title="id指令(查看一个用户的基本信息 包含用户id —用户组id—- 附加组id…) 该指令如果不指定用户则默认当前用户"></a>id指令(查看一个用户的基本信息 包含用户id —用户组id—- 附加组id…) 该指令如果不指定用户则默认当前用户</h1><pre class="line-numbers language-none"><code class="language-none">id card 身份证
+语法格式：
+	1. id 不指定则默认当前用户
+	2. id 用户名 显示指定用户的基本信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="top指令-查看服务器进程占用的资源"><a href="#top指令-查看服务器进程占用的资源" class="headerlink" title="top指令(查看服务器进程占用的资源)"></a>top指令(查看服务器进程占用的资源)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">	进入命令 top 动态显示</span><br><span class="line">	退出命名 按下q键</span><br><span class="line">	</span><br><span class="line">表头含义:</span><br><span class="line">PID:进程id</span><br><span class="line">USER:该进程对于的用户</span><br><span class="line">PR:权重 优先级</span><br><span class="line">NI:用户进程空间内改变过CPU的百分比</span><br><span class="line">VIRT:虚拟内存</span><br><span class="line">RES:常驻内存 [用多少就是多少]</span><br><span class="line">SHR:共享内存</span><br><span class="line">	计算一个进程实际使用的内存 = 常驻内存(RES) -共享内存(SHR)</span><br><span class="line">S:表示进行的状态 其中S表示sleep而R表示running运行   |</span><br><span class="line">%CPU:表示CPU占用的百分比                         |</span><br><span class="line">%MEM:表示内存的占用百分比                         |</span><br><span class="line">TIME+:执行的时间</span><br><span class="line">COMMAND:进程的名称还有路径                       |</span><br><span class="line"></span><br><span class="line">方便快捷键：[在运行top的时候，可以按下方便的快捷键]</span><br><span class="line"></span><br><span class="line">M:将结果按照内存(MEN)从低到高进行降序排列</span><br><span class="line">P:表示将结果按照CPU使用率从高到低进行降序排列</span><br><span class="line">1:当服务器拥有多个cpu的时候可以使用“1”快捷键来切换是否展示显示各个cpu的详细信息</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="whoami-我是谁？显示当前登录的用户名"><a href="#whoami-我是谁？显示当前登录的用户名" class="headerlink" title="whoami(我是谁？显示当前登录的用户名)"></a>whoami(我是谁？显示当前登录的用户名)</h1><pre class="line-numbers language-none"><code class="language-none">whoami 返回root 一般用户shell脚本
+用于获取当前的操作用户的名字方便记录日志<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
+<h1 id="ps-ef指令-用于查看服务器的进程信息"><a href="#ps-ef指令-用于查看服务器的进程信息" class="headerlink" title="ps -ef指令(****)(用于查看服务器的进程信息)"></a>ps -ef指令(****)(用于查看服务器的进程信息)</h1><pre class="line-numbers language-none"><code class="language-none">选项含义
+ -e 等价于&quot;A&quot; 表示列出全部的进程
+ -f 显示全部的列| 全字段
+ 
+ 
+ UID:该进程执行的用户id
+ PID:进程id
+ PPID:该进程的父进程id 如果该ppid找不到那么该进程称之为僵尸进程
+ C:CPU的占用率 其形式是百分比
+ STIME:该进程的启动时间
+ TTY:终端设备，发起该进程的设备识别符号 如果显示?则表示该进程并不是由终端设备发起的
+ TIME:进程的执行时间
+ CMD:该进程的名称或者对应的路径
+ 
+ 多用来查看自己安装的资源
+ 100%使用的命令：ps -ef|grep xxx 在ps的结果中过滤出想要查看（xxx）的进程状态<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
-<h1 id="du-sh指令-查看目录的真实大小"><a href="#du-sh指令-查看目录的真实大小" class="headerlink" title="du -sh指令(查看目录的真实大小)"></a>du -sh指令(查看目录的真实大小)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">选项含义:</span><br><span class="line">	du -sh 路径</span><br><span class="line">	-s[summaries]:只显示汇总的大小</span><br><span class="line">	-h:表示以较高可读性的形式进行显示</span><br></pre></td></tr></table></figure>
 
+<h1 id="top指令-查看服务器进程占用的资源"><a href="#top指令-查看服务器进程占用的资源" class="headerlink" title="top指令(查看服务器进程占用的资源)"></a>top指令(查看服务器进程占用的资源)</h1><pre class="line-numbers language-none"><code class="language-none">语法：
+	进入命令 top 动态显示
+	退出命名 按下q键
+	
+表头含义:
+PID:进程id
+USER:该进程对于的用户
+PR:权重 优先级
+NI:用户进程空间内改变过CPU的百分比
+VIRT:虚拟内存
+RES:常驻内存 [用多少就是多少]
+SHR:共享内存
+	计算一个进程实际使用的内存 &#x3D; 常驻内存(RES) -共享内存(SHR)
+S:表示进行的状态 其中S表示sleep而R表示running运行   |
+%CPU:表示CPU占用的百分比                         |
+%MEM:表示内存的占用百分比                         |
+TIME+:执行的时间
+COMMAND:进程的名称还有路径                       |
 
+方便快捷键：[在运行top的时候，可以按下方便的快捷键]
 
-<h1 id="find指令-用户查找文件"><a href="#find指令-用户查找文件" class="headerlink" title="find指令(用户查找文件)"></a>find指令(用户查找文件)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">参数有55个</span><br><span class="line">语法格式：</span><br><span class="line">	find 路径范围 选项 选项的值</span><br><span class="line">	find /root -name linux*.txt</span><br><span class="line">	find /root -name &quot;Linux*.txt&quot;</span><br><span class="line">	find . -name &quot;*inux*.txt&quot;</span><br><span class="line"></span><br><span class="line">选项：</span><br><span class="line">	-name 按照文档名字进行搜索(支持模糊搜索) find /root -type f</span><br><span class="line">	-type 按照文档的类型进程搜索			find /root -type d</span><br><span class="line">		文档的类型：&quot;-&quot;表示文件[在使用find的时候需要用f来替换] &quot;d&quot;表示文件夹</span><br></pre></td></tr></table></figure>
+M:将结果按照内存(MEN)从低到高进行降序排列
+P:表示将结果按照CPU使用率从高到低进行降序排列
+1:当服务器拥有多个cpu的时候可以使用“1”快捷键来切换是否展示显示各个cpu的详细信息
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h1 id="service指令-控制一些软件的服务启动-停止-重启"><a href="#service指令-控制一些软件的服务启动-停止-重启" class="headerlink" title="service指令(控制一些软件的服务启动/停止/重启)"></a>service指令(控制一些软件的服务启动/停止/重启)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service 服务名 start/stop/restart</span><br><span class="line">service apache start</span><br></pre></td></tr></table></figure>
+<h1 id="du-sh指令-查看目录的真实大小"><a href="#du-sh指令-查看目录的真实大小" class="headerlink" title="du -sh指令(查看目录的真实大小)"></a>du -sh指令(查看目录的真实大小)</h1><pre class="line-numbers language-none"><code class="language-none">选项含义:
+	du -sh 路径
+	-s[summaries]:只显示汇总的大小
+	-h:表示以较高可读性的形式进行显示<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="kill指令"><a href="#kill指令" class="headerlink" title="kill指令"></a>kill指令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kill 进程PID 与ps -ef 一起结合用 找到进程PID</span><br><span class="line">Killall 进程名称</span><br><span class="line">	killall httpd 包括子进程</span><br></pre></td></tr></table></figure>
 
-<h1 id="reboot重启"><a href="#reboot重启" class="headerlink" title="reboot重启"></a>reboot重启</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">重启计算机</span><br><span class="line">reboot</span><br><span class="line">rewrite</span><br><span class="line">reset</span><br><span class="line">......</span><br><span class="line"></span><br><span class="line">2. reboot -w</span><br><span class="line">	模拟重启，但是不重启(开机关机日志)</span><br></pre></td></tr></table></figure>
 
-<h1 id="shutdown关机"><a href="#shutdown关机" class="headerlink" title="shutdown关机"></a>shutdown关机</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">关机 慎用</span><br><span class="line">语法：</span><br><span class="line">	1.立即关机 shutdown-h now &quot;关机提示&quot; 或者 shutdowun -h -t0[时间14:15]</span><br><span class="line">	shutdown -c 直接取消</span><br><span class="line">	2.其他关机命令</span><br><span class="line">		init0</span><br><span class="line">		halt</span><br><span class="line">		poweroff</span><br></pre></td></tr></table></figure>
+<h1 id="find指令-用户查找文件"><a href="#find指令-用户查找文件" class="headerlink" title="find指令(用户查找文件)"></a>find指令(用户查找文件)</h1><pre class="line-numbers language-none"><code class="language-none">参数有55个
+语法格式：
+	find 路径范围 选项 选项的值
+	find &#x2F;root -name linux*.txt
+	find &#x2F;root -name &quot;Linux*.txt&quot;
+	find . -name &quot;*inux*.txt&quot;
 
-<h1 id="uptime-输出计算机的在线时间-开机以来到现在的运行时间"><a href="#uptime-输出计算机的在线时间-开机以来到现在的运行时间" class="headerlink" title="uptime(输出计算机的在线时间 开机以来到现在的运行时间)"></a>uptime(输出计算机的在线时间 开机以来到现在的运行时间)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uptime 开机多久呢</span><br></pre></td></tr></table></figure>
+选项：
+	-name 按照文档名字进行搜索(支持模糊搜索) find &#x2F;root -type f
+	-type 按照文档的类型进程搜索			find &#x2F;root -type d
+		文档的类型：&quot;-&quot;表示文件[在使用find的时候需要用f来替换] &quot;d&quot;表示文件夹<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="uname-获取计算机操作系统的相关信息）"><a href="#uname-获取计算机操作系统的相关信息）" class="headerlink" title="uname(获取计算机操作系统的相关信息）"></a>uname(获取计算机操作系统的相关信息）</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">uname 获取操作系统的类型</span><br><span class="line">uname -a   all获取全部的系统信息（类型-全部主机名-内核版本-发布时间-开源计划）</span><br></pre></td></tr></table></figure>
 
-<h1 id="netstat-tnlp"><a href="#netstat-tnlp" class="headerlink" title="netstat -tnlp"></a>netstat -tnlp</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">参看网络的连接状态</span><br><span class="line">语法格式：</span><br><span class="line">	netstat -tnlp</span><br><span class="line"></span><br><span class="line">选项说明：</span><br><span class="line">	-t 表示只列出tcp协议的连接</span><br><span class="line">	-n 表示将地址从字母组合转化成ip地址 将协议转化成端口号来显示</span><br><span class="line">	-l 只显示”state“状态列中其值为LISTEN（监听）的连接</span><br><span class="line">	-p 表示显示对于连接的PID进程名称id</span><br></pre></td></tr></table></figure>
 
+<h1 id="service指令-控制一些软件的服务启动-停止-重启"><a href="#service指令-控制一些软件的服务启动-停止-重启" class="headerlink" title="service指令(控制一些软件的服务启动/停止/重启)"></a>service指令(控制一些软件的服务启动/停止/重启)</h1><pre class="line-numbers language-none"><code class="language-none">service 服务名 start&#x2F;stop&#x2F;restart
+service apache start<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
+<h1 id="kill指令"><a href="#kill指令" class="headerlink" title="kill指令"></a>kill指令</h1><pre class="line-numbers language-none"><code class="language-none">kill 进程PID 与ps -ef 一起结合用 找到进程PID
+Killall 进程名称
+	killall httpd 包括子进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="man-manual-手册（包含了LINUX全部命令的手机-英文的）"><a href="#man-manual-手册（包含了LINUX全部命令的手机-英文的）" class="headerlink" title="man(manual 手册（包含了LINUX全部命令的手机 英文的）)"></a>man(manual 手册（包含了LINUX全部命令的手机 英文的）)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man 命令    退出按下q</span><br></pre></td></tr></table></figure>
+<h1 id="reboot重启"><a href="#reboot重启" class="headerlink" title="reboot重启"></a>reboot重启</h1><pre class="line-numbers language-none"><code class="language-none">重启计算机
+reboot
+rewrite
+reset
+......
 
+2. reboot -w
+	模拟重启，但是不重启(开机关机日志)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h1 id="shutdown关机"><a href="#shutdown关机" class="headerlink" title="shutdown关机"></a>shutdown关机</h1><pre class="line-numbers language-none"><code class="language-none">关机 慎用
+语法：
+	1.立即关机 shutdown-h now &quot;关机提示&quot; 或者 shutdowun -h -t0[时间14:15]
+	shutdown -c 直接取消
+	2.其他关机命令
+		init0
+		halt
+		poweroff<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">练习题：</span><br><span class="line">1、如何在命令行中快速删除光标前/后的内容?</span><br><span class="line">前: ctrl+u ----- 后: ctrl+k</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rm -f A*</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="uptime-输出计算机的在线时间-开机以来到现在的运行时间"><a href="#uptime-输出计算机的在线时间-开机以来到现在的运行时间" class="headerlink" title="uptime(输出计算机的在线时间 开机以来到现在的运行时间)"></a>uptime(输出计算机的在线时间 开机以来到现在的运行时间)</h1><pre class="line-numbers language-none"><code class="language-none">uptime 开机多久呢<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<h1 id="uname-获取计算机操作系统的相关信息）"><a href="#uname-获取计算机操作系统的相关信息）" class="headerlink" title="uname(获取计算机操作系统的相关信息）"></a>uname(获取计算机操作系统的相关信息）</h1><pre class="line-numbers language-none"><code class="language-none">uname 获取操作系统的类型
+uname -a   all获取全部的系统信息（类型-全部主机名-内核版本-发布时间-开源计划）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
+<h1 id="netstat-tnlp"><a href="#netstat-tnlp" class="headerlink" title="netstat -tnlp"></a>netstat -tnlp</h1><pre class="line-numbers language-none"><code class="language-none">参看网络的连接状态
+语法格式：
+	netstat -tnlp
 
+选项说明：
+	-t 表示只列出tcp协议的连接
+	-n 表示将地址从字母组合转化成ip地址 将协议转化成端口号来显示
+	-l 只显示”state“状态列中其值为LISTEN（监听）的连接
+	-p 表示显示对于连接的PID进程名称id<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
+<h1 id="man-manual-手册（包含了LINUX全部命令的手机-英文的）"><a href="#man-manual-手册（包含了LINUX全部命令的手机-英文的）" class="headerlink" title="man(manual 手册（包含了LINUX全部命令的手机 英文的）)"></a>man(manual 手册（包含了LINUX全部命令的手机 英文的）)</h1><pre class="line-numbers language-none"><code class="language-none">man 命令    退出按下q<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
+<pre class="line-numbers language-none"><code class="language-none">练习题：
+1、如何在命令行中快速删除光标前&#x2F;后的内容?
+前: ctrl+u ----- 后: ctrl+k
 
 
+rm -f A*
 
 
 
 
 
 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 
-<h1 id="vim-vi-编辑器"><a href="#vim-vi-编辑器" class="headerlink" title="vim/vi(编辑器)"></a>vim/vi(编辑器)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Vi编辑器是所有Unix及Linux系统下标准的编辑器，类似于windows系统下的notepad(记事本)编辑器，由于在Unix及Linux系统的任何版本，Vi编辑器是完全相同的，因此可以在其他任何介绍vi的地方都能进一-步了解它,Vi也是Linux中最基本的文本编辑器,学会它后，我们将在Linux的世界里畅行无阻，尤其是在终端中。</span><br><span class="line">关于vim:</span><br><span class="line">    vi和vim都是Linux中的编辑器，不同的是，vim比较高级，可以视为vi的升	级本。vi使用于文本编辑，但是vim更适用于coding (写代码的。</span><br><span class="line">    Vim点是光标的移动，模式切换，删除，查找替换，复制，粘贴，撤销命令的使用。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="vim的三种模式：命令模式-编辑模式-输入模式-末行模式"><a href="#vim的三种模式：命令模式-编辑模式-输入模式-末行模式" class="headerlink" title="vim的三种模式：命令模式 编辑模式(输入模式) 末行模式"></a>vim的三种模式：命令模式 编辑模式(输入模式) 末行模式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">命令模式:在该模式下是不能对文件直接编辑，可以输入快捷键进行- -些操作(删除行，复制行，移动光标，粘贴等等)[打开文件之后默认进入的模式]</span><br><span class="line"></span><br><span class="line">编辑模式:在该模式下可以对文件的内容进行编辑</span><br><span class="line"></span><br><span class="line">末行模式:可以在末行输入命令来对文件进行操作(搜索、替换、保存、退出、撤销、高亮等等)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="vim打开文件的方式"><a href="#vim打开文件的方式" class="headerlink" title="vim打开文件的方式"></a>vim打开文件的方式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. vim 文件路径(文件名) ----&gt;打开指定的文件</span><br><span class="line">2. vim 数字 文件的路径 -----&gt;打开指定的文件并且将光标移动到指定行 不指定默认第一行</span><br><span class="line">3. vim +/关键词 文件的路径 ----&gt;打开指定的文件 并且高亮显示关键词</span><br><span class="line">4. vim 文件路径1 文件路径2 文件路径3 .... 同时打开多个文件</span><br></pre></td></tr></table></figure>
 
 
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">1. 命令模式 打开文件第一个看到的模式（打开文件即可进入）</span><br><span class="line">	1.光标的移动操作</span><br><span class="line">		1.光标移动到行首</span><br><span class="line">			按键：shift + 6或者  &#x27;^&#x27; (按下T上面的6 不是小键盘的)</span><br><span class="line">		2.光标移动到行尾</span><br><span class="line">			按键：shift + 4或者  &#x27;$&#x27; (按下R上面的4 不是小键盘)</span><br><span class="line">		3.光标移动到首行</span><br><span class="line">			按键：gg [goodgame]</span><br><span class="line">		4.光标移动到末行</span><br><span class="line">			按键：G</span><br><span class="line">		5.翻屏</span><br><span class="line">			1.向上翻盘</span><br><span class="line">				按键：ctrl + b[bofore] / PgUp</span><br><span class="line">			2.向下翻屏</span><br><span class="line">				按键：ctrl + f[final] /PgDn</span><br><span class="line">				</span><br><span class="line">	2.复制操作配合粘贴一起用</span><br><span class="line">		1.复制光标所在行</span><br><span class="line">			按键：yy</span><br><span class="line">		2.粘贴</span><br><span class="line">			想要粘贴的地方按下：p</span><br><span class="line">		3.以光标所在行为准(包括所在行)，向下复制指定的行数</span><br><span class="line">			按键：数字yy</span><br><span class="line">		4.可视化复制</span><br><span class="line">			按键：ctrl + v 按下↑↓←→来选中需要复制的区块按下yy复制然后p</span><br><span class="line">	3.剪切/删除</span><br><span class="line">		1.剪切/删除光标所在行</span><br><span class="line">			按键：dd  删除之后下一行上移 严格意义上是剪切命令 如果剪切了不粘贴就是删除效果</span><br><span class="line">		2.剪切/删除光标所在行为准(包括当前行)，向下删除/剪切指定的行</span><br><span class="line">			按键：数字dd</span><br><span class="line">		3.剪切/删除光标所在的当前行，但是删除之后下一行不上移</span><br><span class="line">			按键：D 当前行变成空白行</span><br><span class="line">	4.撤销或者恢复</span><br><span class="line">		1.撤销/回复</span><br><span class="line">			输入 ---&gt; :u[不属于命令模式了] 或者u undo</span><br><span class="line">		2.回复</span><br><span class="line">			按键：ctrl + r [取消之前的撤销工作]</span><br><span class="line">扩展1：光标的快速移动</span><br><span class="line">	1.快速将光标移动到指定的行数</span><br><span class="line">		按键：数字G</span><br><span class="line">	2.以当前的光标为准向上或者向下移动n行</span><br><span class="line">		按键：数字↑ /数字↓</span><br><span class="line">	3.以当前光标为准向左右移动n个字符</span><br><span class="line">		按键：数字← /数字→</span><br><span class="line">	4.末行模式下的快速移动方式：移动到指定的行</span><br><span class="line">		按键：输入英文的:数字</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2.模式间的切换</span><br><span class="line">	命令模式下切换到末行模式英文下的:</span><br><span class="line">	如果想要退出按 1次esc</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="vim-vi-编辑器"><a href="#vim-vi-编辑器" class="headerlink" title="vim/vi(编辑器)"></a>vim/vi(编辑器)</h1><pre class="line-numbers language-none"><code class="language-none">Vi编辑器是所有Unix及Linux系统下标准的编辑器，类似于windows系统下的notepad(记事本)编辑器，由于在Unix及Linux系统的任何版本，Vi编辑器是完全相同的，因此可以在其他任何介绍vi的地方都能进一-步了解它,Vi也是Linux中最基本的文本编辑器,学会它后，我们将在Linux的世界里畅行无阻，尤其是在终端中。
+关于vim:
+    vi和vim都是Linux中的编辑器，不同的是，vim比较高级，可以视为vi的升	级本。vi使用于文本编辑，但是vim更适用于coding (写代码的。
+    Vim点是光标的移动，模式切换，删除，查找替换，复制，粘贴，撤销命令的使用。
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="vim的三种模式：命令模式-编辑模式-输入模式-末行模式"><a href="#vim的三种模式：命令模式-编辑模式-输入模式-末行模式" class="headerlink" title="vim的三种模式：命令模式 编辑模式(输入模式) 末行模式"></a>vim的三种模式：命令模式 编辑模式(输入模式) 末行模式</h2><pre class="line-numbers language-none"><code class="language-none">命令模式:在该模式下是不能对文件直接编辑，可以输入快捷键进行- -些操作(删除行，复制行，移动光标，粘贴等等)[打开文件之后默认进入的模式]
+
+编辑模式:在该模式下可以对文件的内容进行编辑
+
+末行模式:可以在末行输入命令来对文件进行操作(搜索、替换、保存、退出、撤销、高亮等等)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="vim打开文件的方式"><a href="#vim打开文件的方式" class="headerlink" title="vim打开文件的方式"></a>vim打开文件的方式</h2><pre class="line-numbers language-none"><code class="language-none">1. vim 文件路径(文件名) ----&gt;打开指定的文件
+2. vim 数字 文件的路径 -----&gt;打开指定的文件并且将光标移动到指定行 不指定默认第一行
+3. vim +&#x2F;关键词 文件的路径 ----&gt;打开指定的文件 并且高亮显示关键词
+4. vim 文件路径1 文件路径2 文件路径3 .... 同时打开多个文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-none"><code class="language-none">1. 命令模式 打开文件第一个看到的模式（打开文件即可进入）
+	1.光标的移动操作
+		1.光标移动到行首
+			按键：shift + 6或者  &#39;^&#39; (按下T上面的6 不是小键盘的)
+		2.光标移动到行尾
+			按键：shift + 4或者  &#39;$&#39; (按下R上面的4 不是小键盘)
+		3.光标移动到首行
+			按键：gg [goodgame]
+		4.光标移动到末行
+			按键：G
+		5.翻屏
+			1.向上翻盘
+				按键：ctrl + b[bofore] &#x2F; PgUp
+			2.向下翻屏
+				按键：ctrl + f[final] &#x2F;PgDn
+				
+	2.复制操作配合粘贴一起用
+		1.复制光标所在行
+			按键：yy
+		2.粘贴
+			想要粘贴的地方按下：p
+		3.以光标所在行为准(包括所在行)，向下复制指定的行数
+			按键：数字yy
+		4.可视化复制
+			按键：ctrl + v 按下↑↓←→来选中需要复制的区块按下yy复制然后p
+	3.剪切&#x2F;删除
+		1.剪切&#x2F;删除光标所在行
+			按键：dd  删除之后下一行上移 严格意义上是剪切命令 如果剪切了不粘贴就是删除效果
+		2.剪切&#x2F;删除光标所在行为准(包括当前行)，向下删除&#x2F;剪切指定的行
+			按键：数字dd
+		3.剪切&#x2F;删除光标所在的当前行，但是删除之后下一行不上移
+			按键：D 当前行变成空白行
+	4.撤销或者恢复
+		1.撤销&#x2F;回复
+			输入 ---&gt; :u[不属于命令模式了] 或者u undo
+		2.回复
+			按键：ctrl + r [取消之前的撤销工作]
+扩展1：光标的快速移动
+	1.快速将光标移动到指定的行数
+		按键：数字G
+	2.以当前的光标为准向上或者向下移动n行
+		按键：数字↑ &#x2F;数字↓
+	3.以当前光标为准向左右移动n个字符
+		按键：数字← &#x2F;数字→
+	4.末行模式下的快速移动方式：移动到指定的行
+		按键：输入英文的:数字
+
+
+2.模式间的切换
+	命令模式下切换到末行模式英文下的:
+	如果想要退出按 1次esc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
