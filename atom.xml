@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SC&#39;s 神奇的JavaWeb</title>
+  
+  <subtitle>Perseverance And Patience</subtitle>
+  <link href="http://shicheng.cool/atom.xml" rel="self"/>
+  
+  <link href="http://shicheng.cool/"/>
+  <updated>2022-03-30T08:06:40.972Z</updated>
+  <id>http://shicheng.cool/</id>
+  
+  <author>
+    <name>SC</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringMVC</title>
+    <link href="http://shicheng.cool/2022/03/30/SpringMVC%E7%AC%94%E8%AE%B0/"/>
+    <id>http://shicheng.cool/2022/03/30/SpringMVC%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-03-29T16:00:00.000Z</published>
+    <updated>2022-03-30T08:06:40.972Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、SpringMVC简介&quot;&gt;&lt;a href=&quot;#一、SpringMVC简介&quot; class=&quot;headerlink&quot; title=&quot;一、SpringMVC简介&quot;&gt;&lt;/a&gt;一、SpringMVC简介&lt;/h1&gt;&lt;h3 id=&quot;1、什么是MVC&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="-SSM" scheme="http://shicheng.cool/categories/SSM/"/>
+    
+    
+    <category term="SpringMVC" scheme="http://shicheng.cool/tags/SpringMVC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java程序设计模式第六章</title>
+    <link href="http://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day06/"/>
+    <id>http://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day06/</id>
+    <published>2022-03-24T12:27:53.580Z</published>
+    <updated>2022-03-30T07:59:17.851Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;6，行为型模式&quot;&gt;&lt;a href=&quot;#6，行为型模式&quot; class=&quot;headerlink&quot; title=&quot;6，行为型模式&quot;&gt;&lt;/a&gt;6，行为型模式&lt;/h1&gt;&lt;h2 id=&quot;6-11-解释器模式&quot;&gt;&lt;a href=&quot;#6-11-解释器模式&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-Java程序模式设计" scheme="http://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="Java程序模式设计" scheme="http://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java程序设计模式第三章</title>
+    <link href="http://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/"/>
+    <id>http://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/</id>
+    <published>2022-03-23T16:00:00.000Z</published>
+    <updated>2022-03-30T07:59:00.221Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;5，结构型模式&quot;&gt;&lt;a href=&quot;#5，结构型模式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-Java程序模式设计" scheme="http://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="Java程序模式设计" scheme="http://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java程序设计模式第五章</title>
+    <link href="http://shicheng.cool/2022/03/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day05/"/>
+    <id>http://shicheng.cool/2022/03/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day05/</id>
+    <published>2022-03-18T16:00:00.000Z</published>
+    <updated>2022-03-30T07:59:12.227Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;6，行为型模式&quot;&gt;&lt;a href=&quot;#6，行为型模式&quot; class=&quot;headerlink&quot; title=&quot;6，行为型模式&quot;&gt;&lt;/a&gt;6，行为型模式&lt;/h1&gt;&lt;h2 id=&quot;6-5-状态模式&quot;&gt;&lt;a href=&quot;#6-5-状态模式&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-Java程序模式设计" scheme="http://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="Java程序模式设计" scheme="http://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java程序设计模式第二章</title>
+    <link href="http://shicheng.cool/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/"/>
+    <id>http://shicheng.cool/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/</id>
+    <published>2022-03-10T16:00:00.000Z</published>
+    <updated>2022-03-30T07:58:50.992Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;4，创建型模式&quot;&gt;&lt;a href=&quot;#4，创建型模式&quot; class=&quot;headerlink&quot; title=&quot;4，创建型模式&quot;&gt;&lt;/a&gt;4，创建型模式&lt;/h1&gt;&lt;h2 id=&quot;4-2-工厂模式&quot;&gt;&lt;a href=&quot;#4-2-工厂模式&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-Java程序模式设计" scheme="http://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="Java程序模式设计" scheme="http://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java程序设计模式第一章</title>
+    <link href="http://shicheng.cool/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/"/>
+    <id>http://shicheng.cool/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/</id>
+    <published>2022-03-08T16:00:00.000Z</published>
+    <updated>2022-03-30T07:59:23.603Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1，设计模式概述&quot;&gt;&lt;a href=&quot;#1，设计模式概述&quot; class=&quot;headerlink&quot; title=&quot;1，设计模式概述&quot;&gt;&lt;/a&gt;1，设计模式概述&lt;/h1&gt;&lt;h2 id=&quot;1-1-软件设计模式的产生背景&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="-Java程序模式设计" scheme="http://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="Java程序模式设计" scheme="http://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如果有什么问题请加我微信，(●&#39;◡&#39;●)</title>
+    <link href="http://shicheng.cool/2022/03/01/Weixin/"/>
+    <id>http://shicheng.cool/2022/03/01/Weixin/</id>
+    <published>2022-03-01T00:33:57.917Z</published>
+    <updated>2022-03-01T00:45:16.025Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;Email:1041151583@qq.com
+vx:
+注意：添加好友时请备注来历
+&lt;span aria-hidden=&quot;true&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-我的联系方式(●&#39;◡&#39;●)" scheme="http://shicheng.cool/categories/%E6%88%91%E7%9A%84%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F-%E2%97%8F-%E2%97%A1-%E2%97%8F/"/>
+    
+    
+    <category term="关于-我的联系方式" scheme="http://shicheng.cool/tags/%E5%85%B3%E4%BA%8E-%E6%88%91%E7%9A%84%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Request和Response</title>
+    <link href="http://shicheng.cool/2022/03/01/Request&amp;Response/"/>
+    <id>http://shicheng.cool/2022/03/01/Request&amp;Response/</id>
+    <published>2022-03-01T00:33:57.895Z</published>
+    <updated>2022-01-27T12:39:47.220Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;今日目标&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;掌握Request对象的概念与使用&lt;/li&gt;
+&lt;li&gt;掌握Response对象的概念与使用&lt;/li&gt;
+&lt;li&gt;能够完成用户登录注册案例的实现&lt;/li&gt;
+&lt;li&gt;能够完成SqlSe</summary>
+        
+      
+    
+    
+    
+    <category term="-JRequest和Response" scheme="http://shicheng.cool/categories/JRequest%E5%92%8CResponse/"/>
+    
+    
+    <category term="-Request和Response" scheme="http://shicheng.cool/tags/Request%E5%92%8CResponse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql基础</title>
+    <link href="http://shicheng.cool/2022/03/01/mysql%E5%9F%BA%E7%A1%80/"/>
+    <id>http://shicheng.cool/2022/03/01/mysql%E5%9F%BA%E7%A1%80/</id>
+    <published>2022-03-01T00:33:57.872Z</published>
+    <updated>2021-12-23T10:33:43.503Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;MySQL基础&quot;&gt;&lt;a href=&quot;#MySQL基础&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-Mysql基础" scheme="http://shicheng.cool/categories/Mysql%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="-Mysql基础" scheme="http://shicheng.cool/tags/Mysql%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql的使用</title>
+    <link href="http://shicheng.cool/2022/03/01/mysql%E9%AB%98%E7%BA%A7/"/>
+    <id>http://shicheng.cool/2022/03/01/mysql%E9%AB%98%E7%BA%A7/</id>
+    <published>2022-03-01T00:33:57.855Z</published>
+    <updated>2021-12-23T10:33:36.509Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;mysql高级&quot;&gt;&lt;a href=&quot;#mysql高级&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-Mysql高级" scheme="http://shicheng.cool/categories/Mysql%E9%AB%98%E7%BA%A7/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql的安装与卸载</title>
+    <link href="http://shicheng.cool/2022/03/01/MySQL%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/"/>
+    <id>http://shicheng.cool/2022/03/01/MySQL%E5%AE%89%E8%A3%85%E6%96%87%E6%A1%A3/</id>
+    <published>2022-03-01T00:33:57.832Z</published>
+    <updated>2021-12-23T10:33:21.403Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;安装环境:Win10 64位&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;软件版本:MySQL 5.7.24 解压版&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;一、下载&quot;&gt;&lt;a href=&quot;#一、下载&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-Mysql的安装与卸载" scheme="http://shicheng.cool/categories/Mysql%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis</title>
+    <link href="http://shicheng.cool/2022/03/01/Mybatis/"/>
+    <id>http://shicheng.cool/2022/03/01/Mybatis/</id>
+    <published>2022-03-01T00:33:57.816Z</published>
+    <updated>2022-03-30T08:06:55.612Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Mybatis练习&quot;&gt;&lt;a href=&quot;#Mybatis练习&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-SSM" scheme="http://shicheng.cool/categories/SSM/"/>
+    
+    
+    <category term="Mybatis" scheme="http://shicheng.cool/tags/Mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用Linux操作命令</title>
+    <link href="http://shicheng.cool/2022/03/01/Linux/"/>
+    <id>http://shicheng.cool/2022/03/01/Linux/</id>
+    <published>2022-03-01T00:33:57.785Z</published>
+    <updated>2021-12-23T10:33:04.927Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;操作系统的常用指令&quot;&gt;&lt;a href=&quot;#操作系统的常用指令&quot; class=&quot;headerlink&quot; title=&quot;操作系统的常用指令:&quot;&gt;&lt;/a&gt;&lt;strong&gt;操作系统的常用指令:&lt;/strong&gt;&lt;/h1&gt;&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="-linux操作命令" scheme="http://shicheng.cool/categories/linux%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JDBC基础</title>
+    <link href="http://shicheng.cool/2022/03/01/JDBC/"/>
+    <id>http://shicheng.cool/2022/03/01/JDBC/</id>
+    <published>2022-03-01T00:33:57.765Z</published>
+    <updated>2021-12-23T10:32:50.712Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;JDBC&quot;&gt;&lt;a href=&quot;#JDBC&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-JDBC基础" scheme="http://shicheng.cool/categories/JDBC%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="-JDBC基础" scheme="http://shicheng.cool/tags/JDBC%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>This Is Html and CSS</title>
+    <link href="http://shicheng.cool/2022/03/01/JavaWeb/"/>
+    <id>http://shicheng.cool/2022/03/01/JavaWeb/</id>
+    <published>2022-03-01T00:33:57.753Z</published>
+    <updated>2021-12-12T05:47:07.765Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hello-JavaWeb&quot;&gt;&lt;a href=&quot;#Hello-JavaWeb&quot; class=&quot;headerlink&quot; title=&quot;Hello JavaWeb&quot;&gt;&lt;/a&gt;Hello JavaWeb&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://shicheng.cool/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript</title>
+    <link href="http://shicheng.cool/2022/03/01/JavaScript/"/>
+    <id>http://shicheng.cool/2022/03/01/JavaScript/</id>
+    <published>2022-03-01T00:33:57.749Z</published>
+    <updated>2022-03-31T06:38:25.696Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://shicheng.cool/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP&amp;Tomcat&amp;Servlet</title>
+    <link href="http://shicheng.cool/2022/03/01/HTTP&amp;Tomcat&amp;Servlet/"/>
+    <id>http://shicheng.cool/2022/03/01/HTTP&amp;Tomcat&amp;Servlet/</id>
+    <published>2022-03-01T00:33:57.708Z</published>
+    <updated>2022-03-31T06:36:38.397Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;HTTP-amp-Tomcat-amp-Servlet&quot;&gt;&lt;a href=&quot;#HTTP-amp-Tomcat-amp-Servlet&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="http://shicheng.cool/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML&amp;CSS</title>
+    <link href="http://shicheng.cool/2022/03/01/HTML&amp;CSS/"/>
+    <id>http://shicheng.cool/2022/03/01/HTML&amp;CSS/</id>
+    <published>2022-03-01T00:33:57.686Z</published>
+    <updated>2022-03-31T06:34:53.166Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;HTML-amp-CSS&quot;&gt;&lt;a href=&quot;#HTML-amp-CSS&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://shicheng.cool/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VUE&amp;Element</title>
+    <link href="http://shicheng.cool/2022/01/19/VUE&amp;Element&amp;%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/"/>
+    <id>http://shicheng.cool/2022/01/19/VUE&amp;Element&amp;%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/</id>
+    <published>2022-01-18T16:00:00.000Z</published>
+    <updated>2022-04-01T10:10:42.832Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;VUE-amp-Element&quot;&gt;&lt;a href=&quot;#VUE-amp-Element&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-VUE&amp;Element" scheme="http://shicheng.cool/categories/VUE-Element/"/>
+    
+    
+    <category term="VUE&amp;Element" scheme="http://shicheng.cool/tags/VUE-Element/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Maven&amp;MyBatis</title>
+    <link href="http://shicheng.cool/2021/12/19/Maven&amp;MyBatis/"/>
+    <id>http://shicheng.cool/2021/12/19/Maven&amp;MyBatis/</id>
+    <published>2021-12-18T16:00:00.000Z</published>
+    <updated>2022-03-30T08:06:51.228Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Maven-amp-MyBatis&quot;&gt;&lt;a href=&quot;#Maven-amp-MyBatis&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-SSM" scheme="http://shicheng.cool/categories/SSM/"/>
+    
+    
+    <category term="Maven&amp;MyBatis的使用" scheme="http://shicheng.cool/tags/Maven-MyBatis%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+</feed>
