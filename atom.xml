@@ -6,7 +6,7 @@
   <link href="https://shicheng.cool/atom.xml" rel="self"/>
   
   <link href="https://shicheng.cool/"/>
-  <updated>2022-04-10T02:13:28.487Z</updated>
+  <updated>2022-04-10T12:37:51.743Z</updated>
   <id>https://shicheng.cool/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>双链表表的基本操作</title>
+    <link href="https://shicheng.cool/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8F%8C%E9%93%BE%E8%A1%A8/"/>
+    <id>https://shicheng.cool/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8F%8C%E9%93%BE%E8%A1%A8/</id>
+    <published>2022-04-09T16:00:00.000Z</published>
+    <updated>2022-04-10T12:37:51.743Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-双链表&quot;&gt;&lt;a href=&quot;#1-双链表&quot; class=&quot;headerlink&quot; title=&quot;1.双链表&quot;&gt;&lt;/a&gt;1.双链表&lt;/h1&gt;&lt;h2 id=&quot;1-1双链表的定义&quot;&gt;&lt;a href=&quot;#1-1双链表的定义&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Data_Structure" scheme="https://shicheng.cool/categories/Data-Structure/"/>
+    
+    
+    <category term="Data_Structure" scheme="https://shicheng.cool/tags/Data-Structure/"/>
+    
+  </entry>
   
   <entry>
     <title>单链表的基本操作</title>
@@ -489,31 +514,6 @@
     
     
     <category term="前端" scheme="https://shicheng.cool/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Maven&amp;MyBatis</title>
-    <link href="https://shicheng.cool/2021/12/19/Maven&amp;MyBatis/"/>
-    <id>https://shicheng.cool/2021/12/19/Maven&amp;MyBatis/</id>
-    <published>2021-12-18T16:00:00.000Z</published>
-    <updated>2022-04-09T13:25:27.153Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Maven-amp-MyBatis&quot;&gt;&lt;a href=&quot;#Maven-amp-MyBatis&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="-SSM" scheme="https://shicheng.cool/categories/SSM/"/>
-    
-    
-    <category term="-SSM" scheme="https://shicheng.cool/tags/SSM/"/>
     
   </entry>
   
