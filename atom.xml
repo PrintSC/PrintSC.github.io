@@ -6,7 +6,7 @@
   <link href="https://shicheng.cool/atom.xml" rel="self"/>
   
   <link href="https://shicheng.cool/"/>
-  <updated>2022-04-09T13:13:59.364Z</updated>
+  <updated>2022-04-10T02:13:28.487Z</updated>
   <id>https://shicheng.cool/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://shicheng.cool/2022/04/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
     <id>https://shicheng.cool/2022/04/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8D%95%E9%93%BE%E8%A1%A8/</id>
     <published>2022-04-08T16:00:00.000Z</published>
-    <updated>2022-04-09T13:13:59.364Z</updated>
+    <updated>2022-04-10T02:13:28.487Z</updated>
     
     
       
@@ -34,7 +34,7 @@
     
     
     
-    <category term="_Data_Structure" scheme="https://shicheng.cool/categories/Data-Structure/"/>
+    <category term="Data_Structure" scheme="https://shicheng.cool/categories/Data-Structure/"/>
     
     
     <category term="Data_Structure" scheme="https://shicheng.cool/tags/Data-Structure/"/>
@@ -71,7 +71,7 @@
     <link href="https://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day06/"/>
     <id>https://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day06/</id>
     <published>2022-03-24T12:27:53.580Z</published>
-    <updated>2022-03-30T07:59:17.851Z</updated>
+    <updated>2022-04-10T02:13:20.492Z</updated>
     
     
       
@@ -84,7 +84,7 @@
     
     
     
-    <category term="-Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    <category term="Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
     
     
     <category term="Java程序模式设计" scheme="https://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
@@ -96,7 +96,7 @@
     <link href="https://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/"/>
     <id>https://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/</id>
     <published>2022-03-23T16:00:00.000Z</published>
-    <updated>2022-03-30T07:59:00.221Z</updated>
+    <updated>2022-04-10T02:13:05.737Z</updated>
     
     
       
@@ -109,7 +109,7 @@
     
     
     
-    <category term="-Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    <category term="Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
     
     
     <category term="Java程序模式设计" scheme="https://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
@@ -121,7 +121,7 @@
     <link href="https://shicheng.cool/2022/03/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day04/"/>
     <id>https://shicheng.cool/2022/03/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day04/</id>
     <published>2022-03-18T16:00:00.000Z</published>
-    <updated>2022-04-09T13:34:12.014Z</updated>
+    <updated>2022-04-10T02:12:43.635Z</updated>
     
     
       
@@ -134,7 +134,7 @@
     
     
     
-    <category term="-Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    <category term="Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
     
     
     <category term="Java程序模式设计" scheme="https://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
@@ -146,7 +146,7 @@
     <link href="https://shicheng.cool/2022/03/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day05/"/>
     <id>https://shicheng.cool/2022/03/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day05/</id>
     <published>2022-03-18T16:00:00.000Z</published>
-    <updated>2022-03-30T07:59:12.227Z</updated>
+    <updated>2022-04-10T02:13:12.875Z</updated>
     
     
       
@@ -159,7 +159,7 @@
     
     
     
-    <category term="-Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    <category term="Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
     
     
     <category term="Java程序模式设计" scheme="https://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
@@ -171,7 +171,7 @@
     <link href="https://shicheng.cool/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/"/>
     <id>https://shicheng.cool/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/</id>
     <published>2022-03-10T16:00:00.000Z</published>
-    <updated>2022-03-30T07:58:50.992Z</updated>
+    <updated>2022-04-10T02:12:55.035Z</updated>
     
     
       
@@ -184,7 +184,7 @@
     
     
     
-    <category term="-Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+    <category term="Java程序模式设计" scheme="https://shicheng.cool/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
     
     
     <category term="Java程序模式设计" scheme="https://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
@@ -213,34 +213,6 @@
     
     
     <category term="Java程序模式设计" scheme="https://shicheng.cool/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如果有什么问题请加我微信，(●&#39;◡&#39;●)</title>
-    <link href="https://shicheng.cool/2022/03/01/Weixin/"/>
-    <id>https://shicheng.cool/2022/03/01/Weixin/</id>
-    <published>2022-03-01T00:33:57.917Z</published>
-    <updated>2022-03-01T00:45:16.025Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;Email:1041151583@qq.com
-vx:
-注意：添加好友时请备注来历
-&lt;span aria-hidden=&quot;true&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="-我的联系方式(●&#39;◡&#39;●)" scheme="https://shicheng.cool/categories/%E6%88%91%E7%9A%84%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F-%E2%97%8F-%E2%97%A1-%E2%97%8F/"/>
-    
-    
-    <category term="关于-我的联系方式" scheme="https://shicheng.cool/tags/%E5%85%B3%E4%BA%8E-%E6%88%91%E7%9A%84%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F/"/>
     
   </entry>
   
@@ -305,7 +277,7 @@ vx:
     <link href="https://shicheng.cool/2022/03/01/mysql%E9%AB%98%E7%BA%A7/"/>
     <id>https://shicheng.cool/2022/03/01/mysql%E9%AB%98%E7%BA%A7/</id>
     <published>2022-03-01T00:33:57.855Z</published>
-    <updated>2022-04-09T13:27:50.192Z</updated>
+    <updated>2022-04-10T02:12:06.684Z</updated>
     
     
       
@@ -358,7 +330,7 @@ vx:
     <link href="https://shicheng.cool/2022/03/01/Mybatis/"/>
     <id>https://shicheng.cool/2022/03/01/Mybatis/</id>
     <published>2022-03-01T00:33:57.816Z</published>
-    <updated>2022-04-09T13:26:26.522Z</updated>
+    <updated>2022-04-10T02:11:10.029Z</updated>
     
     
       
@@ -406,7 +378,7 @@ vx:
     <link href="https://shicheng.cool/2022/03/01/JDBC/"/>
     <id>https://shicheng.cool/2022/03/01/JDBC/</id>
     <published>2022-03-01T00:33:57.765Z</published>
-    <updated>2022-04-09T13:23:37.452Z</updated>
+    <updated>2022-04-10T02:10:38.001Z</updated>
     
     
       
@@ -421,6 +393,8 @@ vx:
     
     <category term="后端" scheme="https://shicheng.cool/categories/%E5%90%8E%E7%AB%AF/"/>
     
+    
+    <category term="后端" scheme="https://shicheng.cool/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -515,6 +489,31 @@ vx:
     
     
     <category term="前端" scheme="https://shicheng.cool/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Maven&amp;MyBatis</title>
+    <link href="https://shicheng.cool/2021/12/19/Maven&amp;MyBatis/"/>
+    <id>https://shicheng.cool/2021/12/19/Maven&amp;MyBatis/</id>
+    <published>2021-12-18T16:00:00.000Z</published>
+    <updated>2022-04-09T13:25:27.153Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Maven-amp-MyBatis&quot;&gt;&lt;a href=&quot;#Maven-amp-MyBatis&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-SSM" scheme="https://shicheng.cool/categories/SSM/"/>
+    
+    
+    <category term="-SSM" scheme="https://shicheng.cool/tags/SSM/"/>
     
   </entry>
   
