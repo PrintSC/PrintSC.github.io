@@ -396,14 +396,14 @@ typedef int ElemType;
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-10
+                    2022-04-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-11
+                    2022-04-13
                 </div>
                 
 
@@ -478,9 +478,9 @@ bool Push(SqStack &amp;S,ElemType x)&#123;
         [4][]
         [3][]
         [2][]
-        [1][]	我们在第0各位插入数据首先得让指针指向0对吧 所以上面的操作指针先+1 
-        [0][]	然后再赋值并且此时的指针指向的是0，如果不加入其他的元素此时指向的是di	
-        -1		开的top指向-1对吧
+        [1][]	我们在第0各位插入数据首先得让指针指向0对吧 所以上面的操作使得指针先+1 
+        [0][]	然后再赋值并且此时的指针指向的是0。	
+        -1		开始的top指向-1对吧
         <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="出栈操作"><a href="#出栈操作" class="headerlink" title="出栈操作"></a>出栈操作</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">bool Pop(SqStack &amp;S,ElemType &amp;x)&#123;
@@ -499,7 +499,7 @@ bool Push(SqStack &amp;S,ElemType x)&#123;
         [4][]		注意我们删除的时候只能删除栈顶元素，此时我们都
         [3][]		知道现在top指向的是栈顶元素，那么我们就在这个时候
         [2][]		取出栈顶元素的值，赋给x，此时这个节点就值了
-        [1][]	 	那么指针指向的4也要减一了
+        [1][]	 	那么指针指向的值4也要减一了
         [0][]	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="读取栈顶元素"><a href="#读取栈顶元素" class="headerlink" title="读取栈顶元素"></a>读取栈顶元素</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;读取栈顶元素
@@ -564,11 +564,11 @@ bool GetTop(SqStack S,ElemType &amp;x)&#123;
 &#125;
 int main()&#123;
     SqStack s;							    &#x2F;&#x2F;声明一个顺序栈
-    InitStack(s);						&#x2F;&#x2F;初始化一个顺序栈
+    InitStack(s);							&#x2F;&#x2F;初始化一个顺序栈
     ElemType x ;
     for(int i&#x3D;1;i&lt;&#x3D;5;i++)
     &#123;
-        Push(s,i);						&#x2F;&#x2F;入栈
+        Push(s,i);							&#x2F;&#x2F;入栈
         cout&lt;&lt;&quot;栈加入元素:&quot;&lt;&lt;i&lt;&lt;endl;
     &#125;
     PrintSqStack(s);
@@ -643,7 +643,7 @@ void InitStack(SqStack &amp;S)&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E6%A0%88/">https://shicheng.cool/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E6%A0%88/</a>
+                    <a href="https://shicheng.cool/2022/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E6%A0%88/">https://shicheng.cool/2022/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E6%A0%88/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -993,17 +993,18 @@ void InitStack(SqStack &amp;S)&#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8F%8C%E9%93%BE%E8%A1%A8/">
+                <a href="/2022/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E6%A0%88/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="双链表表的基本操作">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="栈的基本操作">
                         
-                        <span class="card-title">双链表表的基本操作</span>
+                        <span class="card-title">栈的基本操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1013,9 +1014,9 @@ void InitStack(SqStack &amp;S)&#123;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1028,6 +1029,7 @@ void InitStack(SqStack &amp;S)&#123;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1046,13 +1048,13 @@ void InitStack(SqStack &amp;S)&#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8D%95%E9%93%BE%E8%A1%A8/">
+                <a href="/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8F%8C%E9%93%BE%E8%A1%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="单链表的基本操作">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="双链表表的基本操作">
                         
-                        <span class="card-title">单链表的基本操作</span>
+                        <span class="card-title">双链表表的基本操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1063,7 +1065,7 @@ void InitStack(SqStack &amp;S)&#123;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-10
                             </span>
                         <span class="publish-author">
                             
