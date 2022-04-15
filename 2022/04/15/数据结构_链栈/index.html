@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="栈的基本操作, SC&#39;s 神奇的JavaWeb">
-    <meta name="description" content="栈的定义：#include &amp;quot;iostream&amp;quot;
+    <meta name="keywords" content="链队的基本操作, SC&#39;s 神奇的JavaWeb">
+    <meta name="description" content="链队的基本操作声明链队#include &amp;quot;iostream&amp;quot;
 using namespace std;
+&amp;#x2F;&amp;#x2F;声明
 typedef int ElemType;
-#define Maxsize 10              &amp;#x2F;&amp;#x2">
+typedef struct LinkNo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +21,7 @@ typedef int ElemType;
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>栈的基本操作 | SC&#39;s 神奇的JavaWeb</title>
+    <title>链队的基本操作 | SC&#39;s 神奇的JavaWeb</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -250,12 +251,12 @@ typedef int ElemType;
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">栈的基本操作</h1>
+                    <h1 class="description center-align post-title">链队的基本操作</h1>
                 </div>
             </div>
         </div>
@@ -396,14 +397,14 @@ typedef int ElemType;
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-12
+                    2022-04-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-13
+                    2022-04-15
                 </div>
                 
 
@@ -445,177 +446,175 @@ typedef int ElemType;
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="栈的定义："><a href="#栈的定义：" class="headerlink" title="栈的定义："></a>栈的定义：</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &quot;iostream&quot;
+                <h1 id="链队的基本操作"><a href="#链队的基本操作" class="headerlink" title="链队的基本操作"></a>链队的基本操作</h1><h2 id="声明链队"><a href="#声明链队" class="headerlink" title="声明链队"></a>声明链队</h2><pre class="line-numbers language-none"><code class="language-none">#include &quot;iostream&quot;
 using namespace std;
+&#x2F;&#x2F;声明
 typedef int ElemType;
-#define Maxsize 10              &#x2F;&#x2F;定义栈的最大个数
-typedef struct &#123;
-    ElemType data[Maxsize];     &#x2F;&#x2F;静态数组存放中元素
-    int top;                    &#x2F;&#x2F;栈顶指针
-&#125;SqStack;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+typedef struct LinkNode&#123;        &#x2F;&#x2F;链式队列节点
+    ElemType data;
+    struct LinkNode *next;
+&#125;LinkNode;
+typedef struct &#123;                &#x2F;&#x2F;链式队列
+    LinkNode *front,*rear;      &#x2F;&#x2F;队列的队头front和队尾rear
+&#125;LinkQueue;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="初始化栈"><a href="#初始化栈" class="headerlink" title="初始化栈"></a>初始化栈</h2><pre class="line-numbers language-cc" data-language="cc"><code class="language-cc">&#x2F;&#x2F;初始化栈顶指针
-void InitStack(SqStack &amp;S)&#123;
-    S.top &#x3D; -1;
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;初始化队列 带头节点
+void InitQueue(LinkQueue &amp;Q)&#123;
+    &#x2F;&#x2F;初始front和rear都指向头节点
+    Q.front&#x3D;Q.rear&#x3D;(LinkNode*)malloc(sizeof(LinkNode));
+    Q.front-&gt;next&#x3D;NULL;
 &#125;
 
 注释:
-	我们在初始化栈的时候也就是把我们的指针指向外边<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+	注意带头节点和不带头节点
+	带头节点:Q.front-&gt;next&#x3D;NULL
+	不带头节点: Q.front&#x3D;&#x3D;NULL &amp;&amp; Q.rear&#x3D;&#x3D;NULL<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="新元素入栈"><a href="#新元素入栈" class="headerlink" title="新元素入栈"></a>新元素入栈</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;新元素入栈
-bool Push(SqStack &amp;S,ElemType x)&#123;
-    if (S.top&#x3D;&#x3D;Maxsize-1)&#123;      &#x2F;&#x2F;栈满了
-        return false;
-        cout&lt;&lt;&quot;The Stack is Full&quot;&lt;&lt;endl;
+<h2 id="判断是否为空"><a href="#判断是否为空" class="headerlink" title="判断是否为空"></a>判断是否为空</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;判断是否为空(带头节点)
+bool IsEmpty(LinkQueue Q)&#123;
+    if (Q.front&#x3D;Q.rear)&#123;
+        return true;
     &#125;
-    S.top &#x3D; S.top + 1;          &#x2F;&#x2F;指针先加一
-    S.data[S.top] &#x3D; x;          &#x2F;&#x2F;新元素入栈
-    return true;
-&#125;
-
-注释:
-	我们在存放数据的时候也就是这样的
-        [4][]
-        [3][]
-        [2][]
-        [1][]	我们在第0各位插入数据首先得让指针指向0对吧 所以上面的操作使得指针先+1 
-        [0][]	然后再赋值并且此时的指针指向的是0。	
-        -1		开始的top指向-1对吧
-        <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="出栈操作"><a href="#出栈操作" class="headerlink" title="出栈操作"></a>出栈操作</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">bool Pop(SqStack &amp;S,ElemType &amp;x)&#123;
-    if (S.top&#x3D;&#x3D;-1)&#123;             &#x2F;&#x2F;栈为空
+    else
         return false;
-        cout&lt;&lt;&quot;The Stack is Empty&quot;&lt;&lt;endl;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="新元素入队"><a href="#新元素入队" class="headerlink" title="新元素入队"></a>新元素入队</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;新元素入队(带头节点)
+void EnQueue(LinkQueue &amp;Q,ElemType x)&#123;
+    LinkNode *s &#x3D; (LinkNode*) malloc(sizeof(LinkNode));
+    s-&gt;data &#x3D; x;
+    s-&gt;next &#x3D; NULL;
+    Q.rear-&gt;next &#x3D; s;       &#x2F;&#x2F;新节点加入到s之后
+    Q.rear&#x3D;s;               &#x2F;&#x2F;修改尾指针 当然front一直都在前面指向头
+                            &#x2F;&#x2F;因为插入时尾巴插入
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="队列出队"><a href="#队列出队" class="headerlink" title="队列出队"></a>队列出队</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;队列出队(带头节点)
+bool DeQueue(LinkQueue &amp;Q,ElemType &amp;x)&#123;
+    if (Q.front&#x3D;&#x3D;Q.rear)
+        return false;       &#x2F;&#x2F;空队列
+    LinkNode *p &#x3D; Q.front-&gt;next;
+    x&#x3D;p-&gt;data;                  &#x2F;&#x2F;用变量x返回队头元素 队头front 只能出队
+    Q.front-&gt;next &#x3D; p-&gt;next;    &#x2F;&#x2F;修改头节点的指向next指针
+    if (Q.rear&#x3D;&#x3D;p)&#123;             &#x2F;&#x2F;此次是最后一个节点出队
+        Q.rear&#x3D;Q.front;         &#x2F;&#x2F;修改rear指针
     &#125;
-    x &#x3D; S.data[S.top];
-    S.top &#x3D; S.top - 1;
+    free(p);                    &#x2F;&#x2F;释放节点空间
     return true;
-&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-注释:
-	我们删除放数据的时候也就是这样的
-        [4][]		注意我们删除的时候只能删除栈顶元素，此时我们都
-        [3][]		知道现在top指向的是栈顶元素，那么我们就在这个时候
-        [2][]		取出栈顶元素的值，赋给x，此时这个节点就值了
-        [1][]	 	那么指针指向的值4也要减一了
-        [0][]	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="读取栈顶元素"><a href="#读取栈顶元素" class="headerlink" title="读取栈顶元素"></a>读取栈顶元素</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;读取栈顶元素
-bool GetTop(SqStack S,ElemType &amp;x)&#123;
-    if (S.top &#x3D;&#x3D; -1)&#123;
+<h2 id="查找第一个元素"><a href="#查找第一个元素" class="headerlink" title="查找第一个元素"></a>查找第一个元素</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;查找第一个队头元素
+bool GetHead(LinkQueue Q,ElemType &amp;x)&#123;
+    if (Q.front &#x3D;&#x3D; Q.rear)
         return false;
+    x &#x3D; Q.front-&gt;next-&gt;data;
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="打印队列"><a href="#打印队列" class="headerlink" title="打印队列"></a>打印队列</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;打印队列
+void PrintQueue(LinkQueue Q)&#123;
+    LinkNode *tmp &#x3D; Q.front-&gt;next;
+    while (tmp!&#x3D;NULL)&#123;
+        cout&lt;&lt;tmp-&gt;data&lt;&lt;&quot; &quot;;
+        tmp&#x3D;tmp-&gt;next;
     &#125;
-    x &#x3D; S.data[S.top];
-    return true;
-&#125;
+    cout&lt;&lt;endl;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-注释:
-	这个和删除没多大区别<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="所有代码"><a href="#所有代码" class="headerlink" title="所有代码"></a>所有代码</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &quot;iostream&quot;
+
+<h1 id="全部代码"><a href="#全部代码" class="headerlink" title="全部代码"></a>全部代码</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;stdio.h&gt;
+#include &quot;iostream&quot;
 using namespace std;
+&#x2F;&#x2F;声明
 typedef int ElemType;
-#define Maxsize 10              &#x2F;&#x2F;定义栈的最大个数
-typedef struct &#123;
-    ElemType data[Maxsize];     &#x2F;&#x2F;静态数组存放中元素
-    int top;                    &#x2F;&#x2F;栈顶指针
-&#125;SqStack;
-&#x2F;&#x2F;初始化栈顶指针
-void InitStack(SqStack &amp;S)&#123;
-    S.top &#x3D; -1;
+typedef struct LinkNode&#123;        &#x2F;&#x2F;链式队列节点
+    ElemType data;
+    struct LinkNode *next;
+&#125;LinkNode;
+typedef struct &#123;                &#x2F;&#x2F;链式队列
+    LinkNode *front,*rear;      &#x2F;&#x2F;队列的队头front和队尾rear
+&#125;LinkQueue;
+
+&#x2F;&#x2F;初始化队列 带头节点
+void InitQueue(LinkQueue &amp;Q)&#123;
+    &#x2F;&#x2F;初始front和rear都指向头节点
+    Q.front&#x3D;Q.rear&#x3D;(LinkNode*)malloc(sizeof(LinkNode));
+    Q.front-&gt;next&#x3D;NULL;
 &#125;
-void PrintSqStack(SqStack S)			&#x2F;&#x2F;遍历栈
-&#123;
-    int tmp &#x3D; S.top;
-    while(tmp!&#x3D;-1)						&#x2F;&#x2F;如果tmp&#x3D;&#x3D;-1说明遍历结束
-    &#123;
-        cout&lt;&lt;S.data[tmp--]&lt;&lt;&quot; &quot;;
+&#x2F;&#x2F;判断是否为空
+bool IsEmpty(LinkQueue Q)&#123;
+    if (Q.front&#x3D;Q.rear)&#123;
+        return true;
     &#125;
-&#125;
-&#x2F;&#x2F;新元素入栈
-bool Push(SqStack &amp;S,ElemType x)&#123;
-    if (S.top&#x3D;&#x3D;Maxsize-1)&#123;      &#x2F;&#x2F;栈满了
+    else
         return false;
-        cout&lt;&lt;&quot;The Stack is Full&quot;&lt;&lt;endl;
+&#125;
+&#x2F;&#x2F;新元素入队(带头节点)
+void EnQueue(LinkQueue &amp;Q,ElemType x)&#123;
+    LinkNode *s &#x3D; (LinkNode*) malloc(sizeof(LinkNode));
+    s-&gt;data &#x3D; x;
+    s-&gt;next &#x3D; NULL;
+    Q.rear-&gt;next &#x3D; s;       &#x2F;&#x2F;新节点加入到s之后
+    Q.rear&#x3D;s;               &#x2F;&#x2F;修改尾指针 当然front一直都在前面指向头
+                            &#x2F;&#x2F; 因为插入时尾巴插入
+&#125;
+&#x2F;&#x2F;队列出队(带头节点)
+bool DeQueue(LinkQueue &amp;Q,ElemType &amp;x)&#123;
+    if (Q.front&#x3D;&#x3D;Q.rear)
+        return false;       &#x2F;&#x2F;空队列
+    LinkNode *p &#x3D; Q.front-&gt;next;
+    x&#x3D;p-&gt;data;                  &#x2F;&#x2F;用变量x返回队头元素 队头front 只能出队
+    Q.front-&gt;next &#x3D; p-&gt;next;    &#x2F;&#x2F;修改头节点的指向next指针
+    if (Q.rear&#x3D;&#x3D;p)&#123;             &#x2F;&#x2F;此次是最后一个节点出队
+        Q.rear&#x3D;Q.front;         &#x2F;&#x2F;修改rear指针
     &#125;
-    S.top &#x3D; S.top + 1;          &#x2F;&#x2F;指针先加一
-    S.data[S.top] &#x3D; x;          &#x2F;&#x2F;新元素入栈
+    free(p);                    &#x2F;&#x2F;释放节点空间
     return true;
 &#125;
-&#x2F;&#x2F;出栈操作(也就是我们的删除)
-bool Pop(SqStack &amp;S,ElemType &amp;x)&#123;
-    if (S.top&#x3D;&#x3D;-1)&#123;             &#x2F;&#x2F;栈为空
+&#x2F;&#x2F;查找第一个队头元素
+bool GetHead(LinkQueue Q,ElemType &amp;x)&#123;
+    if (Q.front &#x3D;&#x3D; Q.rear)
         return false;
-        cout&lt;&lt;&quot;The Stack is Empty&quot;&lt;&lt;endl;
-    &#125;
-    x &#x3D; S.data[S.top];
-    S.top &#x3D; S.top - 1;
-    return true;
+    x &#x3D; Q.front-&gt;next-&gt;data;
+
 &#125;
-&#x2F;&#x2F;读取栈顶元素
-bool GetTop(SqStack S,ElemType &amp;x)&#123;
-    if (S.top &#x3D;&#x3D; -1)&#123;
-        return false;
+&#x2F;&#x2F;打印队列
+void PrintQueue(LinkQueue Q)&#123;
+    LinkNode *tmp &#x3D; Q.front-&gt;next;
+    while (tmp!&#x3D;NULL)&#123;
+        cout&lt;&lt;tmp-&gt;data&lt;&lt;&quot; &quot;;
+        tmp&#x3D;tmp-&gt;next;
     &#125;
-    x &#x3D; S.data[S.top];
-    return true;
+    cout&lt;&lt;endl;
 &#125;
 int main()&#123;
-    SqStack s;							    &#x2F;&#x2F;声明一个顺序栈
-    InitStack(s);							&#x2F;&#x2F;初始化一个顺序栈
-    ElemType x ;
-    for(int i&#x3D;1;i&lt;&#x3D;5;i++)
-    &#123;
-        Push(s,i);							&#x2F;&#x2F;入栈
-        cout&lt;&lt;&quot;栈加入元素:&quot;&lt;&lt;i&lt;&lt;endl;
+    LinkQueue Q;
+    InitQueue(Q);
+    for (int i &#x3D; 5; i &gt;&#x3D;1 ; i--) &#123;
+        EnQueue(Q,i);
+        cout&lt;&lt;&quot;此时加入元素:&quot;&lt;&lt;i&lt;&lt;endl;
     &#125;
-    PrintSqStack(s);
-    GetTop(s,x);
-    cout&lt;&lt;&quot;栈找出栈顶元素&quot;&lt;&lt;x&lt;&lt;endl;
-    PrintSqStack(s);
-    ElemType y;
-    Pop(s,y);
-    cout&lt;&lt;&quot;栈取出栈顶元素&quot;&lt;&lt;y&lt;&lt;endl;
-    PrintSqStack(s);
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    PrintQueue(Q);
+    int head;
+    GetHead(Q,head);
+    cout&lt;&lt;&quot;目前的队头元素是:&quot;&lt;&lt;head&lt;&lt;endl;
+    int tail;
+    DeQueue(Q,tail);
+    cout&lt;&lt;&quot;删除队头元素:&quot;&lt;&lt;tail&lt;&lt;endl;
+    PrintQueue(Q);
 
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">程序输出:
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-栈加入元素:1
-栈加入元素:2
-栈加入元素:3
-栈加入元素:4
-栈加入元素:5
+<h2 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h2><pre class="line-numbers language-none"><code class="language-none">此时加入元素:5
+此时加入元素:4
+此时加入元素:3
+此时加入元素:2
+此时加入元素:1
 5 4 3 2 1
-栈找出栈顶元素5
-5 4 3 2 1
-栈取出栈顶元素5
-4 3 2 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="特别的我们有"><a href="#特别的我们有" class="headerlink" title="特别的我们有"></a>特别的我们有</h1><h2 id="共享栈"><a href="#共享栈" class="headerlink" title="共享栈"></a>共享栈</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &quot;iostream&quot;
-using namespace std;
-typedef int ElemType;
-#define Maxsize 10              &#x2F;&#x2F;定义栈的最大个数
-typedef struct &#123;
-    ElemType data[Maxsize];     &#x2F;&#x2F;静态数组存放中元素
-    int top0;                   &#x2F;&#x2F;栈底指针
-    int top1;					&#x2F;&#x2F;栈顶指针
-&#125;SqStack;
-
-&#x2F;&#x2F;初始化栈顶指针
-void InitStack(SqStack &amp;S)&#123;
-    S.top0 &#x3D; -1;
-    S.stop1 &#x3D; Maxsize -1;
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="栈的链式存储"><a href="#栈的链式存储" class="headerlink" title="栈的链式存储"></a>栈的链式存储</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">typedef struct Linknode&#123;
-    ElemType data;						&#x2F;&#x2F;数据域
-    struct Linknode *next;				&#x2F;&#x2F;指针域
-&#125;*Linknode;								&#x2F;&#x2F;栈类型操作<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+目前的队头元素是:5
+删除队头元素:5
+4 3 2 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -643,7 +642,7 @@ void InitStack(SqStack &amp;S)&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E6%A0%88/">https://shicheng.cool/2022/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E6%A0%88/</a>
+                    <a href="https://shicheng.cool/2022/04/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E9%93%BE%E6%A0%88/">https://shicheng.cool/2022/04/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E9%93%BE%E6%A0%88/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -993,17 +992,18 @@ void InitStack(SqStack &amp;S)&#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E9%98%9F%E5%88%97/">
+                <a href="/2022/04/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E9%93%BE%E6%A0%88/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="队列的基本操作">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="链队的基本操作">
                         
-                        <span class="card-title">队列的基本操作</span>
+                        <span class="card-title">链队的基本操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1013,9 +1013,9 @@ void InitStack(SqStack &amp;S)&#123;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1028,6 +1028,7 @@ void InitStack(SqStack &amp;S)&#123;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1046,13 +1047,13 @@ void InitStack(SqStack &amp;S)&#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8F%8C%E9%93%BE%E8%A1%A8/">
+                <a href="/2022/04/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E9%98%9F%E5%88%97/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="双链表表的基本操作">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="队列的基本操作">
                         
-                        <span class="card-title">双链表表的基本操作</span>
+                        <span class="card-title">队列的基本操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1063,7 +1064,7 @@ void InitStack(SqStack &amp;S)&#123;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-14
                             </span>
                         <span class="publish-author">
                             
