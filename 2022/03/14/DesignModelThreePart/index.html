@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java程序设计模式第三章, SC&#39;s 神奇的JavaWeb">
+    <meta name="keywords" content="Design_Pattern_Three, SC&#39;s 神奇的JavaWeb">
     <meta name="description" content="5，结构型模式结构型模式描述如何将类或对象按某种布局组成更大的结构。它分为类结构型模式和对象结构型模式，前者采用继承机制来组织接口和类，后者釆用组合或聚合来组合对象。
 由于组合关系或聚合关系比继承关系耦合度低，满足“合成复用原则”，所以对象">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java程序设计模式第三章 | SC&#39;s 神奇的JavaWeb</title>
+    <title>Design_Pattern_Three | SC&#39;s 神奇的JavaWeb</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -248,12 +248,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java程序设计模式第三章</h1>
+                    <h1 class="description center-align post-title">Design_Pattern_Three</h1>
                 </div>
             </div>
         </div>
@@ -369,8 +369,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                                <span class="chip bg-color">Java程序模式设计</span>
+                            <a href="/tags/Design-Pattern/">
+                                <span class="chip bg-color">Design_Pattern</span>
                             </a>
                         
                     </div>
@@ -381,8 +381,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                Java程序模式设计
+                            <a href="/categories/Design-Pattern/" class="post-category">
+                                Design_Pattern
                             </a>
                         
                     </div>
@@ -394,14 +394,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-24
+                    2022-03-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-17
+                    2022-04-18
                 </div>
                 
 
@@ -466,7 +466,7 @@
 <h3 id="5-1-3-静态代理"><a href="#5-1-3-静态代理" class="headerlink" title="5.1.3 静态代理"></a>5.1.3 静态代理</h3><p>我们通过案例来感受一下静态代理。</p>
 <p>【例】火车站卖票</p>
 <p>如果要买火车票的话，需要去火车站买票，坐车到火车站，排队等一系列的操作，显然比较麻烦。而火车站在多个地方都有代售点，我们去代售点买票就方便很多了。这个例子其实就是典型的代理模式，火车站是目标对象，代售点是代理对象。类图如下：</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/静态代理.png" style="zoom:80%;">
+<img src="/2022/03/14/DesignModelThreePart/静态代理.png" style="zoom:80%;">
 
 <p>代码如下：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//卖票接口</span>
@@ -817,7 +817,7 @@
 </li>
 </ul>
 <h2 id="5-2-适配器模式"><a href="#5-2-适配器模式" class="headerlink" title="5.2 适配器模式"></a>5.2 适配器模式</h2><h3 id="5-2-1-概述"><a href="#5-2-1-概述" class="headerlink" title="5.2.1 概述"></a>5.2.1 概述</h3><p>如果去欧洲国家去旅游的话，他们的插座如下图最左边，是欧洲标准。而我们使用的插头如下图最右边的。因此我们的笔记本电脑，手机在当地不能直接充电。所以就需要一个插座转换器，转换器第1面插入当地的插座，第2面供我们充电，这样使得我们的插头在当地能使用。生活中这样的例子很多，手机充电器（将220v转换为5v的电压），读卡器等，其实就是使用到了适配器模式。</p>
-<p><img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/%E8%BD%AC%E6%8E%A5%E5%A4%B4.png"></p>
+<p><img src="/2022/03/14/DesignModelThreePart/%E8%BD%AC%E6%8E%A5%E5%A4%B4.png"></p>
 <p><strong>定义：</strong></p>
 <p>​    将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类能一起工作。</p>
 <p>​    适配器模式分为类适配器模式和对象适配器模式，前者类之间的耦合度比后者高，且要求程序员了解现有组件库中的相关组件的内部结构，所以应用相对较少些。</p>
@@ -831,7 +831,7 @@
 <p>【例】读卡器</p>
 <p>现有一台电脑只能读取SD卡，而要读取TF卡中的内容的话就需要使用到适配器模式。创建一个读卡器，将TF卡中的内容读取出来。</p>
 <p>类图如下：</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/适配器模式.png" style="zoom:80%;">
+<img src="/2022/03/14/DesignModelThreePart/适配器模式.png" style="zoom:80%;">
 
 <p>代码如下：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//SD卡的接口</span>
@@ -918,7 +918,7 @@
 <h3 id="5-2-4-对象适配器模式"><a href="#5-2-4-对象适配器模式" class="headerlink" title="5.2.4 对象适配器模式"></a>5.2.4 对象适配器模式</h3><p>实现方式：对象适配器模式可釆用将现有组件库中已经实现的组件引入适配器类中，该类同时实现当前系统的业务接口。</p>
 <p>【例】读卡器</p>
 <p>我们使用对象适配器模式将读卡器的案例进行改写。类图如下：</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/对象适配器模式.png" style="zoom:80%;">
+<img src="/2022/03/14/DesignModelThreePart/对象适配器模式.png" style="zoom:80%;">
 
 <p>代码如下：</p>
 <p>类适配器模式的代码，我们只需要修改适配器类（SDAdapterTF）和测试类。</p>
@@ -975,7 +975,7 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如上代码中的sd（StreamDecoder类对象），在Sun的JDK实现中，实际的方法实现是对sun.nio.cs.StreamDecoder类的同名方法的调用封装。类结构图如下：</p>
-<p><img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F-jdk%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.png"></p>
+<p><img src="/2022/03/14/DesignModelThreePart/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F-jdk%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.png"></p>
 <p>从上图可以看出：</p>
 <ul>
 <li>InputStreamReader是对同样实现了Reader的StreamDecoder的封装。</li>
@@ -985,7 +985,7 @@
 <p>​    从表层来看，InputStreamReader做了InputStream字节流类到Reader字符流之间的转换。而从如上Sun JDK中的实现类关系结构中可以看出，是StreamDecoder的设计实现在实际上采用了适配器模式。</p>
 <h2 id="5-3-装饰者模式"><a href="#5-3-装饰者模式" class="headerlink" title="5.3 装饰者模式"></a>5.3 装饰者模式</h2><h3 id="5-3-1-概述"><a href="#5-3-1-概述" class="headerlink" title="5.3.1 概述"></a>5.3.1 概述</h3><p>我们先来看一个快餐店的例子。</p>
 <p>快餐店有炒面、炒饭这些快餐，可以额外附加鸡蛋、火腿、培根这些配菜，当然加配菜需要额外加钱，每个配菜的价钱通常不太一样，那么计算总价就会显得比较麻烦。</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/装饰者模式-使用前.png" style="zoom:80%;">
+<img src="/2022/03/14/DesignModelThreePart/装饰者模式-使用前.png" style="zoom:80%;">
 
 <p>使用继承的方式存在的问题：</p>
 <ul>
@@ -1006,7 +1006,7 @@
 </ul>
 <h3 id="5-3-3-案例"><a href="#5-3-3-案例" class="headerlink" title="5.3.3 案例"></a>5.3.3 案例</h3><p>我们使用装饰者模式对快餐店案例进行改进，体会装饰者模式的精髓。</p>
 <p>类图如下：</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/装饰者模式.png" style="zoom:75%;">
+<img src="/2022/03/14/DesignModelThreePart/装饰者模式.png" style="zoom:75%;">
 
 <p>代码如下：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//快餐接口</span>
@@ -1182,7 +1182,7 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>使用起来感觉确实像是装饰者模式，接下来看它们的结构：</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/装饰者模式-jdk源码.png" style="zoom:80%;">
+<img src="/2022/03/14/DesignModelThreePart/装饰者模式-jdk源码.png" style="zoom:80%;">
 
 <blockquote>
 <p><font color="red">小结：</font></p>
@@ -1203,7 +1203,7 @@
 </li>
 </ul>
 <h2 id="5-4-桥接模式"><a href="#5-4-桥接模式" class="headerlink" title="5.4 桥接模式"></a>5.4 桥接模式</h2><h3 id="5-4-1-概述"><a href="#5-4-1-概述" class="headerlink" title="5.4.1 概述"></a>5.4.1 概述</h3><p>现在有一个需求，需要创建不同的图形，并且每个图形都有可能会有不同的颜色。我们可以利用继承的方式来设计类的关系：</p>
-<p><img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/image-20200207194617620.png"></p>
+<p><img src="/2022/03/14/DesignModelThreePart/image-20200207194617620.png"></p>
 <p>我们可以发现有很多的类，假如我们再增加一个形状或再增加一种颜色，就需要创建更多的类。</p>
 <p>试想，在一个有多种可能会变化的维度的系统中，用继承方式会造成类爆炸，扩展起来不灵活。每次在一个维度上新增一个具体实现都要增加多个子类。为了更加灵活的设计系统，我们此时可以考虑使用桥接模式。</p>
 <p><strong>定义：</strong></p>
@@ -1218,7 +1218,7 @@
 <h3 id="5-4-3-案例"><a href="#5-4-3-案例" class="headerlink" title="5.4.3 案例"></a>5.4.3 案例</h3><p>【例】视频播放器</p>
 <p>需要开发一个跨平台视频播放器，可以在不同操作系统平台（如Windows、Mac、Linux等）上播放多种格式的视频文件，常见的视频格式包括RMVB、AVI、WMV等。该播放器包含了两个维度，适合使用桥接模式。</p>
 <p>类图如下：</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/桥接模式.png" style="zoom:80%;">
+<img src="/2022/03/14/DesignModelThreePart/桥接模式.png" style="zoom:80%;">
 
 <p>代码如下：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//视频文件</span>
@@ -1302,7 +1302,7 @@
 <p><strong>定义：</strong></p>
 <p>​    又名门面模式，是一种通过为多个复杂的子系统提供一个一致的接口，而使这些子系统更加容易被访问的模式。该模式对外有一个统一接口，外部应用程序不用关心内部子系统的具体的细节，这样会大大降低应用程序的复杂度，提高了程序的可维护性。</p>
 <p>​    外观（Facade）模式是“迪米特法则”的典型应用</p>
-<p><img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E5%BC%95%E5%85%A5.jpg"></p>
+<p><img src="/2022/03/14/DesignModelThreePart/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E5%BC%95%E5%85%A5.jpg"></p>
 <h3 id="5-5-2-结构"><a href="#5-5-2-结构" class="headerlink" title="5.5.2 结构"></a>5.5.2 结构</h3><p>外观（Facade）模式包含以下主要角色：</p>
 <ul>
 <li>外观（Facade）角色：为多个子系统对外提供一个共同的接口。</li>
@@ -1310,7 +1310,7 @@
 </ul>
 <h3 id="5-5-3-案例"><a href="#5-5-3-案例" class="headerlink" title="5.5.3 案例"></a>5.5.3 案例</h3><p>【例】智能家电控制</p>
 <p>小明的爷爷已经60岁了，一个人在家生活：每次都需要打开灯、打开电视、打开空调；睡觉时关闭灯、关闭电视、关闭空调；操作起来都比较麻烦。所以小明给爷爷买了智能音箱，可以通过语音直接控制这些智能家电的开启和关闭。类图如下：</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/外观模式.png" style="zoom:80%;">
+<img src="/2022/03/14/DesignModelThreePart/外观模式.png" style="zoom:80%;">
 
 <p>代码如下：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//灯类</span>
@@ -1412,10 +1412,10 @@
 <li>当客户端与多个子系统之间存在很大的联系时，引入外观模式可将它们分离，从而提高子系统的独立性和可移植性。</li>
 </ul>
 <h3 id="5-5-5-源码解析"><a href="#5-5-5-源码解析" class="headerlink" title="5.5.5 源码解析"></a>5.5.5 源码解析</h3><p>使用tomcat作为web容器时，接收浏览器发送过来的请求，tomcat会将请求信息封装成ServletRequest对象，如下图①处对象。但是大家想想ServletRequest是一个接口，它还有一个子接口HttpServletRequest，而我们知道该request对象肯定是一个HttpServletRequest对象的子实现类对象，到底是哪个类的对象呢？可以通过输出request对象，我们就会发现是一个名为RequestFacade的类的对象。</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/image-20200207234545691.png" style="zoom:60%;">
+<img src="/2022/03/14/DesignModelThreePart/image-20200207234545691.png" style="zoom:60%;">
 
 <p>RequestFacade类就使用了外观模式。先看结构图：</p>
-<img src="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/外观模式-jdk源码解析.png" style="zoom:70%;">
+<img src="/2022/03/14/DesignModelThreePart/外观模式-jdk源码解析.png" style="zoom:70%;">
 
 <p><strong>为什么在此处使用外观模式呢？</strong></p>
 <p>​    定义 RequestFacade 类，分别实现 ServletRequest ，同时定义私有成员变量 Request ，并且方法的实现调用 Request  的实现。然后，将 RequestFacade上转为 ServletRequest  传给 servlet 的 service 方法，这样即使在 servlet 中被下转为 RequestFacade ，也不能访问私有成员变量对象中的方法。既用了 Request ，又能防止其中方法被不合理的访问。</p>
@@ -1445,7 +1445,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/">https://shicheng.cool/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day03/</a>
+                    <a href="https://shicheng.cool/2022/03/14/DesignModelThreePart/">https://shicheng.cool/2022/03/14/DesignModelThreePart/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1483,8 +1483,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                                    <span class="chip bg-color">Java程序模式设计</span>
+                                <a href="/tags/Design-Pattern/">
+                                    <span class="chip bg-color">Design_Pattern</span>
                                 </a>
                             
                         </div>
@@ -1799,13 +1799,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/24/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day06/">
+                <a href="/2022/03/19/DesignModelFourPart/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java程序设计模式第六章">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Design_Pattern_Four">
                         
-                        <span class="card-title">Java程序设计模式第六章</span>
+                        <span class="card-title">Design_Pattern_Four</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1816,14 +1816,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-19
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    Java程序模式设计
+                            <a href="/categories/Design-Pattern/" class="post-category">
+                                    Design_Pattern
                                 </a>
                             
                             
@@ -1833,8 +1833,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">Java程序模式设计</span>
+                    <a href="/tags/Design-Pattern/">
+                        <span class="chip bg-color">Design_Pattern</span>
                     </a>
                     
                 </div>
@@ -1848,13 +1848,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day04/">
+                <a href="/2022/03/11/DesignModelTwoPart/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Java程序设计模式第四章">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Design_Pattern_Two">
                         
-                        <span class="card-title">Java程序设计模式第四章</span>
+                        <span class="card-title">Design_Pattern_Two</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1865,14 +1865,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    Java程序模式设计
+                            <a href="/categories/Design-Pattern/" class="post-category">
+                                    Design_Pattern
                                 </a>
                             
                             
@@ -1882,8 +1882,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">Java程序模式设计</span>
+                    <a href="/tags/Design-Pattern/">
+                        <span class="chip bg-color">Design_Pattern</span>
                     </a>
                     
                 </div>

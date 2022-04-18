@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java程序设计模式第一章, SC&#39;s 神奇的JavaWeb">
+    <meta name="keywords" content="Design_Pattern_One, SC&#39;s 神奇的JavaWeb">
     <meta name="description" content="1，设计模式概述1.1 软件设计模式的产生背景“设计模式”最初并不是出现在软件设计中，而是被用于建筑领域的设计中。
 1977年美国著名建筑大师、加利福尼亚大学伯克利分校环境结构中心主任克里斯托夫·亚历山大（Christopher Alexa">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java程序设计模式第一章 | SC&#39;s 神奇的JavaWeb</title>
+    <title>Design_Pattern_One | SC&#39;s 神奇的JavaWeb</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -248,12 +248,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java程序设计模式第一章</h1>
+                    <h1 class="description center-align post-title">Design_Pattern_One</h1>
                 </div>
             </div>
         </div>
@@ -369,8 +369,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                                <span class="chip bg-color">Java程序模式设计</span>
+                            <a href="/tags/Design-Pattern/">
+                                <span class="chip bg-color">Design_Pattern</span>
                             </a>
                         
                     </div>
@@ -381,8 +381,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                Java程序模式设计
+                            <a href="/categories/Design-Pattern/" class="post-category">
+                                Design_Pattern
                             </a>
                         
                     </div>
@@ -401,7 +401,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-17
+                    2022-04-18
                 </div>
                 
 
@@ -473,7 +473,7 @@
 <li>类图是系统分析和设计阶段的重要产物，是系统编码和测试的重要模型。</li>
 </ul>
 <h2 id="2-3-类图表示法"><a href="#2-3-类图表示法" class="headerlink" title="2.3 类图表示法"></a>2.3 类图表示法</h2><h3 id="2-3-1-类的表示方式"><a href="#2-3-1-类的表示方式" class="headerlink" title="2.3.1 类的表示方式"></a>2.3.1 类的表示方式</h3><p>在UML类图中，类使用包含类名、属性(field) 和方法(method) 且带有分割线的矩形来表示，比如下图表示一个Employee类，它包含name,age和address这3个属性，以及work()方法。 </p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/Employee.jpg"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/Employee.jpg"></p>
 <p>属性/方法名称前加的加号和减号表示了这个属性/方法的可见性，UML类图中表示可见性的符号有三种：</p>
 <ul>
 <li><p>+：表示public</p>
@@ -491,7 +491,7 @@
 <p>​    2，也有将类型放在变量名前面，返回值类型放在方法名前面</p>
 </blockquote>
 <p><strong>举个栗子：</strong></p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001%5Cdemo.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/demo.png"></p>
 <p>上图Demo类定义了三个方法：</p>
 <ul>
 <li>method()方法：修饰符为public，没有参数，没有返回值。</li>
@@ -501,32 +501,32 @@
 <h3 id="2-3-2-类与类之间关系的表示方式"><a href="#2-3-2-类与类之间关系的表示方式" class="headerlink" title="2.3.2 类与类之间关系的表示方式"></a>2.3.2 类与类之间关系的表示方式</h3><h4 id="2-3-2-1-关联关系"><a href="#2-3-2-1-关联关系" class="headerlink" title="2.3.2.1 关联关系"></a>2.3.2.1 关联关系</h4><p>关联关系是对象之间的一种引用关系，用于表示一类对象与另一类对象之间的联系，如老师和学生、师傅和徒弟、丈夫和妻子等。关联关系是类与类之间最常用的一种关系，分为一般关联关系、聚合关系和组合关系。我们先介绍一般关联。</p>
 <p>关联又可以分为单向关联，双向关联，自关联。</p>
 <p><strong>1，单向关联</strong></p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/customer_address.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/customer_address.png"></p>
 <p>在UML类图中单向关联用一个带箭头的实线表示。上图表示每个顾客都有一个地址，这通过让Customer类持有一个类型为Address的成员变量类实现。</p>
 <p><strong>2，双向关联</strong></p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/customer_product.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/customer_product.png"></p>
 <p>从上图中我们很容易看出，所谓的双向关联就是双方各自持有对方类型的成员变量。</p>
 <p>在UML类图中，双向关联用一个不带箭头的直线表示。上图中在Customer类中维护一个List&lt;Product&gt;，表示一个顾客可以购买多个商品；在Product类中维护一个Customer类型的成员变量表示这个产品被哪个顾客所购买。</p>
 <p><strong>3，自关联</strong></p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001%5Cnode.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/node.png"></p>
 <p>自关联在UML类图中用一个带有箭头且指向自身的线表示。上图的意思就是Node类包含类型为Node的成员变量，也就是“自己包含自己”。</p>
 <h4 id="2-3-2-2-聚合关系"><a href="#2-3-2-2-聚合关系" class="headerlink" title="2.3.2.2 聚合关系"></a>2.3.2.2 聚合关系</h4><p>聚合关系是关联关系的一种，是强关联关系，是整体和部分之间的关系。</p>
 <p>聚合关系也是通过成员对象来实现的，其中成员对象是整体对象的一部分，但是成员对象可以脱离整体对象而独立存在。例如，学校与老师的关系，学校包含老师，但如果学校停办了，老师依然存在。</p>
 <p>在 UML 类图中，聚合关系可以用带空心菱形的实线来表示，菱形指向整体。下图所示是大学和教师的关系图：</p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/image-20191229173422328.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/image-20191229173422328.png"></p>
 <h4 id="2-3-2-3-组合关系"><a href="#2-3-2-3-组合关系" class="headerlink" title="2.3.2.3 组合关系"></a>2.3.2.3 组合关系</h4><p>组合表示类之间的整体与部分的关系，但它是一种更强烈的聚合关系。</p>
 <p>在组合关系中，整体对象可以控制部分对象的生命周期，一旦整体对象不存在，部分对象也将不存在，部分对象不能脱离整体对象而存在。例如，头和嘴的关系，没有了头，嘴也就不存在了。</p>
 <p>在 UML 类图中，组合关系用带实心菱形的实线来表示，菱形指向整体。下图所示是头和嘴的关系图：</p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/image-20191229173455149.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/image-20191229173455149.png"></p>
 <h4 id="2-3-2-4-依赖关系"><a href="#2-3-2-4-依赖关系" class="headerlink" title="2.3.2.4 依赖关系"></a>2.3.2.4 依赖关系</h4><p>依赖关系是一种使用关系，它是对象之间耦合度最弱的一种关联方式，是临时性的关联。在代码中，某个类的方法通过局部变量、方法的参数或者对静态方法的调用来访问另一个类（被依赖类）中的某些方法来完成一些职责。</p>
 <p>在 UML 类图中，依赖关系使用带箭头的虚线来表示，箭头从使用类指向被依赖的类。下图所示是司机和汽车的关系图，司机驾驶汽车：</p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/image-20191229173518926.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/image-20191229173518926.png"></p>
 <h4 id="2-3-2-5-继承关系"><a href="#2-3-2-5-继承关系" class="headerlink" title="2.3.2.5 继承关系"></a>2.3.2.5 继承关系</h4><p>继承关系是对象之间耦合度最大的一种关系，表示一般与特殊的关系，是父类与子类之间的关系，是一种继承关系。</p>
 <p>在 UML 类图中，泛化关系用带空心三角箭头的实线来表示，箭头从子类指向父类。在代码实现时，使用面向对象的继承机制来实现泛化关系。例如，Student 类和 Teacher 类都是 Person 类的子类，其类图如下图所示：</p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/image-20191229173539838.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/image-20191229173539838.png"></p>
 <h4 id="2-3-2-6-实现关系"><a href="#2-3-2-6-实现关系" class="headerlink" title="2.3.2.6 实现关系"></a>2.3.2.6 实现关系</h4><p>实现关系是接口与实现类之间的关系。在这种关系中，类实现了接口，类中的操作实现了接口中所声明的所有的抽象操作。</p>
 <p>在 UML 类图中，实现关系使用带空心三角箭头的虚线来表示，箭头从实现类指向接口。例如，汽车和船实现了交通工具，其类图如图 9 所示。</p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/image-20191229173554296.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/image-20191229173554296.png"></p>
 <h1 id="3，软件设计原则"><a href="#3，软件设计原则" class="headerlink" title="3，软件设计原则"></a>3，软件设计原则</h1><p>在软件开发中，为了提高软件系统的可维护性和可复用性，增加软件的可扩展性和灵活性，程序员要尽量根据6条原则来开发程序，从而提高软件开发效率、节约软件开发成本和维护成本。</p>
 <h2 id="3-1-开闭原则"><a href="#3-1-开闭原则" class="headerlink" title="3.1 开闭原则"></a>3.1 开闭原则</h2><p><strong>对扩展开放，对修改关闭</strong>。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是为了使程序的扩展性好，易于维护和升级。</p>
 <p>想要达到这样的效果，我们需要使用接口和抽象类。</p>
@@ -534,14 +534,14 @@
 <p>下面以 <code>搜狗输入法</code> 的皮肤为例介绍开闭原则的应用。</p>
 <p>【例】<code>搜狗输入法</code> 的皮肤设计。</p>
 <p>分析：<code>搜狗输入法</code> 的皮肤是输入法背景图片、窗口颜色和声音等元素的组合。用户可以根据自己的喜爱更换自己的输入法的皮肤，也可以从网上下载新的皮肤。这些皮肤有共同的特点，可以为其定义一个抽象类（AbstractSkin），而每个具体的皮肤（DefaultSpecificSkin和HeimaSpecificSkin）是其子类。用户窗体可以根据需要选择或者增加新的主题，而不需要修改原代码，所以它是满足开闭原则的。</p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/open-close.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/open-close.png"></p>
 <h2 id="3-2-里氏代换原则"><a href="#3-2-里氏代换原则" class="headerlink" title="3.2 里氏代换原则"></a>3.2 里氏代换原则</h2><p>里氏代换原则是面向对象设计的基本原则之一。</p>
 <p>里氏代换原则：任何基类可以出现的地方，子类一定可以出现。通俗理解：子类可以扩展父类的功能，但不能改变父类原有的功能。换句话说，子类继承父类时，除添加新的方法完成新增功能外，尽量不要重写父类的方法。</p>
 <p>如果通过重写父类的方法来完成新的功能，这样写起来虽然简单，但是整个继承体系的可复用性会比较差，特别是运用多态比较频繁时，程序运行出错的概率会非常大。</p>
 <p>下面看一个里氏替换原则中经典的一个例子</p>
 <p>【例】正方形不是长方形。</p>
 <p>在数学领域里，正方形毫无疑问是长方形，它是一个长宽相等的长方形。所以，我们开发的一个与几何图形相关的软件系统，就可以顺理成章的让正方形继承自长方形。</p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/%E6%AD%A3%E6%96%B9%E5%BD%A2%E4%B8%8D%E6%98%AF%E9%95%BF%E6%96%B9%E5%BD%A2.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/%E6%AD%A3%E6%96%B9%E5%BD%A2%E4%B8%8D%E6%98%AF%E9%95%BF%E6%96%B9%E5%BD%A2.png"></p>
 <p>代码如下：</p>
 <p><strong>长方形类（Rectangle）：</strong></p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Rectangle</span> <span class="token punctuation">&#123;</span>
@@ -749,9 +749,9 @@
 <p>下面看一个例子来理解接口隔离原则</p>
 <p>【例】安全门案例</p>
 <p>我们需要创建一个<code>黑马</code>品牌的安全门，该安全门具有防火、防水、防盗的功能。可以将防火，防水，防盗功能提取成一个接口，形成一套规范。类图如下：</p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99.png"></p>
 <p>上面的设计我们发现了它存在的问题，黑马品牌的安全门具有防盗，防水，防火的功能。现在如果我们还需要再创建一个传智品牌的安全门，而该安全门只具有防盗、防水功能呢？很显然如果实现SafetyDoor接口就违背了接口隔离原则，那么我们如何进行修改呢？看如下类图：</p>
-<p><img src="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%991.png"></p>
+<p><img src="/2022/03/09/DesignModelOnePart/%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%991.png"></p>
 <p>代码如下：</p>
 <p><strong>AntiTheft（接口）：</strong></p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">AntiTheft</span> <span class="token punctuation">&#123;</span>
@@ -1397,7 +1397,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/">https://shicheng.cool/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/</a>
+                    <a href="https://shicheng.cool/2022/03/09/DesignModelOnePart/">https://shicheng.cool/2022/03/09/DesignModelOnePart/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1435,8 +1435,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                                    <span class="chip bg-color">Java程序模式设计</span>
+                                <a href="/tags/Design-Pattern/">
+                                    <span class="chip bg-color">Design_Pattern</span>
                                 </a>
                             
                         </div>
@@ -1751,13 +1751,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/">
+                <a href="/2022/03/11/DesignModelTwoPart/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Java程序设计模式第二章">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Design_Pattern_Two">
                         
-                        <span class="card-title">Java程序设计模式第二章</span>
+                        <span class="card-title">Design_Pattern_Two</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1774,8 +1774,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    Java程序模式设计
+                            <a href="/categories/Design-Pattern/" class="post-category">
+                                    Design_Pattern
                                 </a>
                             
                             
@@ -1785,8 +1785,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">Java程序模式设计</span>
+                    <a href="/tags/Design-Pattern/">
+                        <span class="chip bg-color">Design_Pattern</span>
                     </a>
                     
                 </div>

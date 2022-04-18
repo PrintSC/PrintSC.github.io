@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java程序设计模式第二章, SC&#39;s 神奇的JavaWeb">
+    <meta name="keywords" content="Design_Pattern_Two, SC&#39;s 神奇的JavaWeb">
     <meta name="description" content="4，创建型模式4.2 工厂模式4.2.1 概述需求：设计一个咖啡店点餐系统。  
 设计一个咖啡类（Coffee），并定义其两个子类（美式咖啡【AmericanCoffee】和拿铁咖啡【LatteCoffee】）；再设计一个咖啡店类（Coff">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java程序设计模式第二章 | SC&#39;s 神奇的JavaWeb</title>
+    <title>Design_Pattern_Two | SC&#39;s 神奇的JavaWeb</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -248,12 +248,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java程序设计模式第二章</h1>
+                    <h1 class="description center-align post-title">Design_Pattern_Two</h1>
                 </div>
             </div>
         </div>
@@ -369,8 +369,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                                <span class="chip bg-color">Java程序模式设计</span>
+                            <a href="/tags/Design-Pattern/">
+                                <span class="chip bg-color">Design_Pattern</span>
                             </a>
                         
                     </div>
@@ -381,8 +381,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                Java程序模式设计
+                            <a href="/categories/Design-Pattern/" class="post-category">
+                                Design_Pattern
                             </a>
                         
                     </div>
@@ -401,7 +401,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-17
+                    2022-04-18
                 </div>
                 
 
@@ -446,7 +446,7 @@
                 <h1 id="4，创建型模式"><a href="#4，创建型模式" class="headerlink" title="4，创建型模式"></a>4，创建型模式</h1><h2 id="4-2-工厂模式"><a href="#4-2-工厂模式" class="headerlink" title="4.2 工厂模式"></a>4.2 工厂模式</h2><h3 id="4-2-1-概述"><a href="#4-2-1-概述" class="headerlink" title="4.2.1 概述"></a>4.2.1 概述</h3><p>需求：设计一个咖啡店点餐系统。  </p>
 <p>设计一个咖啡类（Coffee），并定义其两个子类（美式咖啡【AmericanCoffee】和拿铁咖啡【LatteCoffee】）；再设计一个咖啡店类（CoffeeStore），咖啡店具有点咖啡的功能。</p>
 <p>具体类的设计如下：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/工厂设计模式引入.png" style="zoom:80%;">
+<img src="/2022/03/11/DesignModelTwoPart/工厂设计模式引入.png" style="zoom:80%;">
 
 <p>在java中，万物皆对象，这些对象都需要创建，如果创建的时候直接new该对象，就会对该对象耦合严重，假如我们要更换对象，所有new对象的地方都需要修改一遍，这显然违背了软件设计的开闭原则。如果我们使用工厂来生产对象，我们就只和工厂打交道就可以了，彻底和对象解耦，如果要更换对象，直接在工厂里更换该对象即可，达到了与对象解耦的目的；所以说，工厂模式最大的优点就是：<strong>解耦</strong>。</p>
 <p>在本教程中会介绍三种工厂的使用</p>
@@ -463,7 +463,7 @@
 <li>具体工厂 ：提供了创建产品的方法，调用者通过该方法来获取产品。</li>
 </ul>
 <h4 id="4-2-2-2-实现"><a href="#4-2-2-2-实现" class="headerlink" title="4.2.2.2 实现"></a>4.2.2.2 实现</h4><p>现在使用简单工厂对上面案例进行改进，类图如下：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/简单工厂模式.png" style="zoom:70%;">
+<img src="/2022/03/11/DesignModelTwoPart/简单工厂模式.png" style="zoom:70%;">
 
 <p>工厂类代码如下：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SimpleCoffeeFactory</span> <span class="token punctuation">&#123;</span>
@@ -514,7 +514,7 @@
 <li>具体产品（ConcreteProduct）：实现了抽象产品角色所定义的接口，由具体工厂来创建，它同具体工厂之间一一对应。</li>
 </ul>
 <h4 id="4-2-3-3-实现"><a href="#4-2-3-3-实现" class="headerlink" title="4.2.3.3 实现"></a>4.2.3.3 实现</h4><p>使用工厂方法模式对上例进行改进，类图如下：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/工厂方法模式.png" style="zoom:70%;">
+<img src="/2022/03/11/DesignModelTwoPart/工厂方法模式.png" style="zoom:70%;">
 
 <p>代码如下：</p>
 <p>抽象工厂：</p>
@@ -569,9 +569,9 @@
 <h3 id="4-2-4-抽象工厂模式"><a href="#4-2-4-抽象工厂模式" class="headerlink" title="4.2.4 抽象工厂模式"></a>4.2.4 抽象工厂模式</h3><p>前面介绍的工厂方法模式中考虑的是一类产品的生产，如畜牧场只养动物、电视机厂只生产电视机、传智播客只培养计算机软件专业的学生等。</p>
 <p>这些工厂只生产同种类产品，同种类产品称为同等级产品，也就是说：工厂方法模式只考虑生产同等级的产品，但是在现实生活中许多工厂是综合型的工厂，能生产多等级（种类） 的产品，如电器厂既生产电视机又生产洗衣机或空调，大学既有软件专业又有生物专业等。</p>
 <p>本节要介绍的抽象工厂模式将考虑多等级产品的生产，将同一个具体工厂所生产的位于不同等级的一组产品称为一个产品族，下图所示横轴是产品等级，也就是同一类产品；纵轴是产品族，也就是同一品牌的产品，同一品牌的产品产自同一个工厂。</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/image-20200401214509176.png" style="zoom:67%;">
+<img src="/2022/03/11/DesignModelTwoPart/image-20200401214509176.png" style="zoom:67%;">
 
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/image-20200401222951963.png" style="zoom:67%;">
+<img src="/2022/03/11/DesignModelTwoPart/image-20200401222951963.png" style="zoom:67%;">
 
 <h4 id="4-2-4-1-概念"><a href="#4-2-4-1-概念" class="headerlink" title="4.2.4.1 概念"></a>4.2.4.1 概念</h4><p>是一种为访问类提供一个创建一组相关或相互依赖对象的接口，且访问类无须指定所要产品的具体类就能得到同族的不同等级的产品的模式结构。</p>
 <p>抽象工厂模式是工厂方法模式的升级版本，工厂方法模式只生产一个等级的产品，而抽象工厂模式可生产多个等级的产品。</p>
@@ -583,7 +583,7 @@
 <li>具体产品（ConcreteProduct）：实现了抽象产品角色所定义的接口，由具体工厂来创建，它 同具体工厂之间是多对一的关系。</li>
 </ul>
 <h4 id="4-2-4-2-实现"><a href="#4-2-4-2-实现" class="headerlink" title="4.2.4.2 实现"></a>4.2.4.2 实现</h4><p>现咖啡店业务发生改变，不仅要生产咖啡还要生产甜点，如提拉米苏、抹茶慕斯等，要是按照工厂方法模式，需要定义提拉米苏类、抹茶慕斯类、提拉米苏工厂、抹茶慕斯工厂、甜点工厂类，很容易发生类爆炸情况。其中拿铁咖啡、美式咖啡是一个产品等级，都是咖啡；提拉米苏、抹茶慕斯也是一个产品等级；拿铁咖啡和提拉米苏是同一产品族（也就是都属于意大利风味），美式咖啡和抹茶慕斯是同一产品族（也就是都属于美式风味）。所以这个案例可以使用抽象工厂模式实现。类图如下：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/抽象工厂模式.png" style="zoom:67%;">
+<img src="/2022/03/11/DesignModelTwoPart/抽象工厂模式.png" style="zoom:67%;">
 
 <p>代码如下：</p>
 <p>抽象工厂：</p>
@@ -689,7 +689,7 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>对上面的代码大家应该很熟，使用迭代器遍历集合，获取集合中的元素。而单列集合获取迭代器的方法就使用到了工厂方法模式。我们看通过类图看看结构：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/JDK源码解析.png" style="zoom:75%;">
+<img src="/2022/03/11/DesignModelTwoPart/JDK源码解析.png" style="zoom:75%;">
 
 <p>Collection接口是抽象工厂类，ArrayList是具体的工厂类；Iterator接口是抽象商品类，ArrayList类中的Iter内部类是具体的商品类。在具体的工厂类中iterator()方法创建具体的商品类的对象。</p>
 <blockquote>
@@ -705,7 +705,7 @@
 <li>访问类：使用具体原型类中的 clone() 方法来复制新的对象。</li>
 </ul>
 <p>接口类图如下：</p>
-<p><img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F.png"></p>
+<p><img src="/2022/03/11/DesignModelTwoPart/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F.png"></p>
 <h3 id="4-3-3-实现"><a href="#4-3-3-实现" class="headerlink" title="4.3.3 实现"></a>4.3.3 实现</h3><p>原型模式的克隆分为浅克隆和深克隆。</p>
 <blockquote>
 <p>浅克隆：创建一个新对象，新对象的属性和原来对象完全相同，对于非基本类型属性，仍指向原有属性所指向的对象的内存地址。</p>
@@ -739,7 +739,7 @@
 <h3 id="4-3-4-案例"><a href="#4-3-4-案例" class="headerlink" title="4.3.4 案例"></a>4.3.4 案例</h3><p><strong>用原型模式生成“三好学生”奖状</strong></p>
 <p>同一学校的“三好学生”奖状除了获奖人姓名不同，其他都相同，可以使用原型模式复制多个“三好学生”奖状出来，然后在修改奖状上的名字即可。</p>
 <p>类图如下：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/原型模式1.png" style="zoom:80%;">
+<img src="/2022/03/11/DesignModelTwoPart/原型模式1.png" style="zoom:80%;">
 
 <p>代码如下：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//奖状类</span>
@@ -860,7 +860,7 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>运行结果为：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/原型模式2.png" style="zoom:80%;">
+<img src="/2022/03/11/DesignModelTwoPart/原型模式2.png" style="zoom:80%;">
 
 <p><font color="red">说明：</font></p>
 <p>​    stu对象和stu1对象是同一个对象，就会产生将stu1对象中name属性值改为“李四”，两个Citation（奖状）对象中显示的都是李四。这就是浅克隆的效果，对具体原型类（Citation）中的引用类型的属性进行引用的复制。这种情况需要使用深克隆，而进行深克隆需要使用对象流。代码如下：</p>
@@ -893,13 +893,13 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>运行结果为：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/原型模式3.png" style="zoom:80%;">
+<img src="/2022/03/11/DesignModelTwoPart/原型模式3.png" style="zoom:80%;">
 
 <blockquote>
 <p>注意：Citation类和Student类必须实现Serializable接口，否则会抛NotSerializableException异常。</p>
 </blockquote>
 <h2 id="4-5-建造者模式"><a href="#4-5-建造者模式" class="headerlink" title="4.5 建造者模式"></a>4.5 建造者模式</h2><h3 id="4-4-1-概述"><a href="#4-4-1-概述" class="headerlink" title="4.4.1 概述"></a>4.4.1 概述</h3><p>将一个复杂对象的构建与表示分离，使得同样的构建过程可以创建不同的表示。</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/image-20200413225341516.png" style="zoom:60%;">
+<img src="/2022/03/11/DesignModelTwoPart/image-20200413225341516.png" style="zoom:60%;">
 
 <ul>
 <li>分离了部件的构造(由Builder来负责)和装配(由Director负责)。 从而可以构造出复杂的对象。这个模式适用于：某个对象的构建过程复杂的情况。</li>
@@ -918,14 +918,14 @@
 </li>
 </ul>
 <p>类图如下：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/建造者模式.png" style="zoom:80%;">
+<img src="/2022/03/11/DesignModelTwoPart/建造者模式.png" style="zoom:80%;">
 
 
 
 <h3 id="4-4-3-实例"><a href="#4-4-3-实例" class="headerlink" title="4.4.3 实例"></a>4.4.3 实例</h3><p><strong>创建共享单车</strong></p>
 <p>生产自行车是一个复杂的过程，它包含了车架，车座等组件的生产。而车架又有碳纤维，铝合金等材质的，车座有橡胶，真皮等材质。对于自行车的生产就可以使用建造者模式。</p>
 <p>这里Bike是产品，包含车架，车座等组件；Builder是抽象建造者，MobikeBuilder和OfoBuilder是具体的建造者；Director是指挥者。类图如下：</p>
-<img src="/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/建造者模式1.png" style="zoom:80%;">
+<img src="/2022/03/11/DesignModelTwoPart/建造者模式1.png" style="zoom:80%;">
 
 <p>具体的代码如下：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//自行车类</span>
@@ -1225,7 +1225,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/">https://shicheng.cool/2022/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day02/</a>
+                    <a href="https://shicheng.cool/2022/03/11/DesignModelTwoPart/">https://shicheng.cool/2022/03/11/DesignModelTwoPart/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1263,8 +1263,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                                    <span class="chip bg-color">Java程序模式设计</span>
+                                <a href="/tags/Design-Pattern/">
+                                    <span class="chip bg-color">Design_Pattern</span>
                                 </a>
                             
                         </div>
@@ -1579,13 +1579,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-day05/">
+                <a href="/2022/03/14/DesignModelThreePart/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Java程序设计模式第五章">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Design_Pattern_Three">
                         
-                        <span class="card-title">Java程序设计模式第五章</span>
+                        <span class="card-title">Design_Pattern_Three</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1596,14 +1596,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-19
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-14
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    Java程序模式设计
+                            <a href="/categories/Design-Pattern/" class="post-category">
+                                    Design_Pattern
                                 </a>
                             
                             
@@ -1613,8 +1613,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">Java程序模式设计</span>
+                    <a href="/tags/Design-Pattern/">
+                        <span class="chip bg-color">Design_Pattern</span>
                     </a>
                     
                 </div>
@@ -1628,13 +1628,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80001/">
+                <a href="/2022/03/09/DesignModelOnePart/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Java程序设计模式第一章">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Design_Pattern_One">
                         
-                        <span class="card-title">Java程序设计模式第一章</span>
+                        <span class="card-title">Design_Pattern_One</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1651,8 +1651,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
-                                    Java程序模式设计
+                            <a href="/categories/Design-Pattern/" class="post-category">
+                                    Design_Pattern
                                 </a>
                             
                             
@@ -1662,8 +1662,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">Java程序模式设计</span>
+                    <a href="/tags/Design-Pattern/">
+                        <span class="chip bg-color">Design_Pattern</span>
                     </a>
                     
                 </div>
