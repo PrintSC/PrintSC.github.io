@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DataStructure_Singly Linked List, SC&#39;s 神奇的JavaWeb">
-    <meta name="description" content="1_单链表的基本操作：1.1_表的声明typedef int ElemType;
-typedef struct LNode&amp;#123;
-    ElemType data;       &amp;#x2F;&amp;#x2F;数据域
-    struct ">
+    <meta name="keywords" content="DataStructure_Queue, SC&#39;s 神奇的JavaWeb">
+    <meta name="description" content="队列的基本操作:队列的声明#include &amp;quot;iostream&amp;quot;
+using namespace std;
+&amp;#x2F;&amp;#x2F;队列的声明
+#define Maxsize 10
+typedef int Elemtyp">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +21,7 @@ typedef struct LNode&amp;#123;
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DataStructure_Singly Linked List | SC&#39;s 神奇的JavaWeb</title>
+    <title>DataStructure_Queue | SC&#39;s 神奇的JavaWeb</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -250,12 +251,12 @@ typedef struct LNode&amp;#123;
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DataStructure_Singly Linked List</h1>
+                    <h1 class="description center-align post-title">DataStructure_Queue</h1>
                 </div>
             </div>
         </div>
@@ -396,7 +397,7 @@ typedef struct LNode&amp;#123;
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-09
+                    2022-04-14
                 </div>
                 
 
@@ -410,14 +411,14 @@ typedef struct LNode&amp;#123;
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    991
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    5 分
                 </div>
                 
 
@@ -445,323 +446,179 @@ typedef struct LNode&amp;#123;
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-单链表的基本操作："><a href="#1-单链表的基本操作：" class="headerlink" title="1_单链表的基本操作："></a>1_单链表的基本操作：</h4><h5 id="1-1-表的声明"><a href="#1-1-表的声明" class="headerlink" title="1.1_表的声明"></a>1.1_表的声明</h5><pre class="line-numbers language-none"><code class="language-none">typedef int ElemType;
-typedef struct LNode&#123;
-    ElemType data;       &#x2F;&#x2F;数据域
-    struct LNode *next;  &#x2F;&#x2F;指针域
-&#125;LNode,*LinkList;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="1-2-头插法-可以实现表的逆置"><a href="#1-2-头插法-可以实现表的逆置" class="headerlink" title="1.2_头插法(可以实现表的逆置)"></a>1.2_头插法(可以实现表的逆置)</h5><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">&#x2F;&#x2F;头插法  实现的是倒叙输出
-LinkList List_HeadInsert(LinkList &amp;L)&#123;
-    LNode *s;
-    int x;
-    L&#x3D;(LinkList) malloc (sizeof(LNode));
-    L-&gt;next &#x3D; NULL;
-    scanf(&quot;%d&quot;,&amp;x);
-    while(x!&#x3D;999)&#123;
-        s &#x3D; (LNode*) malloc(sizeof(LNode));
-        s-&gt;data &#x3D; x;
-        s-&gt;next &#x3D; L-&gt;next;
-        L-&gt;next &#x3D; s;
-        scanf(&quot;%d&quot;,&amp;x);
-    &#125;
-    return L;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">程序输入：
-1 2 3 4 5 999
-程序输出：
-5 4 3 2 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="1-3-尾插法-正向建立单链表"><a href="#1-3-尾插法-正向建立单链表" class="headerlink" title="1.3_尾插法(正向建立单链表)"></a>1.3_尾插法(正向建立单链表)</h5><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;尾插法 也就是在最后的一个元素插入
-LinkList List_TailInsert(LinkList &amp;L)&#123;
-    int x;
-    L &#x3D; (LinkList) malloc(sizeof (LNode));
-    LNode *s,*r &#x3D; L;
-    scanf(&quot;%d&quot;,&amp;x);
-    while (x!&#x3D;999)&#123;
-        s &#x3D; (LinkList) malloc(sizeof (LNode));
-        s-&gt;data &#x3D; x;        &#x2F;&#x2F;声明一个内存放数据元素
-        r -&gt;next &#x3D; s;       &#x2F;&#x2F;使我们的r的next指向s [rs] &#x3D;&gt; [r]-&gt;[s]
-        r &#x3D; s;              &#x2F;&#x2F;然后又让我们的rs呆在一起继续合作[r]-&gt;[s]&#x3D;&gt;[rs]即指向尾节点
-        scanf(&quot;%d&quot;,&amp;x);
-    &#125;
-    r-&gt;next&#x3D;NULL;           &#x2F;&#x2F;r最后指向NULL 即为为尾节点
-    return L;               &#x2F;&#x2F;给用户返回单链表
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">程序输入：
-1 2 3 4 5 999
-程序输出：
-1 2 3 4 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="1-4-指定位序插入"><a href="#1-4-指定位序插入" class="headerlink" title="1.4_指定位序插入"></a>1.4_指定位序插入</h5><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;插入元素 在指定的位置插入
-void  Insert(LinkList &amp;L,int i,ElemType E)&#123;
-    LNode *p;
-    LNode *s &#x3D; (LNode*)malloc(sizeof (LNode));
-    s-&gt;data &#x3D; E;
-    s-&gt;next &#x3D; NULL;
-    p &#x3D; GetElem(L,i-1);
-    if(p!&#x3D;NULL)&#123;
-        s-&gt;next &#x3D; p-&gt;next;
-        p-&gt;next &#x3D; s;
-    &#125;else&#123;
-        cout&lt;&lt;&quot;插入值非法&quot;&lt;&lt;endl;
-    &#125;
-
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">程序输入：
-1 2 3 4 5 999
-程序输出：
-5 4 3 2 1
-在第三个位置插入元素10
-5 4 10 3 2 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="1-5-查找第i个元素-位序查找"><a href="#1-5-查找第i个元素-位序查找" class="headerlink" title="1.5_查找第i个元素(位序查找)"></a>1.5_查找第i个元素(位序查找)</h5><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;查找第i个元素值
-LNode *GetElem(LinkList L,int i)&#123;
-    int j &#x3D; 1;
-    LNode *p &#x3D; L-&gt;next;
-    if (i &#x3D;&#x3D; 0)&#123;
-        return L;
-    &#125;
-    if (i &lt; 1)&#123;
-        return NULL;
-    &#125;
-    while (p-&gt;next!&#x3D;NULL&amp;&amp;j&lt;i)
-    &#123;
-        p&#x3D;p-&gt;next;
-        j++;
-    &#125;
-    return p;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">程序输入：
-1 2 3 4 5 999
-程序输出：
-5 4 3 2 1
-这是按位序查找,查找(位序为1)的元素的值:5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="1-6-指定元素查找"><a href="#1-6-指定元素查找" class="headerlink" title="1.6_指定元素查找"></a>1.6_指定元素查找</h5><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;找到指定元素的位序
-&#x2F;&#x2F;int e就是我们需要找到的元素如果有返回数据[data[next]]
-LNode *FindByEle(LinkList L,int e)&#123;
-    LNode *p &#x3D; L-&gt;next;
-    while(p!&#x3D;NULL &amp;&amp; p-&gt;data!&#x3D;e)&#123;
-        p &#x3D; p-&gt;next;
-    &#125;
-    return p;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">程序输入：
-1 2 3 4 5 999
-程序输出：
-5 4 3 2 1
-找到元素为三的元素:3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="1-7-打印单链表"><a href="#1-7-打印单链表" class="headerlink" title="1.7_打印单链表"></a>1.7_打印单链表</h5><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;打印单链表
-void PrintLinkList(LinkList L)&#123;
-    LNode *tmp &#x3D; L-&gt;next;		&#x2F;&#x2F;这里我们开始第一个元素
-    if (tmp &#x3D;&#x3D; NULL)&#123;			&#x2F;&#x2F;如果第一个元素的值为null即为空
-       printf(&quot;链表为空&quot;);	
-    &#125;
-    while(tmp !&#x3D; NULL)&#123;			&#x2F;&#x2F;循环取数据
-        cout&lt;&lt;tmp-&gt;data&lt;&lt;&quot; &quot;;
-        tmp &#x3D; tmp-&gt;next;
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="1-8-按位序删除某个节点"><a href="#1-8-按位序删除某个节点" class="headerlink" title="1.8_按位序删除某个节点"></a>1.8_按位序删除某个节点</h5><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;按位序删除节点
-void Delete_LinkList(LinkList &amp;L,int i,ElemType &amp;e)&#123;
-    &#x2F;&#x2F;p所指的节点是q所指的节点的前驱节点
-    LNode *p;
-    LNode *q &#x3D; (LNode*) malloc(sizeof (LNode));
-    p &#x3D; GetElem(L,i-1);			&#x2F;&#x2F;我们调用了上面GetElem但是实际上我们取的是第i-1个元素
-    if(p&#x3D;&#x3D;NULL || p-&gt;next&#x3D;&#x3D;NULL)&#123;
-        cout&lt;&lt;&quot;非法删除&quot;&lt;&lt;endl;
-        free(q);
-    &#125;
-    q&#x3D;p-&gt;next;                  &#x2F;&#x2F;我们从上面的i-1得到第i-1个元素
-    e &#x3D; q-&gt;data;				&#x2F;&#x2F;取出删除节点的数据
-    p-&gt;next &#x3D; q-&gt;next;          &#x2F;&#x2F;声明一个新节点接受i-1的next 也就是我们要删除的节点
-    free(q);                    &#x2F;&#x2F;我们再free之前就先把i-1的next指向i的next就很OK!<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">程序输入：
-1 2 3 4 5 999
-程序输出：
-5 4 3 2 1
-这是按位序删除(位序为2),被删除的元素值:4
-5 3 2 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="1-9-删除某个节点的时间复杂度为O-1-的"><a href="#1-9-删除某个节点的时间复杂度为O-1-的" class="headerlink" title="1.9_删除某个节点的时间复杂度为O(1)的"></a>1.9_删除某个节点的时间复杂度为O(1)的</h5><pre class="line-numbers language-none"><code class="language-none">bool DeleteNode(LNode *p)&#123;
-	if(p&#x3D;&#x3D;NULL)&#123;
-		return false;
-	&#125;
-	LNode *q &#x3D; p-&gt;next;			&#x2F;&#x2F;令q指向*p的后继节点 
-	p-&gt;data&#x3D;p-&gt;next-&gt;data;		&#x2F;&#x2F;和后继节点交换数据 
-	p-&gt;next&#x3D;q-&gt;next;			&#x2F;&#x2F;将*q节点从链中&quot;断开&quot; 
-	free(p);					&#x2F;&#x2F;释放 
-	return true;
-&#125;
-
-注释：
-	我们想要删除
-	[1]-&gt;[2]-&gt;[3]-&gt;[4]....
-	通过上面的GetElem得到想要删除的节点p。在这里我们假设是第三个
-	1、那么平时的做法就是头开始遍历。使得[2]-&gt;next &#x3D; [3]-&gt;next 即是[2]-&gt;[4] 释放[3]就可以了
-	2、这个做法是我们虽然不能移动指针但是数据可以移动。即将[4]的数据转移到[3]上来 释放[4]即可
-	那么[3]-&gt;data &#x3D; [4]-&gt;data也就是我们上面的[p[3]-&gt;data&#x3D;[p-&gt;next][4]-&gt;data]。断开[4]
-	即是[p[3]-&gt;next&#x3D;q[4]-&gt;next]。为了方便理解我们假设在[4]后有一个[5].那么[4]-&gt;next &#x3D; [5]不是吗？是不是特别容易理解！
-	
-	我可真聪明哈哈哈哈！
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="2-全部代码"><a href="#2-全部代码" class="headerlink" title="2_全部代码"></a>2_全部代码</h4><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
-#include &quot;iostream&quot;
+                <h1 id="队列的基本操作"><a href="#队列的基本操作" class="headerlink" title="队列的基本操作:"></a>队列的基本操作:</h1><h2 id="队列的声明"><a href="#队列的声明" class="headerlink" title="队列的声明"></a>队列的声明</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &quot;iostream&quot;
 using namespace std;
+&#x2F;&#x2F;队列的声明
+#define Maxsize 10
+typedef int Elemtype;
+typedef struct&#123;
+    Elemtype data[Maxsize];     &#x2F;&#x2F;用静态数组存放队列元素
+    int front,rear;             &#x2F;&#x2F;队头指针和队尾指针
+    int size;
 
-typedef int ElemType;
-typedef struct LNode&#123;
-    ElemType data;      &#x2F;&#x2F;数据域
-    struct LNode *next;  &#x2F;&#x2F;指针域
-&#125;LNode,*LinkList;
-&#x2F;&#x2F;头插法  实现的是倒叙输出
-LinkList List_HeadInsert(LinkList &amp;L)&#123;
-    LNode *s;
-    int x;
-    L&#x3D;(LinkList) malloc (sizeof(LNode));
-    L-&gt;next &#x3D; NULL;
-    scanf(&quot;%d&quot;,&amp;x);
-    while(x!&#x3D;999)&#123;
-        s &#x3D; (LNode*) malloc(sizeof(LNode));
-        s-&gt;data &#x3D; x;
-        s-&gt;next &#x3D; L-&gt;next;
-        L-&gt;next &#x3D; s;
-        scanf(&quot;%d&quot;,&amp;x);
+&#125;SqQueue;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="初始化队列"><a href="#初始化队列" class="headerlink" title="初始化队列"></a>初始化队列</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;初始化队列
+void InitQueue(SqQueue &amp;Q)&#123;
+    Q.rear &#x3D; Q.front &#x3D; 0;
+    Q.size &#x3D; 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="判断为空"><a href="#判断为空" class="headerlink" title="判断为空"></a>判断为空</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;判断为空
+bool QueueEmpty(SqQueue Q)&#123;
+    if(Q.size&#x3D;&#x3D;0)c++
+        return true;
+    else
+        return false;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="入队-队尾入队"><a href="#入队-队尾入队" class="headerlink" title="入队(队尾入队)"></a>入队(队尾入队)</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;入队
+bool InQueue(SqQueue &amp;Q,Elemtype x)&#123;
+    if (Q.size &#x3D;&#x3D; Maxsize)&#123;
+        return false;
     &#125;
-    return L;
+    Q.data[Q.rear] &#x3D; x;             &#x2F;&#x2F;尾部插入数据
+    Q.rear &#x3D; (Q.rear+1)%Maxsize;    &#x2F;&#x2F;队尾指针后移
+    Q.size ++;
+    return true;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="出队"><a href="#出队" class="headerlink" title="出队"></a>出队</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;出队
+bool DeQueue(SqQueue &amp;Q,Elemtype &amp;x)&#123;
+    if (Q.rear &#x3D;&#x3D; Q.front)&#123;
+        return false;
+    &#125;
+    x &#x3D; Q.data[Q.front];
+    Q.front &#x3D; (Q.front+1)%Maxsize;
+    Q.size--;
+    return true;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="获取队头元素"><a href="#获取队头元素" class="headerlink" title="获取队头元素"></a>获取队头元素</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;获取队头元素
+bool GetHead(SqQueue Q,Elemtype &amp;x)&#123;
+    if (Q.size &#x3D;&#x3D; 0)
+        return false;
+    x &#x3D; Q.data[Q.front];
+    return true;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="打印队列"><a href="#打印队列" class="headerlink" title="打印队列"></a>打印队列</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;打印队列
+void PrintQueue(SqQueue Q)&#123;
+    int tmp &#x3D; Q.front;
+    while (tmp!&#x3D;Q.rear)&#123;
+        cout&lt;&lt;Q.data[tmp]&lt;&lt;&quot; &quot;;
+        tmp&#x3D;(tmp+1)%Maxsize;
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="全部代码"><a href="#全部代码" class="headerlink" title="全部代码"></a>全部代码</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &quot;iostream&quot;
+using namespace std;
+&#x2F;&#x2F;队列的声明
+#define Maxsize 10
+typedef int Elemtype;
+typedef struct&#123;
+    Elemtype data[Maxsize];     &#x2F;&#x2F;用静态数组存放队列元素
+    int front,rear;             &#x2F;&#x2F;队头指针和队尾指针
+    int size;
+
+&#125;SqQueue;
+&#x2F;&#x2F;初始化队列
+void InitQueue(SqQueue &amp;Q)&#123;
+    Q.rear &#x3D; Q.front &#x3D; 0;
+    Q.size &#x3D; 0;
 &#125;
-&#x2F;&#x2F;打印单链表
-void PrintLinkList(LinkList L)&#123;
-    LNode *tmp &#x3D; L-&gt;next;
-    if (tmp &#x3D;&#x3D; NULL)&#123;
-       printf(&quot;链表为空&quot;);
+&#x2F;&#x2F;判断为空
+bool QueueEmpty(SqQueue Q)&#123;
+    if(Q.size&#x3D;&#x3D;0)
+        return true;
+    else
+        return false;
+&#125;
+&#x2F;&#x2F;入队
+bool InQueue(SqQueue &amp;Q,Elemtype x)&#123;
+    if (Q.size &#x3D;&#x3D; Maxsize)&#123;
+        return false;
     &#125;
-    while(tmp !&#x3D; NULL)&#123;
-        cout&lt;&lt;tmp-&gt;data&lt;&lt;&quot; &quot;;
-        tmp &#x3D; tmp-&gt;next;
+    Q.data[Q.rear] &#x3D; x;             &#x2F;&#x2F;尾部插入数据
+    Q.rear &#x3D; (Q.rear+1)%Maxsize;    &#x2F;&#x2F;队尾指针后移
+    Q.size ++;
+    return true;
+&#125;
+&#x2F;&#x2F;出队
+bool DeQueue(SqQueue &amp;Q,Elemtype &amp;x)&#123;
+    if (Q.rear &#x3D;&#x3D; Q.front)&#123;
+        return false;
+    &#125;
+    x &#x3D; Q.data[Q.front];
+    Q.front &#x3D; (Q.front+1)%Maxsize;
+    Q.size--;
+    return true;
+&#125;
+&#x2F;&#x2F;获取队头元素
+bool GetHead(SqQueue Q,Elemtype &amp;x)&#123;
+    if (Q.size &#x3D;&#x3D; 0)
+        return false;
+    x &#x3D; Q.data[Q.front];
+    return true;
+&#125;
+&#x2F;&#x2F;打印队列
+void PrintQueue(SqQueue Q)&#123;
+    int tmp &#x3D; Q.front;
+    while (tmp!&#x3D;Q.rear)&#123;
+        cout&lt;&lt;Q.data[tmp]&lt;&lt;&quot; &quot;;
+        tmp&#x3D;(tmp+1)%Maxsize;
     &#125;
 &#125;
-&#x2F;&#x2F;找到指定元素的位序
-LNode *FindByEle(LinkList L,int e)&#123;
-    LNode *p &#x3D; L-&gt;next;
-    while(p!&#x3D;NULL &amp;&amp; p-&gt;data!&#x3D;e)&#123;
-        p &#x3D; p-&gt;next;
+int main()&#123;
+    SqQueue Q;
+    InitQueue(Q);
+    for(int i&#x3D;1;i&lt;&#x3D;5;i++)&#123;
+        cout&lt;&lt;&quot;插入队列数据第&quot;&lt;&lt;i&lt;&lt;&quot;个元素:&quot;&lt;&lt;i&lt;&lt;endl;
+        InQueue(Q,i);
+
     &#125;
-    return p;
-&#125;
-&#x2F;&#x2F;查找第i个元素值
-LNode *GetElem(LinkList L,int i)&#123;
-    int j &#x3D; 1;
-    LNode *p &#x3D; L-&gt;next;
-    if (i &#x3D;&#x3D; 0)&#123;
-        return L;
-    &#125;
-    if (i &lt; 1)&#123;
-        return NULL;
-    &#125;
-    while (p-&gt;next!&#x3D;NULL&amp;&amp;j&lt;i)
-    &#123;
-        p&#x3D;p-&gt;next;
-        j++;
-    &#125;
-    return p;
-&#125;
-&#x2F;&#x2F;按位序删除节点
-void Delete_LinkList(LinkList &amp;L,int i,ElemType &amp;e)&#123;
-    &#x2F;&#x2F;p所指的节点是q所指的节点的前驱节点
-    LNode *p;
-    LNode *q &#x3D; (LNode*) malloc(sizeof (LNode));
-    p &#x3D; GetElem(L,i-1);
-    if(p&#x3D;&#x3D;NULL || p-&gt;next&#x3D;&#x3D;NULL)&#123;
-        cout&lt;&lt;&quot;非法删除&quot;&lt;&lt;endl;
-        free(q);
-    &#125;
-    q&#x3D;p-&gt;next;                  &#x2F;&#x2F;我们从上面的i-1得到第i-1个元素
-    e &#x3D; q-&gt;data;
-    p-&gt;next &#x3D; q-&gt;next;          &#x2F;&#x2F;然后在声明一个新节点接受i-1的next 也就是我们要删除的节点
-    free(q);                    &#x2F;&#x2F;我们再free之前就先把i-1的next指向i的nextfree就没事啦
+    PrintQueue(Q);
+    cout&lt;&lt;endl;
+    Elemtype head;
+    GetHead(Q,head);
+    cout&lt;&lt;&quot;目前队列的队头元素是:&quot;&lt;&lt;head&lt;&lt;&quot;;且只能允许出队&quot;&lt;&lt;endl;
+    int DeEle;
+    DeQueue(Q,DeEle);
+    cout&lt;&lt;&quot;现在要删除队头元素是:&quot;&lt;&lt;DeEle&lt;&lt;endl;
+    cout&lt;&lt;&quot;删除队头之后的队列是:&quot;&lt;&lt;endl;
+    PrintQueue(Q);
+    cout&lt;&lt;endl;
+    DeQueue(Q,DeEle);
+    cout&lt;&lt;&quot;现在要删除队头元素是:&quot;&lt;&lt;DeEle&lt;&lt;endl;
+    cout&lt;&lt;&quot;删除队头之后的队列是:&quot;&lt;&lt;endl;
+    PrintQueue(Q);
+    cout&lt;&lt;endl;
+    int DeEle1;
+    DeQueue(Q,DeEle1);
+    cout&lt;&lt;&quot;现在要删除队头元素是:&quot;&lt;&lt;DeEle1&lt;&lt;endl;
+    cout&lt;&lt;&quot;删除队头之后的队列是:&quot;&lt;&lt;endl;
+    PrintQueue(Q);
 
 &#125;
-&#x2F;&#x2F;插入元素 在指定的位置插入
-void  Insert(LinkList &amp;L,int i,ElemType E)&#123;
-    LNode *p;
-    LNode *s &#x3D; (LNode *)malloc(sizeof (LNode));
-    s-&gt;data &#x3D; E;
-    s-&gt;next &#x3D; NULL;
-    p &#x3D; GetElem(L,i-1);
-    if(p!&#x3D;NULL)&#123;
-        s-&gt;next &#x3D; p-&gt;next;
-        p-&gt;next &#x3D; s;
-    &#125;else&#123;
-        cout&lt;&lt;&quot;插入值非法&quot;&lt;&lt;endl;
-    &#125;
 
-&#125;
-&#x2F;&#x2F;尾插法 也就是在最后的一个元素插入
-LinkList List_TailInsert(LinkList &amp;L)&#123;
-    int x;
-    L &#x3D; (LinkList) malloc(sizeof (LNode));
-    LNode *s,*r &#x3D; L;
-    scanf(&quot;%d&quot;,&amp;x);
-    while (x!&#x3D;999)&#123;
-        s &#x3D; (LinkList) malloc(sizeof (LNode));
-        s-&gt;data &#x3D; x;        &#x2F;&#x2F;声明一个内存放数据元素
-        r -&gt;next &#x3D; s;       &#x2F;&#x2F;使我们的r的next指向s [rs] &#x3D;&gt; [r]-&gt;[s]
-        r &#x3D; s;              &#x2F;&#x2F;然后又让我们的rs呆在一起继续合作  [r]-&gt;[s] &#x3D;&gt; [rs] 即指向尾节点
-        scanf(&quot;%d&quot;,&amp;x);
-    &#125;
-    r-&gt;next&#x3D;NULL;           &#x2F;&#x2F;r最后指向NULL 即为为尾节点
-    return L;               &#x2F;&#x2F;给用户返回单链表
-&#125;
-int main() &#123;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    LinkList L;
-
-    List_HeadInsert(L);
-    PrintLinkList(L);
-    int e;
-    Delete_LinkList(L,2,e);
-    cout&lt;&lt;&quot;\n&quot;&lt;&lt;&quot;这是按位序删除(位序为2),被删除的元素值:&quot;&lt;&lt;e&lt;&lt;endl;
-    PrintLinkList(L);
-    &#x2F;&#x2F;查找第i个元素
-    cout&lt;&lt;&quot;\n&quot;&lt;&lt;&quot;这是按位序查找,查找(位序为1)的元素的值:&quot;&lt;&lt;GetElem(L,1)-&gt;data&lt;&lt;endl;
-    LNode *pNode &#x3D; FindByEle(L, 3);
-    cout&lt;&lt;&quot;找到元素为三的元素:&quot;&lt;&lt;pNode-&gt;data&lt;&lt;endl;
-    &#x2F;&#x2F;在第三个位置插入元素10
-    cout&lt;&lt;&quot;在第三个位置插入元素10&quot;&lt;&lt;endl;
-    Insert(L,3,10);
-    PrintLinkList(L);
-    return 0;
-
-    LinkList TailL;
-    List_TailInsert(TailL);
-    PrintLinkList(TailL);
-
-
-
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">程序输入：
-1 2 3 4 5 999
-程序输出：
-5 4 3 2 1
-这是按位序删除(位序为2),被删除的元素值:4
-5 3 2 1
-这是按位序查找,查找(位序为1)的元素的值:5
-找到元素为三的元素:3
-在第三个位置插入元素10
-5 3 10 2 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">插入队列数据第1个元素:1
+插入队列数据第2个元素:2
+插入队列数据第3个元素:3
+插入队列数据第4个元素:4
+插入队列数据第5个元素:5
+1 2 3 4 5
+目前队列的队头元素是:1;且只能允许出队
+现在要删除队头元素是:1
+删除队头之后的队列是:
+2 3 4 5
+现在要删除队头元素是:2
+删除队头之后的队列是:
+3 4 5
+现在要删除队头元素是:3
+删除队头之后的队列是:
+4 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -789,7 +646,7 @@ int main() &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/04/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8D%95%E9%93%BE%E8%A1%A8/">https://shicheng.cool/2022/04/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8D%95%E9%93%BE%E8%A1%A8/</a>
+                    <a href="https://shicheng.cool/2022/04/14/DataStructure_Queue/">https://shicheng.cool/2022/04/14/DataStructure_Queue/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1143,13 +1000,13 @@ int main() &#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8F%8C%E9%93%BE%E8%A1%A8/">
+                <a href="/2022/04/15/DataStructure_LinkQueue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="DataStructure_DLinkList">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="DataStructure_LinkQueue">
                         
-                        <span class="card-title">DataStructure_DLinkList</span>
+                        <span class="card-title">DataStructure_LinkQueue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1160,7 +1017,7 @@ int main() &#123;
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-15
                         </span>
                         <span class="publish-author">
                             
@@ -1192,13 +1049,13 @@ int main() &#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/30/SpringMVC%E7%AC%94%E8%AE%B0/">
+                <a href="/2022/04/12/DataStructure_SqStack/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SpringMVC">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="DataStructure_SqStack">
                         
-                        <span class="card-title">SpringMVC</span>
+                        <span class="card-title">DataStructure_SqStack</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1209,14 +1066,14 @@ int main() &#123;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SSM/" class="post-category">
-                                    -SSM
+                            <a href="/categories/Data-Structure/" class="post-category">
+                                    Data_Structure
                                 </a>
                             
                             
@@ -1226,8 +1083,8 @@ int main() &#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SSM/">
-                        <span class="chip bg-color">-SSM</span>
+                    <a href="/tags/Data-Structure/">
+                        <span class="chip bg-color">Data_Structure</span>
                     </a>
                     
                 </div>
@@ -1414,7 +1271,7 @@ int main() &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">174.6k</span>
+                        class="white-color">167.1k</span>
             
             
             

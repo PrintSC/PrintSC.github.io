@@ -378,8 +378,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">前端</span>
+                            <a href="/tags/Front/">
+                                <span class="chip bg-color">Front</span>
                             </a>
                         
                     </div>
@@ -390,8 +390,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/Front/" class="post-category">
+                                Front
                             </a>
                         
                     </div>
@@ -410,7 +410,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-17
+                    2022-04-22
                 </div>
                 
 
@@ -465,25 +465,25 @@
 <h2 id="1，VUE"><a href="#1，VUE" class="headerlink" title="1，VUE"></a>1，VUE</h2><h3 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1  概述"></a>1.1  概述</h3><p>接下来我们学习一款前端的框架，就是 VUE。</p>
 <p>==Vue 是一套前端框架，免除原生JavaScript中的DOM操作，简化书写。==</p>
 <p>我们之前也学习过后端的框架 <code>Mybatis</code> ，<code>Mybatis</code> 是用来简化 <code>jdbc</code> 代码编写的；而 <code>VUE</code> 是前端的框架，是用来简化 <code>JavaScript</code> 代码编写的。前一天我们做了一个综合性的案例，里面进行了大量的DOM操作，如下</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831112115508.png" alt="image-20210831112115508" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831112115508.png" alt="image-20210831112115508" style="zoom:70%;">
 
 <p>学习了 <code>VUE</code> 后，这部分代码我们就不需要再写了。那么 <code>VUE</code> 是如何简化 DOM 书写呢？</p>
 <p>==基于MVVM(Model-View-ViewModel)思想，实现数据的双向绑定，将编程的关注点放在数据上。==之前我们是将关注点放在了 DOM 操作上；而要了解 <code>MVVM</code> 思想，必须先聊聊 <code>MVC</code> 思想，如下图就是 <code>MVC</code> 思想图解</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831113940588.png" alt="image-20210831113940588" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831113940588.png" alt="image-20210831113940588" style="zoom:70%;">
 
 <p>C 就是咱们 js 代码，M 就是数据，而 V 是页面上展示的内容，如下图是我们之前写的代码</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831114227585.png" alt="image-20210831114227585" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831114227585.png" alt="image-20210831114227585" style="zoom:70%;">
 
 <p><code>MVC</code> 思想是没法进行双向绑定的。双向绑定是指当数据模型数据发生变化时，页面展示的会随之发生变化，而如果表单数据发生变化，绑定的模型数据也随之发生变化。接下来我们聊聊 <code>MVVM</code> 思想，如下图是三个组件图解</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831114805052.png" alt="image-20210831114805052" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831114805052.png" alt="image-20210831114805052" style="zoom:80%;">
 
 <p>图中的 <code>Model</code> 就是我们的数据，<code>View</code> 是视图，也就是页面标签，用户可以通过浏览器看到的内容；<code>Model</code> 和 <code>View</code> 是通过 <code>ViewModel</code> 对象进行双向绑定的，而 <code>ViewModel</code> 对象是 <code>Vue</code> 提供的。接下来让大家看一下双向绑定的效果，下图是提前准备的代码，输入框绑定了 <code>username</code> 模型数据，而在页面上也使用 <code>&#123;&#123;&#125;&#125;` 绑定了 `username` 模型数据
 
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831115645528.png" alt="image-20210831115645528" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831115645528.png" alt="image-20210831115645528" style="zoom:70%;">
 
 通过浏览器打开该页面可以看到如下页面
 
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831115902537.png" alt="image-20210831115902537" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831115902537.png" alt="image-20210831115902537" style="zoom:80%;">
 
 当我们在输入框中输入内容，而输入框后面随之实时的展示我们输入的内容，这就是双向绑定的效果。
 
@@ -598,7 +598,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 </tr>
 </tbody></table>
 <p>接下来我们挨个学习这些指令</p>
-<h4 id="1-3-1-v-bind-amp-v-model-指令"><a href="#1-3-1-v-bind-amp-v-model-指令" class="headerlink" title="1.3.1  v-bind &amp; v-model 指令"></a>1.3.1  v-bind &amp; v-model 指令</h4><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831150101736.png" alt="image-20210831150101736" style="zoom:70%;">
+<h4 id="1-3-1-v-bind-amp-v-model-指令"><a href="#1-3-1-v-bind-amp-v-model-指令" class="headerlink" title="1.3.1  v-bind &amp; v-model 指令"></a>1.3.1  v-bind &amp; v-model 指令</h4><img src="/2022/01/19/VUE&Element/image-20210831150101736.png" alt="image-20210831150101736" style="zoom:70%;">
 
 <ul>
 <li><p><strong>v-bind</strong></p>
@@ -646,9 +646,9 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>通过浏览器打开上面页面，并且使用检查查看超链接的路径，该路径会根据输入框输入的路径变化而变化，这是因为超链接和输入框绑定的是同一个模型数据</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831150945931.png" alt="image-20210831150945931" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831150945931.png" alt="image-20210831150945931" style="zoom:80%;">
 
-<h4 id="1-3-2-v-on-指令"><a href="#1-3-2-v-on-指令" class="headerlink" title="1.3.2  v-on 指令"></a>1.3.2  v-on 指令</h4><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831151231955.png" alt="image-20210831151231955" style="zoom:70%;">
+<h4 id="1-3-2-v-on-指令"><a href="#1-3-2-v-on-指令" class="headerlink" title="1.3.2  v-on 指令"></a>1.3.2  v-on 指令</h4><img src="/2022/01/19/VUE&Element/image-20210831151231955.png" alt="image-20210831151231955" style="zoom:70%;">
 
 <p>我们在页面定义一个按钮，并给该按钮使用 <code>v-on</code> 指令绑定单击事件，html代码如下</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>一个按钮<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">v-on:</span>click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>show()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -706,7 +706,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="1-3-3-条件判断指令"><a href="#1-3-3-条件判断指令" class="headerlink" title="1.3.3  条件判断指令"></a>1.3.3  条件判断指令</h4><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831151904081.png" alt="image-20210831151904081" style="zoom:70%;">
+<h4 id="1-3-3-条件判断指令"><a href="#1-3-3-条件判断指令" class="headerlink" title="1.3.3  条件判断指令"></a>1.3.3  条件判断指令</h4><img src="/2022/01/19/VUE&Element/image-20210831151904081.png" alt="image-20210831151904081" style="zoom:70%;">
 
 <p>接下来通过代码演示一下。在 Vue中定义一个 <code>count</code> 的数据模型，如下</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//1. 创建Vue核心对象</span>
@@ -760,7 +760,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>通过浏览器打开页面并在输入框输入不同的值，效果如下</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831154300325.png" alt="image-20210831154300325" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831154300325.png" alt="image-20210831154300325" style="zoom:80%;">
 
 <p>然后我们在看看 <code>v-show</code> 指令的效果，如果模型数据 <code>count </code> 的值是3时，展示 <code>div v-show</code> 内容，否则不展示，html页面代码如下</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>count == 3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>div v-show<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -768,13 +768,13 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>count<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>浏览器打开效果如下：</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831154547780.png" alt="image-20210831154547780" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831154547780.png" alt="image-20210831154547780" style="zoom:80%;">
 
 <p>通过上面的演示，发现 <code>v-show</code> 和 <code>v-if</code> 效果一样，那它们到底有什么区别呢？我们根据浏览器的检查功能查看源代码</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831154759672.png" alt="image-20210831154759672" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831154759672.png" alt="image-20210831154759672" style="zoom:80%;">
 
 <p>通过上图可以看出 <code>v-show</code> 不展示的原理是给对应的标签添加 <code>display</code> css属性，并将该属性值设置为 <code>none</code> ，这样就达到了隐藏的效果。而 <code>v-if</code> 指令是条件不满足时根本就不会渲染。</p>
-<h4 id="1-3-4-v-for-指令"><a href="#1-3-4-v-for-指令" class="headerlink" title="1.3.4  v-for 指令"></a>1.3.4  v-for 指令</h4><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831155204829.png" alt="image-20210831155204829" style="zoom:80%;">
+<h4 id="1-3-4-v-for-指令"><a href="#1-3-4-v-for-指令" class="headerlink" title="1.3.4  v-for 指令"></a>1.3.4  v-for 指令</h4><img src="/2022/01/19/VUE&Element/image-20210831155204829.png" alt="image-20210831155204829" style="zoom:80%;">
 
 <p>这个指令看到名字就知道是用来遍历的，该指令使用的格式如下：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>标签</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>变量名 in 集合模型数据<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -826,21 +826,21 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>通过浏览器打开效果如下</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831155837801.png" alt="image-20210831155837801" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831155837801.png" alt="image-20210831155837801" style="zoom:80%;">
 
 <h3 id="1-4-生命周期"><a href="#1-4-生命周期" class="headerlink" title="1.4  生命周期"></a>1.4  生命周期</h3><p>生命周期的八个阶段：每触发一个生命周期事件，会自动执行一个生命周期方法，这些生命周期方法也被称为钩子方法。</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831160239294.png" alt="image-20210831160239294" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831160239294.png" alt="image-20210831160239294" style="zoom:80%;">
 
 <p>下图是 Vue 官网提供的从创建 Vue 到效果 Vue 对象的整个过程及各个阶段对应的钩子函数</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831160335496.png" alt="image-20210831160335496" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831160335496.png" alt="image-20210831160335496" style="zoom:80%;">
 
 <p>看到上面的图，大家无需过多的关注这张图。这些钩子方法我们只关注 <code>mounted</code> 就行了。</p>
 <p><code>mounted</code>：挂载完成，Vue初始化成功，HTML页面渲染成功。而以后我们会在该方法中==发送异步请求，加载数据。==</p>
 <h3 id="1-5-案例"><a href="#1-5-案例" class="headerlink" title="1.5  案例"></a>1.5  案例</h3><h4 id="1-5-1-需求"><a href="#1-5-1-需求" class="headerlink" title="1.5.1  需求"></a>1.5.1  需求</h4><p>使用 Vue 简化我们在前一天ajax学完后做的品牌列表数据查询和添加功能</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831161040800.png" alt="image-20210831161040800" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831161040800.png" alt="image-20210831161040800" style="zoom:80%;">
 
 <p>此案例只是使用 Vue 对前端代码进行优化，后端代码无需修改。</p>
-<h4 id="1-5-2-查询所有功能"><a href="#1-5-2-查询所有功能" class="headerlink" title="1.5.2  查询所有功能"></a>1.5.2  查询所有功能</h4><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831161346678.png" alt="image-20210831161346678" style="zoom:80%;">
+<h4 id="1-5-2-查询所有功能"><a href="#1-5-2-查询所有功能" class="headerlink" title="1.5.2  查询所有功能"></a>1.5.2  查询所有功能</h4><img src="/2022/01/19/VUE&Element/image-20210831161346678.png" alt="image-20210831161346678" style="zoom:80%;">
 
 <ol>
 <li><p><strong>在 brand.html 页面引入 vue 的js文件</strong></p>
@@ -951,10 +951,10 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="1-5-3-添加功能"><a href="#1-5-3-添加功能" class="headerlink" title="1.5.3  添加功能"></a>1.5.3  添加功能</h4><p>页面操作效果如下：</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831163001830.png" alt="image-20210831163001830" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831163001830.png" alt="image-20210831163001830" style="zoom:80%;">
 
 <p>整体流程如下</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831163035298.png" alt="image-20210831163035298" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831163035298.png" alt="image-20210831163035298" style="zoom:70%;">
 
 <blockquote>
 <p>==注意：前端代码的关键点在于使用 <code>v-model</code> 指令给标签项绑定模型数据，利用双向绑定特性，在发送异步请求时提交数据。==</p>
@@ -1075,18 +1075,18 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <h2 id="2，Element"><a href="#2，Element" class="headerlink" title="2，Element"></a>2，Element</h2><p>Element：是饿了么公司前端开发团队提供的一套基于 Vue 的网站组件库，用于快速构建网页。</p>
 <p>Element 提供了很多组件（组成网页的部件）供我们使用。例如 超链接、按钮、图片、表格等等~</p>
 <p>如下图左边的是我们编写页面看到的按钮，上图右边的是 Element 提供的页面效果，效果一目了然。</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831170943892.png" alt="image-20210831170943892" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831170943892.png" alt="image-20210831170943892" style="zoom:80%;">
 
 <p>我们学习 Element 其实就是学习怎么从官网拷贝组件到我们自己的页面并进行修改，官网网址是</p>
 <pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;element.eleme.cn&#x2F;#&#x2F;zh-CN<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>进入官网能看到如下页面</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831171456559.png" alt="image-20210831171456559"></p>
+<p><img src="/2022/01/19/VUE&Element/image-20210831171456559.png" alt="image-20210831171456559"></p>
 <p>接下来直接点击 <code>组件</code> ，页面如下</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831171552844.png" alt="image-20210831171552844"></p>
+<p><img src="/2022/01/19/VUE&Element/image-20210831171552844.png" alt="image-20210831171552844"></p>
 <h3 id="2-1-快速入门"><a href="#2-1-快速入门" class="headerlink" title="2.1  快速入门"></a>2.1  快速入门</h3><ol>
 <li><p>将资源 <code>04-资料\02-element</code> 下的 <code>element-ui</code> 文件夹直接拷贝到项目的 <code>webapp</code> 下。目录结构如下</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831171856768.png" alt="image-20210831171856768" style="zoom:80%;"></li>
+<img src="/2022/01/19/VUE&Element/image-20210831171856768.png" alt="image-20210831171856768" style="zoom:80%;"></li>
 <li><p>创建页面，并在页面引入Element 的css、js文件 和 Vue.js</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element-ui/lib/index.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -1099,7 +1099,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
     <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>官网复制Element组件代码</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831180730287.png" alt="image-20210831180730287" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831180730287.png" alt="image-20210831180730287" style="zoom:70%;">
 
 <p>在左菜单栏找到 <code>Button 按钮</code> ，然后找到自己喜欢的按钮样式，点击 <code>显示代码</code> ，在下面就会展示出对应的代码，将这些代码拷贝到我们自己的页面即可。</p>
 </li>
@@ -1170,7 +1170,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <li>Container 布局容器</li>
 </ul>
 <h4 id="2-2-1-Layout-局部"><a href="#2-2-1-Layout-局部" class="headerlink" title="2.2.1  Layout 局部"></a>2.2.1  Layout 局部</h4><p>通过基础的 24 分栏，迅速简便地创建布局。也就是默认将一行分为 24 栏，根据页面要求给每一列设置所占的栏数。</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831182349672.png" alt="image-20210831182349672" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831182349672.png" alt="image-20210831182349672" style="zoom:70%;">
 
 <p>在左菜单栏找到 <code>Layout 布局</code> ，然后找到自己喜欢的按钮样式，点击 <code>显示代码</code> ，在下面就会展示出对应的代码，显示出的代码中有样式，有html标签。将样式拷贝我们自己页面的 <code>head</code> 标签内，将html标签拷贝到  <code>&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;</code> 标签内。</p>
 <p><strong>整体页面代码如下：</strong></p>
@@ -1264,7 +1264,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 
 <h4 id="2-2-2-Container-布局容器"><a href="#2-2-2-Container-布局容器" class="headerlink" title="2.2.2  Container 布局容器"></a>2.2.2  Container 布局容器</h4><p>用于布局的容器组件，方便快速搭建页面的基本结构。如下图就是布局容器效果。</p>
 <p>如下图是官网提供的 Container 布局容器实例：</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831183433892.png" alt="image-20210831183433892" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831183433892.png" alt="image-20210831183433892" style="zoom:70%;">
 
 <p>该效果代码中包含了样式、页面标签、模型数据。将里面的样式 <code>&lt;style&gt;</code> 拷贝到我们自己页面的 <code>head</code> 标签中；将html标签拷贝到 <code>&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;</code> 标签中，再将数据模型拷贝到 <code>vue</code> 对象的 <code>data()</code> 中。</p>
 <p><strong>整体页面代码如下：</strong></p>
@@ -1381,12 +1381,12 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 
 <h3 id="2-3-案例"><a href="#2-3-案例" class="headerlink" title="2.3  案例"></a>2.3  案例</h3><p>其他的组件我们通过完成一个页面来学习。</p>
 <p>我们要完成如下页面效果</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831185223141.png" alt="image-20210831185223141" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831185223141.png" alt="image-20210831185223141" style="zoom:80%;">
 
 <p>要完成该页面，我们需要先对这个页面进行分析，看页面由哪儿几部分组成，然后到官网进行拷贝并修改。页面总共有如下组成部分</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831185505106.png" alt="image-20210831185505106"></p>
+<p><img src="/2022/01/19/VUE&Element/image-20210831185505106.png" alt="image-20210831185505106"></p>
 <p>还有一个是当我们点击 <code>新增</code> 按钮，会在页面正中间弹出一个对话框，如下</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831185612905.png" alt="image-20210831185612905" style="zoom:60%;">
+<img src="/2022/01/19/VUE&Element/image-20210831185612905.png" alt="image-20210831185612905" style="zoom:60%;">
 
 <h4 id="2-3-1-准备基本页面"><a href="#2-3-1-准备基本页面" class="headerlink" title="2.3.1  准备基本页面"></a>2.3.1  准备基本页面</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -1412,63 +1412,63 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="2-3-2-完成表格展示"><a href="#2-3-2-完成表格展示" class="headerlink" title="2.3.2  完成表格展示"></a>2.3.2  完成表格展示</h4><p>使用 Element 整体的思路就是 ==拷贝 + 修改==。</p>
-<h5 id="2-3-2-1-拷贝"><a href="#2-3-2-1-拷贝" class="headerlink" title="2.3.2.1  拷贝"></a>2.3.2.1  拷贝</h5><p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831185937618.png" alt="image-20210831185937618"></p>
+<h5 id="2-3-2-1-拷贝"><a href="#2-3-2-1-拷贝" class="headerlink" title="2.3.2.1  拷贝"></a>2.3.2.1  拷贝</h5><p><img src="/2022/01/19/VUE&Element/image-20210831185937618.png" alt="image-20210831185937618"></p>
 <p>在左菜单栏找到 <code>Table 表格</code>并点击，右边主体就会定位到表格这一块，找到我们需要的表格效果（如上图），点击 <code>显示代码</code> 就可以看到这个表格的代码了。</p>
 <p>将html标签拷贝到 <code>&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;</code> 中，如下：</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831190328825.png" alt="image-20210831190328825" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831190328825.png" alt="image-20210831190328825" style="zoom:80%;">
 
 <p>将css样式拷贝到我们页面的 <code>head</code> 标签中，如下</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831190419248.png" alt="image-20210831190419248" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831190419248.png" alt="image-20210831190419248" style="zoom:80%;">
 
 <p>将方法和模型数据拷贝到 Vue 对象指定的位置</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831190534720.png" alt="image-20210831190534720" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831190534720.png" alt="image-20210831190534720" style="zoom:80%;">
 
 <p>拷贝完成后通过浏览器打开可以看到表格的效果</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831191234876.png" alt="image-20210831191234876"></p>
+<p><img src="/2022/01/19/VUE&Element/image-20210831191234876.png" alt="image-20210831191234876"></p>
 <p>表格效果出来了，但是显示的表头和数据并不是我们想要的，所以接下来就需要对页面代码进行修改了。</p>
 <h5 id="2-3-2-2-修改"><a href="#2-3-2-2-修改" class="headerlink" title="2.3.2.2  修改"></a>2.3.2.2  修改</h5><ol>
 <li><p><strong>修改表头和数据</strong></p>
 <p>下面是对表格代码进行分析的图解。根据下图说明修改自己的列数和列名</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831192032118.png" alt="image-20210831192032118" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831192032118.png" alt="image-20210831192032118" style="zoom:70%;">
 
 <p>修改完页面后，还需要对绑定的模型数据进行修改，下图是对模型数据进行分析的图解</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831192429806.png" alt="image-20210831192429806" style="zoom:70%;"></li>
+<img src="/2022/01/19/VUE&Element/image-20210831192429806.png" alt="image-20210831192429806" style="zoom:70%;"></li>
 <li><p><strong>给表格添加操作列</strong></p>
 <p>从之前的表格拷贝一列出来并对其进行修改。按钮是从官网的 <code>Button 按钮</code> 组件中拷贝并修改的</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831192809304.png" alt="image-20210831192809304" style="zoom:70%;"></li>
+<img src="/2022/01/19/VUE&Element/image-20210831192809304.png" alt="image-20210831192809304" style="zoom:70%;"></li>
 <li><p><strong>给表格添加复选框列和标号列</strong></p>
 <p>给表格添加复选框和标号列，效果如下</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831193216143.png" alt="image-20210831193216143"></p>
+<p><img src="/2022/01/19/VUE&Element/image-20210831193216143.png" alt="image-20210831193216143"></p>
 <p>此效果也是从 Element 官网进行拷贝，先找到对应的表格效果，然后将其对应代码拷贝到我们的代码中，如下是复选框列官网效果图和代码</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831193601788.png" alt="image-20210831193601788"></p>
+<p><img src="/2022/01/19/VUE&Element/image-20210831193601788.png" alt="image-20210831193601788"></p>
 <p>这里需要注意在 <code>&lt;el-table&gt;</code> 标签上有一个事件 <code>@selection-change=&quot;handleSelectionChange&quot;</code> ，这里绑定的函数也需要从官网拷贝到我们自己的页面代码中，函数代码如下：</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831194013986.png" alt="image-20210831194013986"></p>
+<p><img src="/2022/01/19/VUE&Element/image-20210831194013986.png" alt="image-20210831194013986"></p>
 <p>从该函数中又发现还需要一个模型数据 <code>multipleSelection </code> ，所以还需要定义出该模型数据</p>
 </li>
 </ol>
 <p>标号列也用同样的方式进行拷贝并修改。</p>
 <h4 id="2-3-3-完成搜索表单展示"><a href="#2-3-3-完成搜索表单展示" class="headerlink" title="2.3.3  完成搜索表单展示"></a>2.3.3  完成搜索表单展示</h4><p>在 Element 官网找到横排的表单效果，然后拷贝代码并进行修改</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831194300357.png" alt="image-20210831194300357"></p>
+<p><img src="/2022/01/19/VUE&Element/image-20210831194300357.png" alt="image-20210831194300357"></p>
 <p>点击上面的 <code>显示代码</code> 后，就会展示出对应的代码，下面是对这部分代码进行分析的图解</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831194835721.png" alt="image-20210831194835721"></p>
+<p><img src="/2022/01/19/VUE&Element/image-20210831194835721.png" alt="image-20210831194835721"></p>
 <p>然后根据我们要的效果修改代码。</p>
 <h4 id="2-3-4-完成批量删除和新增按钮展示"><a href="#2-3-4-完成批量删除和新增按钮展示" class="headerlink" title="2.3.4  完成批量删除和新增按钮展示"></a>2.3.4  完成批量删除和新增按钮展示</h4><p>从 Element 官网找具有着色效果的按钮，并将代码拷贝到我们自己的页面上</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831214602954.png" alt="image-20210831214602954" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831214602954.png" alt="image-20210831214602954" style="zoom:70%;">
 
 
 
 <h4 id="2-3-5-完成对话框展示"><a href="#2-3-5-完成对话框展示" class="headerlink" title="2.3.5  完成对话框展示"></a>2.3.5  完成对话框展示</h4><p>在 Element 官网找对话框，如下：</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831214818516.png" alt="image-20210831214818516" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831214818516.png" alt="image-20210831214818516" style="zoom:70%;">
 
 <p>下面对官网提供的代码进行分析</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831215609729.png" alt="image-20210831215609729" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831215609729.png" alt="image-20210831215609729" style="zoom:80%;">
 
 <p>上图分析出来的模型数据需要在 Vue 对象中进行定义。</p>
 <h4 id="2-3-6-完成分页条展示"><a href="#2-3-6-完成分页条展示" class="headerlink" title="2.3.6  完成分页条展示"></a>2.3.6  完成分页条展示</h4><p>在 Element 官网找到 <code>Pagination 分页</code> ，在页面主体部分找到我们需要的效果，如下</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831220034775.png" alt="image-20210831220034775" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/image-20210831220034775.png" alt="image-20210831220034775" style="zoom:70%;">
 
 <p>点击 <code>显示代码</code> ，找到 <code>完整功能</code> 对应的代码，接下来对该代码进行分析</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831220446390.png" alt="image-20210831220446390" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/image-20210831220446390.png" alt="image-20210831220446390" style="zoom:80%;">
 
 <p>上面代码属性说明：</p>
 <ul>
@@ -1476,7 +1476,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 </li>
 <li><p><code>page-sizes</code> ： 每页显示个数选择器的选项设置。</p>
 <p><code>:page-sizes=&quot;[100,200,300,400]&quot;</code>  对应的页面效果如下：</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210831220820557.png" alt="image-20210831220820557" style="zoom:70%;"></li>
+<img src="/2022/01/19/VUE&Element/image-20210831220820557.png" alt="image-20210831220820557" style="zoom:70%;"></li>
 <li><p><code>currentPage</code> ：当前页码。我们点击那个页码，此属性值就是几。</p>
 </li>
 <li><p><code>total</code> ：总记录数。用来设置总的数据条目数，该属性设置后， Element 会自动计算出需分多少页并给我们展示对应的页码。</p>
@@ -1709,7 +1709,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="3，综合案例"><a href="#3，综合案例" class="headerlink" title="3，综合案例"></a>3，综合案例</h2><h3 id="3-1-功能介绍"><a href="#3-1-功能介绍" class="headerlink" title="3.1  功能介绍"></a>3.1  功能介绍</h3><p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210825171411003.png" alt="image-20210825171411003"></p>
+<h2 id="3，综合案例"><a href="#3，综合案例" class="headerlink" title="3，综合案例"></a>3，综合案例</h2><h3 id="3-1-功能介绍"><a href="#3-1-功能介绍" class="headerlink" title="3.1  功能介绍"></a>3.1  功能介绍</h3><p><img src="/2022/01/19/VUE&Element/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element/image-20210825171411003.png" alt="image-20210825171411003"></p>
 <p>以上是我们在综合案例要实现的功能。对数据的除了对数据的增删改查功能外，还有一些复杂的功能，如 <code>批量删除</code>、<code>分页查询</code>、<code>条件查询</code> 等功能</p>
 <ul>
 <li><code>批量删除</code> 功能：每条数据前都有复选框，当我选中多条数据并点击 <code>批量删除</code> 按钮后，会发送请求到后端并删除数据库中指定的多条数据。</li>
@@ -1723,7 +1723,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <li>执行资料中提供的 tb_brand.sql脚本</li>
 </ul>
 <h4 id="3-2-1-工程准备"><a href="#3-2-1-工程准备" class="headerlink" title="3.2.1  工程准备"></a>3.2.1  工程准备</h4><p>将 <code>04-资料\01-初始工程</code> 中的 <code>brand-case</code> 工程导入到我们自己的 idea 中。工程结构如下：</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element&综合案例/image-20210825195522904.png" alt="image-20210825195522904" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element/image-20210825195522904.png" alt="image-20210825195522904" style="zoom:80%;">
 
 <h4 id="3-2-2-创建表"><a href="#3-2-2-创建表" class="headerlink" title="3.2.2  创建表"></a>3.2.2  创建表</h4><p>下面是创建表的语句</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 删除tb_brand表</span>
@@ -1795,7 +1795,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
        <span class="token punctuation">(</span><span class="token string">'百度'</span><span class="token punctuation">,</span> <span class="token string">'百度在线网络技术公司'</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">'搜搜搜'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
        <span class="token punctuation">(</span><span class="token string">'京东'</span><span class="token punctuation">,</span> <span class="token string">'北京京东世纪贸易有限公司'</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">'就是快'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-3-查询所有功能"><a href="#3-3-查询所有功能" class="headerlink" title="3.3  查询所有功能"></a>3.3  查询所有功能</h3><p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210825200138600.png" alt="image-20210825200138600"></p>
+<h3 id="3-3-查询所有功能"><a href="#3-3-查询所有功能" class="headerlink" title="3.3  查询所有功能"></a>3.3  查询所有功能</h3><p><img src="/2022/01/19/VUE&Element/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element/image-20210825200138600.png" alt="image-20210825200138600"></p>
 <p>如上图所示是查询所有品牌数据在页面展示的效果。要实现这个功能，要先搞明白如下问题：</p>
 <ul>
 <li><p>什么时候发送异步请求？</p>
@@ -1806,11 +1806,11 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 </li>
 <li><p>响应的数据格式是什么样？</p>
 <p>后端是需要将 <code>List&lt;Brand&gt;</code> 对象转换为 JSON 格式的数据并响应回给浏览器。响应数据格式如下：</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210825201634849.png" alt="image-20210825201634849"></p>
+<p><img src="/2022/01/19/VUE&Element/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element/image-20210825201634849.png" alt="image-20210825201634849"></p>
 </li>
 </ul>
 <p>整体流程如下</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210825200332542.png" alt="image-20210825200332542"></p>
+<p><img src="/2022/01/19/VUE&Element/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element/image-20210825200332542.png" alt="image-20210825200332542"></p>
 <p>我们先实现后端程序，然后再实现前端程序。</p>
 <h4 id="3-3-1-后端实现"><a href="#3-3-1-后端实现" class="headerlink" title="3.3.1 后端实现"></a>3.3.1 后端实现</h4><h5 id="3-3-1-1-dao方法实现"><a href="#3-3-1-1-dao方法实现" class="headerlink" title="3.3.1.1  dao方法实现"></a>3.3.1.1  dao方法实现</h5><p>在 <code>com.itheima.mapper.BrandMapper</code> 接口中定义抽象方法，并使用 <code>@Select</code> 注解编写 sql 语句</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
@@ -1862,7 +1862,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>此处为什么要给 service 定义接口呢？因为service定义了接口后，在 servlet 中就可以使用多态的形式创建Service实现类的对象，如下：</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element&综合案例/image-20210825203843142.png" alt="image-20210825203843142" style="zoom:80%;">
+<img src="/2022/01/19/VUE&Element/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element/image-20210825203843142.png" alt="image-20210825203843142" style="zoom:80%;">
 
 <p>这里使用多态是因为方便我们后期解除 <code>Servlet</code> 和 <code>service</code> 的耦合。从上面的代码我们可以看到 <code>SelectAllServlet</code> 类和 <code>BrandServiceImpl</code> 类之间是耦合在一起的，如果后期 <code>BrandService</code> 有其它更好的实现类（例如叫 <code>BrandServiceImpl</code>），那就需要修改 <code>SelectAllServlet</code> 类中的代码。后面我们学习了 <code>Spring</code> 框架后就可以解除 <code>SelectAllServlet</code> 类和红色框括起来的代码耦合。而现在咱们还做不到解除耦合，在这里只需要理解为什么定义接口即可。</p>
 <p><code>BrandServiceImpl</code> 类代码如下：</p>
@@ -1917,9 +1917,9 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="3-3-1-4-测试后端程序"><a href="#3-3-1-4-测试后端程序" class="headerlink" title="3.3.1.4  测试后端程序"></a>3.3.1.4  测试后端程序</h5><p>在浏览器输入访问 servlet 的资源路径 <code>http://localhost:8080/brand-case/selectAllServlet</code> ，如果没有报错，并能看到如下信息表明后端程序没有问题</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210825205133752.png" alt="image-20210825205133752"></p>
+<p><img src="/2022/01/19/VUE&Element/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element/image-20210825205133752.png" alt="image-20210825205133752"></p>
 <h4 id="3-3-2-前端实现"><a href="#3-3-2-前端实现" class="headerlink" title="3.3.2  前端实现"></a>3.3.2  前端实现</h4><p>前端需要在页面加载完毕后发送 ajax 请求，所以发送请求的逻辑应该放在 <code>mounted()</code> 钩子函数中。而响应回来的数据需要赋值给表格绑定的数据模型，从下图可以看出表格绑定的数据模型是 <code>tableData</code></p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element&综合案例/image-20210825220436889.png" alt="image-20210825220436889" style="zoom:70%;">
+<img src="/2022/01/19/VUE&Element/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element/image-20210825220436889.png" alt="image-20210825220436889" style="zoom:70%;">
 
 <p>前端代码如下：</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
@@ -1934,12 +1934,12 @@ Vue 使用起来是比较简单的，总共分为如下三步：
     <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-4-添加功能"><a href="#3-4-添加功能" class="headerlink" title="3.4  添加功能"></a>3.4  添加功能</h3><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element&综合案例/image-20210825221138245.png" alt="image-20210825221138245" style="zoom:70%;">
+<h3 id="3-4-添加功能"><a href="#3-4-添加功能" class="headerlink" title="3.4  添加功能"></a>3.4  添加功能</h3><img src="/2022/01/19/VUE&Element/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element/image-20210825221138245.png" alt="image-20210825221138245" style="zoom:70%;">
 
 <p>上图是添加数据的对话框，当点击 <code>提交</code> 按钮后就需要将数据提交到后端，并将数据保存到数据库中。下图是整体的流程：</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210825221329231.png" alt="image-20210825221329231"></p>
+<p><img src="/2022/01/19/VUE&Element/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element/image-20210825221329231.png" alt="image-20210825221329231"></p>
 <p>页面发送请求时，需要将输入框输入的内容提交给后端程序，而这里是以 json 格式进行传递的。而具体的数据格式如下：</p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210826185917510.png" alt="image-20210826185917510"></p>
+<p><img src="/2022/01/19/VUE&Element/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element/image-20210826185917510.png" alt="image-20210826185917510"></p>
 <blockquote>
 <p>==注意：由于是添加数据，所以上述json数据中id是没有值的。==</p>
 </blockquote>
@@ -2010,7 +2010,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="3-4-2-前端实现"><a href="#3-4-2-前端实现" class="headerlink" title="3.4.2  前端实现"></a>3.4.2  前端实现</h4><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element&综合案例/image-20210825223121993.png" alt="image-20210825223121993" style="zoom:60%;">
+<h4 id="3-4-2-前端实现"><a href="#3-4-2-前端实现" class="headerlink" title="3.4.2  前端实现"></a>3.4.2  前端实现</h4><img src="/2022/01/19/VUE&Element/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element/image-20210825223121993.png" alt="image-20210825223121993" style="zoom:60%;">
 
 <p>上图左边是页面效果，里面的 <code>提交</code> 按钮可以通过上图右边看出绑定了一个 单击事件，而该事件绑定的是 <code>addBrand</code> 函数，所以添加数据功能的逻辑代码应该写在 <code>addBrand()</code>  函数中。在此方法中需要发送异步请求并将表单中输入的数据作为参数进行传递。如下</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 添加数据</span>
@@ -2031,7 +2031,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <ol>
 <li><p><strong>关闭新增对话框窗口</strong></p>
 <p>如下图所示是添加数据的对话框代码，从代码中可以看到此对话框绑定了 <code>dialogVisible</code> 数据模型，只需要将该数据模型的值设置为 false，就可以关闭新增对话框窗口了。</p>
-<img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element&综合案例/image-20210825223933953.png" alt="image-20210825223933953" style="zoom:70%;"></li>
+<img src="/2022/01/19/VUE&Element/../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/VUE&Element/image-20210825223933953.png" alt="image-20210825223933953" style="zoom:70%;"></li>
 <li><p><strong>重新查询数据</strong></p>
 <p>数据添加成功与否，用户只要能在页面上查看到数据说明添加成功。而此处需要重新发送异步请求获取所有的品牌数据，而这段代码在 <code>查询所有</code> 功能中已经实现，所以我们可以将此功能代码进行抽取，抽取到一个 <code>selectAll()</code> 函数中</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 查询所有数据</span>
@@ -2055,7 +2055,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
 <p>同时在新增响应的回调中调用 <code>selectAll()</code> 进行数据的重新查询。</p>
 </li>
 <li><p><strong>弹出消息给用户提示添加成功</strong></p>
-<p><img src="/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/image-20210825224958220.png" alt="image-20210825224958220"></p>
+<p><img src="/2022/01/19/VUE&Element/../../../../%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2/2021%E5%B9%B4/web%E9%98%B6%E6%AE%B5%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/JavaWeb%E8%AF%BE%E7%A8%8B%E6%96%87%E6%A1%A3/day14-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/VUE&Element/image-20210825224958220.png" alt="image-20210825224958220"></p>
 <p>上图左边就是 elementUI 官网提供的成功提示代码，而上图右边是具体的效果。</p>
 <blockquote>
 <p>==注意：上面的this需要的是表示 VUE 对象的this。==</p>
@@ -2114,7 +2114,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/">https://shicheng.cool/2022/01/19/VUE&Element&%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B/</a>
+                    <a href="https://shicheng.cool/2022/01/19/VUE&Element/">https://shicheng.cool/2022/01/19/VUE&Element/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -2152,8 +2152,8 @@ Vue 使用起来是比较简单的，总共分为如下三步：
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">前端</span>
+                                <a href="/tags/Front/">
+                                    <span class="chip bg-color">Front</span>
                                 </a>
                             
                         </div>
@@ -2468,13 +2468,13 @@ Vue 使用起来是比较简单的，总共分为如下三步：
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/01/HTML&CSS/">
+                <a href="/2022/01/24/MysqlAdvance/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="HTML&amp;CSS">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="MysqlAdvance">
                         
-                        <span class="card-title">HTML&amp;CSS</span>
+                        <span class="card-title">MysqlAdvance</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -2485,19 +2485,27 @@ Vue 使用起来是比较简单的，总共分为如下三步：
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-24
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/Back-End/" class="post-category">
+                                    Back End
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Back-End/">
+                        <span class="chip bg-color">Back End</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -2731,7 +2739,7 @@ Vue 使用起来是比较简单的，总共分为如下三步：
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">174.6k</span>
+                        class="white-color">167.1k</span>
             
             
             

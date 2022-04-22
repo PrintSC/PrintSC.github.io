@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DataStructure_DLinkList, SC&#39;s 神奇的JavaWeb">
-    <meta name="description" content="1.双链表1.1双链表的定义#include &amp;quot;iostream&amp;quot;
+    <meta name="keywords" content="DataStructure_SqStack, SC&#39;s 神奇的JavaWeb">
+    <meta name="description" content="栈的定义：#include &amp;quot;iostream&amp;quot;
 using namespace std;
 typedef int ElemType;
-typedef struct DNode&amp;#123;					&amp;#">
+#define Maxsize 10              &amp;#x2F;&amp;#x2">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +20,7 @@ typedef struct DNode&amp;#123;					&amp;#">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DataStructure_DLinkList | SC&#39;s 神奇的JavaWeb</title>
+    <title>DataStructure_SqStack | SC&#39;s 神奇的JavaWeb</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -250,12 +250,12 @@ typedef struct DNode&amp;#123;					&amp;#">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DataStructure_DLinkList</h1>
+                    <h1 class="description center-align post-title">DataStructure_SqStack</h1>
                 </div>
             </div>
         </div>
@@ -396,7 +396,7 @@ typedef struct DNode&amp;#123;					&amp;#">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-10
+                    2022-04-12
                 </div>
                 
 
@@ -410,14 +410,14 @@ typedef struct DNode&amp;#123;					&amp;#">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    764
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -445,84 +445,177 @@ typedef struct DNode&amp;#123;					&amp;#">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-双链表"><a href="#1-双链表" class="headerlink" title="1.双链表"></a>1.双链表</h1><h2 id="1-1双链表的定义"><a href="#1-1双链表的定义" class="headerlink" title="1.1双链表的定义"></a>1.1双链表的定义</h2><pre class="line-numbers language-none"><code class="language-none">#include &quot;iostream&quot;
+                <h1 id="栈的定义："><a href="#栈的定义：" class="headerlink" title="栈的定义："></a>栈的定义：</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &quot;iostream&quot;
 using namespace std;
 typedef int ElemType;
-typedef struct DNode&#123;					&#x2F;&#x2F;定义双链表结点类型
-    ElemType data;						&#x2F;&#x2F;数据域
-    struct DNode *prior,*next;			&#x2F;&#x2F;前驱和后继指针
-&#125;DNode,*DLinkList;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+#define Maxsize 10              &#x2F;&#x2F;定义栈的最大个数
+typedef struct &#123;
+    ElemType data[Maxsize];     &#x2F;&#x2F;静态数组存放中元素
+    int top;                    &#x2F;&#x2F;栈顶指针
+&#125;SqStack;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="1-2双链表的插入-这里是在p节点之后插入节点s"><a href="#1-2双链表的插入-这里是在p节点之后插入节点s" class="headerlink" title="1.2双链表的插入(这里是在p节点之后插入节点s)"></a>1.2双链表的插入(这里是在p节点之后插入节点s)</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;在p节点之后插入s
-bool InsertNextDNode(DNode *p,DNode *s)&#123;
-    if (p&#x3D;&#x3D;NULL || s&#x3D;&#x3D;NULL)&#123;
-        return false;
-    &#125;
-    s-&gt;next &#x3D; p-&gt;next;                  &#x2F;&#x2F;将节点s插入到节点p之后
-    if (p-&gt;next!&#x3D;NULL)&#123;					&#x2F;&#x2F;这里判断的是我们的最后一个节点
-        p-&gt;next-&gt;prior &#x3D; s;				&#x2F;&#x2F;要知道最后的一个节点指向的NULL那么他的prior可不存在的
-    &#125;
-    s-&gt;prior &#x3D; p;						&#x2F;&#x2F;因为s在p之后。所以s的前驱得指向p
-    p-&gt;next &#x3D; s;						&#x2F;&#x2F;p的后继得指向s
-    return true;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="1-3双链表的删除-在p节点之后删除"><a href="#1-3双链表的删除-在p节点之后删除" class="headerlink" title="1.3双链表的删除(在p节点之后删除)"></a>1.3双链表的删除(在p节点之后删除)</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;双链表的删除(删除p节点的后继节点)
-bool DeleteNextDNode(DNode *p)&#123;
-    if (p&#x3D;&#x3D;NULL)&#123;                       &#x2F;&#x2F;非空判断
-        return false;
-    &#125;
-    DNode *q &#x3D; p-&gt;next;                 &#x2F;&#x2F;找到p的后继节点
-    if (q&#x3D;&#x3D;NULL)&#123;                       &#x2F;&#x2F;如果为空，那么p就是最后一个节点嘛
-        return false;
-    &#125;
-    p-&gt;next &#x3D; q-&gt;next;					&#x2F;&#x2F;删除q那么p得指向它指向的下一个节点的节点
-    if (q-&gt;next!&#x3D;NULL)&#123;					&#x2F;&#x2F;老规矩最后一个节点的判断
-        q-&gt;next-&gt;prior &#x3D; p;
-    &#125;
-    free(p);
-    return true;
-
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="1-4双链表的遍历"><a href="#1-4双链表的遍历" class="headerlink" title="1.4双链表的遍历"></a>1.4双链表的遍历</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;后遍历
-void PrintHEADlist(DNode *L)&#123;
-    DNode *p &#x3D; L-&gt;next;
-    while (p!&#x3D;NULL)&#123;
-        p&#x3D;p-&gt;next;
-        cout&lt;&lt;&quot;依次向后遍历的值是:&quot;&lt;&lt;p-&gt;data&lt;&lt;endl;
-    &#125;
-&#125;
-
-&#x2F;&#x2F;前遍历 这个L得是最后一个节点
-void PrintBEHINDlist(DNode *L)&#123;
-    while (L!&#x3D;NULL)&#123;
-        L&#x3D;L-&gt;prior;
-        cout&lt;&lt;&quot;依次向前遍历的值是:&quot;&lt;&lt;L-&gt;data&lt;&lt;endl;
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="1-5双链表的摧毁"><a href="#1-5双链表的摧毁" class="headerlink" title="1.5双链表的摧毁"></a>1.5双链表的摧毁</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;摧毁双链表
-void DestoryList(DLinkList &amp;L)&#123;
-    &#x2F;&#x2F;循环找到各个数据节点
-    while (L-&gt;next!&#x3D;NULL)&#123;
-        DeleteNextDNode(L);   &#x2F;&#x2F;调用上面的删除后一个节点
-    &#125;
-    free(L);                  &#x2F;&#x2F;删除完了后面的节点是不是需要释放头节点
-    L&#x3D;NULL;                   &#x2F;&#x2F;头指针得指向NULL 当然我们不考虑prior，因为他本来就是NULL
+<h2 id="初始化栈"><a href="#初始化栈" class="headerlink" title="初始化栈"></a>初始化栈</h2><pre class="line-numbers language-cc" data-language="cc"><code class="language-cc">&#x2F;&#x2F;初始化栈顶指针
+void InitStack(SqStack &amp;S)&#123;
+    S.top &#x3D; -1;
 &#125;
 
 注释:
-	这里我们得注意一下对于双链表的判断我们都知道头节点。那么如果prior和next都指向头节点head那么这个
-	表是不是为空
-	|---------⬇--⬇--------|
-	[prior]&lt;-[head]-&gt;[next]
-	很容易理解吧
-	
-	当然对于循环单链表我没有给出其他的代码也就是最后一个元素指向的next是头节点L
-	判断为空的话那就不是是否-&gt;next&#x3D;NULL了，要知道循环链表的next是都不会指向NULL的。所以我们的判断条件是
-	 ⬇----------|
-	[head][L]-&gt;next :即头节点的next是否是头指针<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+	我们在初始化栈的时候也就是把我们的指针指向外边<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="新元素入栈"><a href="#新元素入栈" class="headerlink" title="新元素入栈"></a>新元素入栈</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;新元素入栈
+bool Push(SqStack &amp;S,ElemType x)&#123;
+    if (S.top&#x3D;&#x3D;Maxsize-1)&#123;      &#x2F;&#x2F;栈满了
+        return false;
+        cout&lt;&lt;&quot;The Stack is Full&quot;&lt;&lt;endl;
+    &#125;
+    S.top &#x3D; S.top + 1;          &#x2F;&#x2F;指针先加一
+    S.data[S.top] &#x3D; x;          &#x2F;&#x2F;新元素入栈
+    return true;
+&#125;
+
+注释:
+	我们在存放数据的时候也就是这样的
+        [4][]
+        [3][]
+        [2][]
+        [1][]	我们在第0各位插入数据首先得让指针指向0对吧 所以上面的操作使得指针先+1 
+        [0][]	然后再赋值并且此时的指针指向的是0。	
+        -1		开始的top指向-1对吧
+        <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="出栈操作"><a href="#出栈操作" class="headerlink" title="出栈操作"></a>出栈操作</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">bool Pop(SqStack &amp;S,ElemType &amp;x)&#123;
+    if (S.top&#x3D;&#x3D;-1)&#123;             &#x2F;&#x2F;栈为空
+        return false;
+        cout&lt;&lt;&quot;The Stack is Empty&quot;&lt;&lt;endl;
+    &#125;
+    x &#x3D; S.data[S.top];
+    S.top &#x3D; S.top - 1;
+    return true;
+&#125;
+
+
+注释:
+	我们删除放数据的时候也就是这样的
+        [4][]		注意我们删除的时候只能删除栈顶元素，此时我们都
+        [3][]		知道现在top指向的是栈顶元素，那么我们就在这个时候
+        [2][]		取出栈顶元素的值，赋给x，此时这个节点就值了
+        [1][]	 	那么指针指向的值4也要减一了
+        [0][]	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="读取栈顶元素"><a href="#读取栈顶元素" class="headerlink" title="读取栈顶元素"></a>读取栈顶元素</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;读取栈顶元素
+bool GetTop(SqStack S,ElemType &amp;x)&#123;
+    if (S.top &#x3D;&#x3D; -1)&#123;
+        return false;
+    &#125;
+    x &#x3D; S.data[S.top];
+    return true;
+&#125;
+
+注释:
+	这个和删除没多大区别<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="所有代码"><a href="#所有代码" class="headerlink" title="所有代码"></a>所有代码</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &quot;iostream&quot;
+using namespace std;
+typedef int ElemType;
+#define Maxsize 10              &#x2F;&#x2F;定义栈的最大个数
+typedef struct &#123;
+    ElemType data[Maxsize];     &#x2F;&#x2F;静态数组存放中元素
+    int top;                    &#x2F;&#x2F;栈顶指针
+&#125;SqStack;
+&#x2F;&#x2F;初始化栈顶指针
+void InitStack(SqStack &amp;S)&#123;
+    S.top &#x3D; -1;
+&#125;
+void PrintSqStack(SqStack S)			&#x2F;&#x2F;遍历栈
+&#123;
+    int tmp &#x3D; S.top;
+    while(tmp!&#x3D;-1)						&#x2F;&#x2F;如果tmp&#x3D;&#x3D;-1说明遍历结束
+    &#123;
+        cout&lt;&lt;S.data[tmp--]&lt;&lt;&quot; &quot;;
+    &#125;
+&#125;
+&#x2F;&#x2F;新元素入栈
+bool Push(SqStack &amp;S,ElemType x)&#123;
+    if (S.top&#x3D;&#x3D;Maxsize-1)&#123;      &#x2F;&#x2F;栈满了
+        return false;
+        cout&lt;&lt;&quot;The Stack is Full&quot;&lt;&lt;endl;
+    &#125;
+    S.top &#x3D; S.top + 1;          &#x2F;&#x2F;指针先加一
+    S.data[S.top] &#x3D; x;          &#x2F;&#x2F;新元素入栈
+    return true;
+&#125;
+&#x2F;&#x2F;出栈操作(也就是我们的删除)
+bool Pop(SqStack &amp;S,ElemType &amp;x)&#123;
+    if (S.top&#x3D;&#x3D;-1)&#123;             &#x2F;&#x2F;栈为空
+        return false;
+        cout&lt;&lt;&quot;The Stack is Empty&quot;&lt;&lt;endl;
+    &#125;
+    x &#x3D; S.data[S.top];
+    S.top &#x3D; S.top - 1;
+    return true;
+&#125;
+&#x2F;&#x2F;读取栈顶元素
+bool GetTop(SqStack S,ElemType &amp;x)&#123;
+    if (S.top &#x3D;&#x3D; -1)&#123;
+        return false;
+    &#125;
+    x &#x3D; S.data[S.top];
+    return true;
+&#125;
+int main()&#123;
+    SqStack s;							    &#x2F;&#x2F;声明一个顺序栈
+    InitStack(s);							&#x2F;&#x2F;初始化一个顺序栈
+    ElemType x ;
+    for(int i&#x3D;1;i&lt;&#x3D;5;i++)
+    &#123;
+        Push(s,i);							&#x2F;&#x2F;入栈
+        cout&lt;&lt;&quot;栈加入元素:&quot;&lt;&lt;i&lt;&lt;endl;
+    &#125;
+    PrintSqStack(s);
+    GetTop(s,x);
+    cout&lt;&lt;&quot;栈找出栈顶元素&quot;&lt;&lt;x&lt;&lt;endl;
+    PrintSqStack(s);
+    ElemType y;
+    Pop(s,y);
+    cout&lt;&lt;&quot;栈取出栈顶元素&quot;&lt;&lt;y&lt;&lt;endl;
+    PrintSqStack(s);
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">程序输出:
+
+栈加入元素:1
+栈加入元素:2
+栈加入元素:3
+栈加入元素:4
+栈加入元素:5
+5 4 3 2 1
+栈找出栈顶元素5
+5 4 3 2 1
+栈取出栈顶元素5
+4 3 2 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="特别的我们有"><a href="#特别的我们有" class="headerlink" title="特别的我们有"></a>特别的我们有</h1><h2 id="共享栈"><a href="#共享栈" class="headerlink" title="共享栈"></a>共享栈</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &quot;iostream&quot;
+using namespace std;
+typedef int ElemType;
+#define Maxsize 10              &#x2F;&#x2F;定义栈的最大个数
+typedef struct &#123;
+    ElemType data[Maxsize];     &#x2F;&#x2F;静态数组存放中元素
+    int top0;                   &#x2F;&#x2F;栈底指针
+    int top1;					&#x2F;&#x2F;栈顶指针
+&#125;SqStack;
+
+&#x2F;&#x2F;初始化栈顶指针
+void InitStack(SqStack &amp;S)&#123;
+    S.top0 &#x3D; -1;
+    S.stop1 &#x3D; Maxsize -1;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="栈的链式存储"><a href="#栈的链式存储" class="headerlink" title="栈的链式存储"></a>栈的链式存储</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">typedef struct Linknode&#123;
+    ElemType data;						&#x2F;&#x2F;数据域
+    struct Linknode *next;				&#x2F;&#x2F;指针域
+&#125;*Linknode;								&#x2F;&#x2F;栈类型操作<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -550,7 +643,7 @@ void DestoryList(DLinkList &amp;L)&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8F%8C%E9%93%BE%E8%A1%A8/">https://shicheng.cool/2022/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8F%8C%E9%93%BE%E8%A1%A8/</a>
+                    <a href="https://shicheng.cool/2022/04/12/DataStructure_SqStack/">https://shicheng.cool/2022/04/12/DataStructure_SqStack/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -904,13 +997,13 @@ void DestoryList(DLinkList &amp;L)&#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E6%A0%88/">
+                <a href="/2022/04/14/DataStructure_Queue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="DataStructure_SqStack">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="DataStructure_Queue">
                         
-                        <span class="card-title">DataStructure_SqStack</span>
+                        <span class="card-title">DataStructure_Queue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -921,7 +1014,7 @@ void DestoryList(DLinkList &amp;L)&#123;
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-14
                         </span>
                         <span class="publish-author">
                             
@@ -953,13 +1046,13 @@ void DestoryList(DLinkList &amp;L)&#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E5%8D%95%E9%93%BE%E8%A1%A8/">
+                <a href="/2022/04/10/DataStructure_DLinkList/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="DataStructure_Singly Linked List">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="DataStructure_DLinkList">
                         
-                        <span class="card-title">DataStructure_Singly Linked List</span>
+                        <span class="card-title">DataStructure_DLinkList</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -970,7 +1063,7 @@ void DestoryList(DLinkList &amp;L)&#123;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-10
                             </span>
                         <span class="publish-author">
                             
@@ -1175,7 +1268,7 @@ void DestoryList(DLinkList &amp;L)&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">174.6k</span>
+                        class="white-color">167.1k</span>
             
             
             

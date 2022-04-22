@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="MysqlBasis, SC&#39;s 神奇的JavaWeb">
-    <meta name="description" content="MySQL基础今日目标：
+    <meta name="description" content="MysqlBasis今日目标：
 
 
 完成MySQL的安装及登陆基本操作
@@ -14,7 +14,7 @@
 能通过SQL对数据进行CRUD
 
 
-1，数据库相关概念以前我们做系统，数据持久化的存储采用的是文件存储。存储到">
+1，数据库相关概念以前我们做系统，数据持久化的存储采用的是文件存储。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -377,8 +377,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                                <span class="chip bg-color">后端</span>
+                            <a href="/tags/Back-End/">
+                                <span class="chip bg-color">Back End</span>
                             </a>
                         
                     </div>
@@ -389,8 +389,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                后端
+                            <a href="/categories/Back-End/" class="post-category">
+                                Back End
                             </a>
                         
                     </div>
@@ -451,7 +451,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><p><strong>今日目标：</strong></p>
+                <h2 id="MysqlBasis"><a href="#MysqlBasis" class="headerlink" title="MysqlBasis"></a>MysqlBasis</h2><p><strong>今日目标：</strong></p>
 <blockquote>
 <ul>
 <li>完成MySQL的安装及登陆基本操作</li>
@@ -481,10 +481,10 @@
 <li>英文：DataBase Management System，简称 DBMS</li>
 </ul>
 <p>在电脑上安装了数据库管理系统后，就可以通过数据库管理系统创建数据库来存储数据，也可以通过该系统对数据库中的数据进行数据的增删改查相关的操作。我们平时说的MySQL数据库其实是MySQL数据库管理系统。</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721185923635.png" alt="image-20210721185923635" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721185923635.png" alt="image-20210721185923635" style="zoom:80%;">
 
 <p>通过上面的描述，大家应该已经知道了 <code>数据库管理系统</code> 和 <code>数据库</code> 的关系。那么有有哪些常见的数据库管理系统呢？</p>
-<h3 id="1-3-常见的数据库管理系统"><a href="#1-3-常见的数据库管理系统" class="headerlink" title="1.3  常见的数据库管理系统"></a>1.3  常见的数据库管理系统</h3><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721184354001.png" alt="image-20210721184354001" style="zoom:70%;">
+<h3 id="1-3-常见的数据库管理系统"><a href="#1-3-常见的数据库管理系统" class="headerlink" title="1.3  常见的数据库管理系统"></a>1.3  常见的数据库管理系统</h3><img src="/2022/03/01/MysqlBasis/image-20210721184354001.png" alt="image-20210721184354001" style="zoom:70%;">
 
 <p>接下来对上面列举的数据库管理系统进行简单的介绍：</p>
 <ul>
@@ -497,7 +497,7 @@
 <li>MariaDB：开源免费中小型的数据库</li>
 </ul>
 <p>我们课程上学习的是MySQL数据库管理系统，PostgreSQL在一些公司也有使用，此时大家肯定会想以后在公司中如果使用我们没有学习过程的PostgreSQL数据库管理系统怎么办？这点大家大可不必担心，如下图所示：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721185303106.png" alt="image-20210721185303106" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721185303106.png" alt="image-20210721185303106" style="zoom:80%;">
 
 <p>我们可以通过数据库管理系统操作数据库，对数据库中的数据进行增删改查操作，而怎么样让用户跟数据库管理系统打交道呢？就可以通过一门编程语言（SQL）来实现。</p>
 <h3 id="1-4-SQL"><a href="#1-4-SQL" class="headerlink" title="1.4  SQL"></a>1.4  SQL</h3><ul>
@@ -510,16 +510,16 @@
 </blockquote>
 <h4 id="2-1-1-下载"><a href="#2-1-1-下载" class="headerlink" title="2.1.1  下载"></a>2.1.1  下载</h4><p><a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a></p>
 <p>点开上面的链接就能看到如下界面：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210404200055449.png" alt="image-20210404200055449" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210404200055449.png" alt="image-20210404200055449" style="zoom:80%;">
 
 <p>选择选择和自己<strong>系统位数</strong>相对应的版本点击右边的<code>Download</code>，此时会进到另一个页面，同样在接近页面底部的地方找到如下图所示的位置：</p>
 <img src="https://img2018.cnblogs.com/blog/1556823/201812/1556823-20181220194715840-436169502.png" alt="img" style="zoom:80%;">
 
 <p>不用理会上面的登录和注册按钮，直接点击 <code>No thanks, just start my download.</code> 就可以下载。</p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109134805641.png" alt="image-20201109134805641"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20201109134805641.png" alt="image-20201109134805641"></p>
 <h4 id="2-1-2-安装-解压"><a href="#2-1-2-安装-解压" class="headerlink" title="2.1.2  安装(解压)"></a>2.1.2  安装(解压)</h4><p>下载完成后我们得到的是一个压缩包，将其解压，我们就可以得到MySQL 5.7.24的软件本体了(就是一个文件夹)，我们可以把它放在你想安装的位置。</p>
 <hr>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109134948046.png" alt="image-20201109134948046"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20201109134948046.png" alt="image-20201109134948046"></p>
 <h3 id="2-2-MySQL卸载"><a href="#2-2-MySQL卸载" class="headerlink" title="2.2  MySQL卸载"></a>2.2  MySQL卸载</h3><p>如果你想卸载MySQL，也很简单。</p>
 <p>右键开始菜单，选择<code>命令提示符(管理员)</code>，打开黑框。</p>
 <ol>
@@ -529,7 +529,7 @@
 
 
 
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/1556823-20181220222924783-57600848.png" alt="img"></p>
+<p><img src="/2022/03/01/MysqlBasis/1556823-20181220222924783-57600848.png" alt="img"></p>
 <ol start="2">
 <li>再敲入<code>mysqld -remove mysql</code>，回车。</li>
 </ol>
@@ -537,7 +537,7 @@
 
 
 
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/1556823-20181220223025128-587235464.png" alt="img"></p>
+<p><img src="/2022/03/01/MysqlBasis/1556823-20181220223025128-587235464.png" alt="img"></p>
 <ol start="3">
 <li>最后删除MySQL目录及相关的环境变量。</li>
 </ol>
@@ -546,19 +546,19 @@
 <p>环境变量里面有很多选项，这里我们只用到<code>Path</code>这个参数。为什么在初始化的开始要添加环境变量呢？<br>在黑框(即CMD)中输入一个可执行程序的名字，Windows会先在环境变量中的<code>Path</code>所指的路径中寻找一遍，如果找到了就直接执行，没找到就在当前工作目录找，如果还没找到，就报错。我们添加环境变量的目的就是能够在任意一个黑框直接调用MySQL中的相关程序而不用总是修改工作目录，大大简化了操作。</p>
 </blockquote>
 <p>右键<code>此电脑</code>→<code>属性</code>，点击<code>高级系统设置</code></p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/1556823-20181220220242472-524708778.png" alt="img" style="zoom:90%;">
+<img src="/2022/03/01/MysqlBasis/1556823-20181220220242472-524708778.png" alt="img" style="zoom:90%;">
 
 <p>点击<code>环境变量</code></p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/1556823-20181220220359609-736422950.png" alt="img" style="zoom:90%;">
+<img src="/2022/03/01/MysqlBasis/1556823-20181220220359609-736422950.png" alt="img" style="zoom:90%;">
 
 <p>在<code>系统变量</code>中新建MYSQL_HOME</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109140222488.png" alt="image-20201109140222488" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20201109140222488.png" alt="image-20201109140222488" style="zoom:80%;">
 
 <p>在<code>系统变量</code>中找到并<strong>双击</strong><code>Path</code></p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/1556823-20181220220551145-1198958872.png" alt="img" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/1556823-20181220220551145-1198958872.png" alt="img" style="zoom:80%;">
 
 <p>点击<code>新建</code></p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109135248104.png" alt="image-20201109135248104" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20201109135248104.png" alt="image-20201109135248104" style="zoom:80%;">
 
 <p>最后点击确定。</p>
 <p><strong>如何验证是否添加成功？</strong></p>
@@ -573,24 +573,24 @@
 <span class="token attr-name">sql_mode</span><span class="token punctuation">=</span><span class="token attr-value">STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>把上面的文本文件另存为，在保存类型里选<code>所有文件 (*.*)</code>，文件名叫<code>my.ini</code>，存放的路径为MySQL的<code>根目录</code>(例如我的是<code>D:\software\mysql-5.7.24-winx64</code>,根据自己的MySQL目录位置修改)。</p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109142704951.png" alt="image-20201109142704951"></p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109142737584.png" alt="image-20201109142737584"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20201109142704951.png" alt="image-20201109142704951"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20201109142737584.png" alt="image-20201109142737584"></p>
 <p>上面代码意思就是配置数据库的默认编码集为utf-8和默认存储引擎为INNODB。</p>
 <h4 id="2-3-3-初始化MySQL"><a href="#2-3-3-初始化MySQL" class="headerlink" title="2.3.3  初始化MySQL"></a>2.3.3  初始化MySQL</h4><p>在刚才的黑框中敲入<code>mysqld --initialize-insecure</code>，回车，稍微等待一会，如果出现没有出现报错信息(如下图)则证明data目录初始化没有问题，此时再查看MySQL目录下已经有data目录生成。</p>
 <pre class="line-numbers language-none"><code class="language-none">mysqld --initialize-insecure<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109140955772.png" alt="image-20201109140955772"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20201109140955772.png" alt="image-20201109140955772"></p>
 <p>tips：如果出现如下错误</p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109135848054.png" alt="image-20201109135848054"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20201109135848054.png" alt="image-20201109135848054"></p>
 <p>是由于权限不足导致的，去<code>C:\Windows\System32</code> 下以管理员方式运行 cmd.exe</p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109140423691.png" alt="image-20201109140423691"></p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109140001186.png" alt="image-20201109140001186"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20201109140423691.png" alt="image-20201109140423691"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20201109140001186.png" alt="image-20201109140001186"></p>
 <h4 id="2-3-4-注册MySQL服务"><a href="#2-3-4-注册MySQL服务" class="headerlink" title="2.3.4  注册MySQL服务"></a>2.3.4  注册MySQL服务</h4><p>在黑框里敲入<code>mysqld -install</code>，回车。</p>
 <pre class="line-numbers language-none"><code class="language-none">mysqld -install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20201109141325810.png" alt="image-20201109141325810"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20201109141325810.png" alt="image-20201109141325810"></p>
 <p>现在你的计算机上已经安装好了MySQL服务了。</p>
 <p>MySQL服务器</p>
 <h4 id="2-3-5-启动MySQL服务"><a href="#2-3-5-启动MySQL服务" class="headerlink" title="2.3.5  启动MySQL服务"></a>2.3.5  启动MySQL服务</h4><p>在黑框里敲入<code>net start mysql</code>，回车。</p>
@@ -600,18 +600,18 @@ net stop mysql  <span class="token comment">// 停止mysql服务</span><span ari
 
 
 
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/1556823-20181221093036851-1317238155.png" alt="img"></p>
+<p><img src="/2022/03/01/MysqlBasis/1556823-20181221093036851-1317238155.png" alt="img"></p>
 <h4 id="2-3-6-修改默认账户密码"><a href="#2-3-6-修改默认账户密码" class="headerlink" title="2.3.6  修改默认账户密码"></a>2.3.6  修改默认账户密码</h4><p>在黑框里敲入<code>mysqladmin -u root password 1234</code>，这里的<code>1234</code>就是指默认管理员(即root账户)的密码，可以自行修改成你喜欢的。</p>
 <pre class="line-numbers language-none"><code class="language-none">mysqladmin -u root password 1234<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/1556823-20181221093251250-819416425.png" alt="img"></p>
+<p><img src="/2022/03/01/MysqlBasis/1556823-20181221093251250-819416425.png" alt="img"></p>
 <p><strong>至此，MySQL 5.7 解压版安装完毕！</strong></p>
 <h3 id="2-4-MySQL登陆和退出"><a href="#2-4-MySQL登陆和退出" class="headerlink" title="2.4  MySQL登陆和退出"></a>2.4  MySQL登陆和退出</h3><h4 id="2-4-1-登陆"><a href="#2-4-1-登陆" class="headerlink" title="2.4.1  登陆"></a>2.4.1  登陆</h4><p>右键开始菜单，选择<code>命令提示符</code>，打开黑框。<br>在黑框中输入，<code>mysql -uroot -p1234</code>，回车，出现下图且左下角为<code>mysql&gt;</code>，则登录成功。</p>
 <pre class="line-numbers language-none"><code class="language-none">mysql -uroot -p1234<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/1556823-20181220222422178-61579658.png" alt="img"></p>
+<p><img src="/2022/03/01/MysqlBasis/1556823-20181220222422178-61579658.png" alt="img"></p>
 <p><strong>到这里你就可以开始你的MySQL之旅了！</strong></p>
 <p>登陆参数：</p>
 <pre class="line-numbers language-none"><code class="language-none">mysql -u用户名 -p密码 -h要连接的mysql服务器的ip地址(默认127.0.0.1) -P端口号(默认3306)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -629,7 +629,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <p>关系型数据库是建立在关系模型基础上的数据库，简单说，关系型数据库是由多张能互相连接的 二维表 组成的数据库</p>
 </blockquote>
 <p>如下图，<code>订单信息表</code> 和 <code>客户信息表</code> 都是有行有列二维表我们将这样的称为关系型数据库。</p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721205130231.png" alt="image-20210721205130231"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20210721205130231.png" alt="image-20210721205130231"></p>
 <p>接下来看关系型数据库的优点：</p>
 <ul>
 <li>都是使用表结构，格式一致，易于维护。</li>
@@ -641,16 +641,16 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <li>数据存储在磁盘中，安全。</li>
 </ul>
 <p><strong>数据模型：</strong></p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721212754568.png" alt="image-20210721212754568" style="zoom:70%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721212754568.png" alt="image-20210721212754568" style="zoom:70%;">
 
 <p>如上图，我们通过客户端可以通过数据库管理系统创建数据库，在数据库中创建表，在表中添加数据。创建的每一个数据库对应到磁盘上都是一个文件夹。比如可以通过SQL语句创建一个数据库（数据库名称为db1），语句如下。该语句咱们后面会学习。</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721213349761.png" alt="image-20210721213349761" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721213349761.png" alt="image-20210721213349761" style="zoom:80%;">
 
 
 
 <p>我们可以在数据库安装目录下的data目录下看到多了一个 <code>db1</code> 的文件夹。所以，<strong>在MySQL中一个数据库对应到磁盘上的一个文件夹。</strong></p>
 <p>而一个数据库下可以创建多张表，我们到MySQL中自带的mysql数据库的文件夹目录下：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721214029913.png" alt="image-20210721214029913" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721214029913.png" alt="image-20210721214029913" style="zoom:80%;">
 
 <p>而上图中右边的 <code>db.frm</code> 是表文件，<code>db.MYD</code> 是数据文件，通过这两个文件就可以查询到数据展示成二维表的效果。</p>
 <p><strong>小结：</strong></p>
@@ -668,19 +668,19 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 </ul>
 <h3 id="3-2-通用语法"><a href="#3-2-通用语法" class="headerlink" title="3.2  通用语法"></a>3.2  通用语法</h3><ul>
 <li><p>SQL 语句可以单行或多行书写，以分号结尾。</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721215223872.png" alt="image-20210721215223872" style="zoom:80%;"> 
+<img src="/2022/03/01/MysqlBasis/image-20210721215223872.png" alt="image-20210721215223872" style="zoom:80%;"> 
 
 <p>如上，以分号结尾才是一个完整的sql语句。</p>
 </li>
 <li><p>MySQL 数据库的 SQL 语句不区分大小写，关键字建议使用大写。</p>
 <p>同样的一条sql语句写成下图的样子，一样可以运行处结果。</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721215328410.png" alt="image-20210721215328410" style="zoom:80%;"> </li>
+<img src="/2022/03/01/MysqlBasis/image-20210721215328410.png" alt="image-20210721215328410" style="zoom:80%;"> </li>
 <li><p>注释</p>
 <ul>
 <li><p>单行注释: – 注释内容 或 #注释内容(MySQL 特有) </p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721215517293.png" alt="image-20210721215517293" style="zoom:80%;"> 
+<img src="/2022/03/01/MysqlBasis/image-20210721215517293.png" alt="image-20210721215517293" style="zoom:80%;"> 
 
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721215556885.png" alt="image-20210721215556885" style="zoom:80%;"> 
+<img src="/2022/03/01/MysqlBasis/image-20210721215556885.png" alt="image-20210721215556885" style="zoom:80%;"> 
 
 <blockquote>
 <p>注意：使用– 添加单行注释时，–后面一定要加空格，而#没有要求。</p>
@@ -694,10 +694,10 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <h3 id="3-3-SQL分类"><a href="#3-3-SQL分类" class="headerlink" title="3.3  SQL分类"></a>3.3  SQL分类</h3><ul>
 <li><p>DDL(Data Definition Language) ： 数据定义语言，用来定义数据库对象：数据库，表，列等</p>
 <p>DDL简单理解就是用来操作数据库，表等</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721220032047.png" alt="image-20210721220032047" style="zoom:60%;"></li>
+<img src="/2022/03/01/MysqlBasis/image-20210721220032047.png" alt="image-20210721220032047" style="zoom:60%;"></li>
 <li><p>DML(Data Manipulation Language) 数据操作语言，用来对数据库中表的数据进行增删改</p>
 <p>DML简单理解就对表中数据进行增删改</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721220132919.png" alt="image-20210721220132919" style="zoom:60%;"></li>
+<img src="/2022/03/01/MysqlBasis/image-20210721220132919.png" alt="image-20210721220132919" style="zoom:60%;"></li>
 <li><p>DQL(Data Query Language) 数据查询语言，用来查询数据库中表的记录(数据)</p>
 <p>DQL简单理解就是对数据进行查询操作。从数据库表中查询到我们想要的数据。</p>
 </li>
@@ -713,7 +713,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SHOW</span> <span class="token keyword">DATABASES</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>运行上面语句效果如下：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721221107014.png" alt="image-20210721221107014" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721221107014.png" alt="image-20210721221107014" style="zoom:80%;">
 
 <p>上述查询到的是的这些数据库是mysql安装好自带的数据库，我们以后不要操作这些数据库。</p>
 <h3 id="4-2-创建数据库"><a href="#4-2-创建数据库" class="headerlink" title="4.2  创建数据库"></a>4.2  创建数据库</h3><ul>
@@ -722,10 +722,10 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> 数据库名称<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>运行语句效果如下：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721223450755.png" alt="image-20210721223450755" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721223450755.png" alt="image-20210721223450755" style="zoom:80%;">
 
 <p>而在创建数据库的时候，我并不知道db1数据库有没有创建，直接再次创建名为db1的数据库就会出现错误。</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721223745490.png" alt="image-20210721223745490" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721223745490.png" alt="image-20210721223745490" style="zoom:80%;">
 
 <p>为了避免上面的错误，在创建数据库的时候先做判断，如果不存在再创建。</p>
 <ul>
@@ -734,7 +734,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> <span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span> 数据库名称<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>运行语句效果如下：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721224056476.png" alt="image-20210721224056476" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721224056476.png" alt="image-20210721224056476" style="zoom:80%;">
 
 <p>从上面的效果可以看到虽然db1数据库已经存在，再创建db1也没有报错，而创建db2数据库则创建成功。</p>
 <h3 id="4-3-删除数据库"><a href="#4-3-删除数据库" class="headerlink" title="4.3  删除数据库"></a>4.3  删除数据库</h3><ul>
@@ -748,7 +748,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">DATABASE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> 数据库名称<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>运行语句效果如下：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721224435251.png" alt="image-20210721224435251" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721224435251.png" alt="image-20210721224435251" style="zoom:80%;">
 
 <h3 id="4-4-使用数据库"><a href="#4-4-使用数据库" class="headerlink" title="4.4  使用数据库"></a>4.4  使用数据库</h3><p>数据库创建好了，要在数据库中创建表，得先明确在哪儿个数据库中操作，此时就需要使用数据库。</p>
 <ul>
@@ -762,7 +762,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token keyword">DATABASE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>运行语句效果如下：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721224720841.png" alt="image-20210721224720841" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721224720841.png" alt="image-20210721224720841" style="zoom:80%;">
 
 <h2 id="5，DDL-操作表"><a href="#5，DDL-操作表" class="headerlink" title="5，DDL:操作表"></a>5，DDL:操作表</h2><p>操作表也就是对表进行增（Create）删（Retrieve）改（Update）查（Delete）。</p>
 <h3 id="5-1-查询表"><a href="#5-1-查询表" class="headerlink" title="5.1  查询表"></a>5.1  查询表</h3><ul>
@@ -771,14 +771,14 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SHOW</span> <span class="token keyword">TABLES</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>我们创建的数据库中没有任何表，因此我们进入mysql自带的mysql数据库，执行上述语句查看</p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721230202814.png" alt="image-20210721230202814"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20210721230202814.png" alt="image-20210721230202814"></p>
 <ul>
 <li><strong>查询表结构</strong></li>
 </ul>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">DESC</span> 表名称<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>查看mysql数据库中func表的结构，运行语句如下：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721230332428.png" alt="image-20210721230332428" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721230332428.png" alt="image-20210721230332428" style="zoom:80%;">
 
 <h3 id="5-2-创建表"><a href="#5-2-创建表" class="headerlink" title="5.2  创建表"></a>5.2  创建表</h3><ul>
 <li><strong>创建表</strong></li>
@@ -795,7 +795,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <p>注意：最后一行末尾，不能加逗号</p>
 </blockquote>
 <p>知道了创建表的语句，那么我们创建创建如下结构的表</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721230824097.png" alt="image-20210721230824097" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721230824097.png" alt="image-20210721230824097" style="zoom:80%;">
 
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> tb_user <span class="token punctuation">(</span>
 	id <span class="token keyword">int</span><span class="token punctuation">,</span>
@@ -804,7 +804,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>运行语句如下：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721231142326.png" alt="image-20210721231142326" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721231142326.png" alt="image-20210721231142326" style="zoom:80%;">
 
 <h3 id="5-3-数据类型"><a href="#5-3-数据类型" class="headerlink" title="5.3  数据类型"></a>5.3  数据类型</h3><p>MySQL 支持多种类型，可以分为三类：</p>
 <ul>
@@ -866,7 +866,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> 表名<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>运行语句效果如下：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721235108267.png" alt="image-20210721235108267" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721235108267.png" alt="image-20210721235108267" style="zoom:80%;">
 
 <h3 id="5-5-修改表"><a href="#5-5-修改表" class="headerlink" title="5.5  修改表"></a>5.5  修改表</h3><ul>
 <li><strong>修改表名</strong></li>
@@ -918,31 +918,31 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 </ul>
 <h3 id="6-2-navicat安装"><a href="#6-2-navicat安装" class="headerlink" title="6.2  navicat安装"></a>6.2  navicat安装</h3><p>参考 : 资料\navicat安装包\navicat_mysql_x86\navicat安装步骤.md</p>
 <h3 id="6-3-navicat使用"><a href="#6-3-navicat使用" class="headerlink" title="6.3  navicat使用"></a>6.3  navicat使用</h3><h4 id="6-3-1-建立和mysql服务的连接"><a href="#6-3-1-建立和mysql服务的连接" class="headerlink" title="6.3.1  建立和mysql服务的连接"></a>6.3.1  建立和mysql服务的连接</h4><p>第一步： 点击连接，选择MySQL</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210721235928346.png" alt="image-20210721235928346" style="zoom:70%;">
+<img src="/2022/03/01/MysqlBasis/image-20210721235928346.png" alt="image-20210721235928346" style="zoom:70%;">
 
 <p>第二步：填写连接数据库必要的信息</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722000116080.png" alt="image-20210722000116080" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722000116080.png" alt="image-20210722000116080" style="zoom:80%;">
 
 <p>以上操作没有问题就会出现如下图所示界面：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722000345349.png" alt="image-20210722000345349" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722000345349.png" alt="image-20210722000345349" style="zoom:80%;">
 
 <h4 id="6-3-2-操作"><a href="#6-3-2-操作" class="headerlink" title="6.3.2  操作"></a>6.3.2  操作</h4><p>连接成功后就能看到如下图界面：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722000521997.png" alt="image-20210722000521997" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722000521997.png" alt="image-20210722000521997" style="zoom:80%;">
 
 <ul>
 <li><strong>修改表结构</strong></li>
 </ul>
 <p>通过下图操作修改表结构：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722000740661.png" alt="image-20210722000740661" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722000740661.png" alt="image-20210722000740661" style="zoom:80%;">
 
 <p>点击了设计表后即出现如下图所示界面，在图中红框中直接修改字段名，类型等信息：</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722000929075.png" alt="image-20210722000929075" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722000929075.png" alt="image-20210722000929075" style="zoom:80%;">
 
 <ul>
 <li><strong>编写SQL语句并执行</strong></li>
 </ul>
 <p>按照如下图所示进行操作即可书写SQL语句并执行sql语句。</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722001333817.png" alt="image-20210722001333817" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722001333817.png" alt="image-20210722001333817" style="zoom:80%;">
 
 <h2 id="7，DML"><a href="#7，DML" class="headerlink" title="7，DML"></a>7，DML</h2><p>DML主要是对数据进行增（insert）删（delete）改（update）操作。</p>
 <h3 id="7-1-添加数据"><a href="#7-1-添加数据" class="headerlink" title="7.1  添加数据"></a>7.1  添加数据</h3><ul>
@@ -1012,7 +1012,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">update</span> stu <span class="token keyword">set</span> sex <span class="token operator">=</span> <span class="token string">'女'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>上面语句的执行完后查询到的结果是：</p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722204233305.png" alt="image-20210722204233305"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20210722204233305.png" alt="image-20210722204233305"></p>
 </li>
 </ul>
 </li>
@@ -1034,10 +1034,10 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 
 
 <h2 id="8，DQL"><a href="#8，DQL" class="headerlink" title="8，DQL"></a>8，DQL</h2><p>下面是黑马程序员展示试题库数据的页面</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722215838144.png" alt="image-20210722215838144" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722215838144.png" alt="image-20210722215838144" style="zoom:80%;">
 
 <p>页面上展示的数据肯定是在数据库中的试题库表中进行存储，而我们需要将数据库中的数据查询出来并展示在页面给用户看。上图中的是最基本的查询效果，那么数据库其实是很多的，不可能在将所有的数据在一页进行全部展示，而页面上会有分页展示的效果，如下：</p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722220139174.png" alt="image-20210722220139174"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20210722220139174.png" alt="image-20210722220139174"></p>
 <p>当然上图中的难度字段当我们点击也可以实现排序查询操作。从这个例子我们就可以看出，对于数据库的查询时灵活多变的，需要根据具体的需求来实现，而数据库查询操作也是最重要的操作，所以此部分需要大家重点掌握。</p>
 <p>接下来我们先介绍查询的完整语法：</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> 
@@ -1110,7 +1110,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> stu<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>上面语句中的*不建议大家使用，因为在这写*不方便我们阅读sql语句。我们写字段列表的话，可以添加注释对每一个字段进行说明</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722221534870.png" alt="image-20210722221534870" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722221534870.png" alt="image-20210722221534870" style="zoom:80%;">
 
 <p>而在上课期间为了简约课程的时间，老师很多地方都会写*。</p>
 </li>
@@ -1118,7 +1118,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> address <span class="token keyword">from</span> stu<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>执行上面语句结果如下：</p>
-<p><img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722221756380.png" alt="image-20210722221756380"></p>
+<p><img src="/2022/03/01/MysqlBasis/image-20210722221756380.png" alt="image-20210722221756380"></p>
 <p>从上面的结果我们可以看到有重复的数据，我们也可以使用 <code>distinct</code> 关键字去重重复数据。</p>
 </li>
 <li><p>去除重复记录</p>
@@ -1133,7 +1133,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <li><strong>条件</strong></li>
 </ul>
 <p>条件列表可以使用以下运算符</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722190508272.png" alt="image-20210722190508272" style="zoom:60%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722190508272.png" alt="image-20210722190508272" style="zoom:60%;">
 
 <h4 id="8-2-2-条件查询练习"><a href="#8-2-2-条件查询练习" class="headerlink" title="8.2.2  条件查询练习"></a>8.2.2  条件查询练习</h4><ul>
 <li><p>查询年龄大于20岁的学员信息</p>
@@ -1198,7 +1198,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 </ul>
 <h3 id="8-4-聚合函数"><a href="#8-4-聚合函数" class="headerlink" title="8.4  聚合函数"></a>8.4  聚合函数</h3><h4 id="8-4-1-概念"><a href="#8-4-1-概念" class="headerlink" title="8.4.1  概念"></a>8.4.1  概念</h4><p> ==将一列数据作为一个整体，进行纵向计算。==</p>
 <p>如何理解呢？假设有如下表</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722194410628.png" alt="image-20210722194410628" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722194410628.png" alt="image-20210722194410628" style="zoom:80%;">
 
 <p>现有一需求让我们求表中所有数据的数学成绩的总和。这就是对math字段进行纵向求和。</p>
 <h4 id="8-4-2-聚合函数分类"><a href="#8-4-2-聚合函数分类" class="headerlink" title="8.4.2  聚合函数分类"></a>8.4.2  聚合函数分类</h4><table>
@@ -1280,7 +1280,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 </li>
 </ul>
 <h3 id="8-6-分页查询"><a href="#8-6-分页查询" class="headerlink" title="8.6  分页查询"></a>8.6  分页查询</h3><p>如下图所示，大家在很多网站都见过类似的效果，如京东、百度、淘宝等。分页查询是将数据一页一页的展示给用户看，用户也可以通过点击查看下一页的数据。</p>
-<img src="/2022/03/01/mysql%E5%9F%BA%E7%A1%80/image-20210722230330366.png" alt="image-20210722230330366" style="zoom:80%;">
+<img src="/2022/03/01/MysqlBasis/image-20210722230330366.png" alt="image-20210722230330366" style="zoom:80%;">
 
 <p>接下来我们先说分页查询的语法。</p>
 <h4 id="8-6-1-语法"><a href="#8-6-1-语法" class="headerlink" title="8.6.1  语法"></a>8.6.1  语法</h4><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> 字段列表 <span class="token keyword">FROM</span> 表名 <span class="token keyword">LIMIT</span>  起始索引 <span class="token punctuation">,</span> 查询条目数<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1327,7 +1327,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/03/01/mysql%E5%9F%BA%E7%A1%80/">https://shicheng.cool/2022/03/01/mysql%E5%9F%BA%E7%A1%80/</a>
+                    <a href="https://shicheng.cool/2022/03/01/MysqlBasis/">https://shicheng.cool/2022/03/01/MysqlBasis/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1365,8 +1365,8 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                                    <span class="chip bg-color">后端</span>
+                                <a href="/tags/Back-End/">
+                                    <span class="chip bg-color">Back End</span>
                                 </a>
                             
                         </div>
@@ -1685,9 +1685,9 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Request和Response">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="RequestAndResponse">
                         
-                        <span class="card-title">Request和Response</span>
+                        <span class="card-title">RequestAndResponse</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1704,8 +1704,8 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
+                            <a href="/categories/Back-End/" class="post-category">
+                                    Back End
                                 </a>
                             
                             
@@ -1715,8 +1715,8 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                        <span class="chip bg-color">后端</span>
+                    <a href="/tags/Back-End/">
+                        <span class="chip bg-color">Back End</span>
                     </a>
                     
                 </div>
@@ -1730,13 +1730,13 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/01/mysql%E9%AB%98%E7%BA%A7/">
+                <a href="/2022/03/01/MySQLDownLoad/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Mysql的使用">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="DownLoad and UnLod of Mysql">
                         
-                        <span class="card-title">Mysql的使用</span>
+                        <span class="card-title">DownLoad and UnLod of Mysql</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1753,8 +1753,8 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
+                            <a href="/categories/Back-End/" class="post-category">
+                                    Back End
                                 </a>
                             
                             
@@ -1764,8 +1764,8 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                        <span class="chip bg-color">后端</span>
+                    <a href="/tags/Back-End/">
+                        <span class="chip bg-color">Back End</span>
                     </a>
                     
                 </div>
@@ -1952,7 +1952,7 @@ quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">174.6k</span>
+                        class="white-color">167.1k</span>
             
             
             
