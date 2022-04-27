@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DataStructure_DLinkList, SC&#39;s 神奇的JavaWeb">
-    <meta name="description" content="1.双链表1.1双链表的定义#include &amp;quot;iostream&amp;quot;
+    <meta name="keywords" content="DataStructure_Tree, SC&#39;s 神奇的JavaWeb">
+    <meta name="description" content="树的遍历树的声明#include &amp;lt;stdio.h&amp;gt;
+#include &amp;quot;iostream&amp;quot;
 using namespace std;
-typedef int ElemType;
-typedef struct DNode&amp;#123;					&amp;#">
+&amp;#x2F;&amp;#x2F;树的声明
+typedef char ElemTy">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +21,7 @@ typedef struct DNode&amp;#123;					&amp;#">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DataStructure_DLinkList | SC&#39;s 神奇的JavaWeb</title>
+    <title>DataStructure_Tree | SC&#39;s 神奇的JavaWeb</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -250,12 +251,12 @@ typedef struct DNode&amp;#123;					&amp;#">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DataStructure_DLinkList</h1>
+                    <h1 class="description center-align post-title">DataStructure_Tree</h1>
                 </div>
             </div>
         </div>
@@ -396,28 +397,28 @@ typedef struct DNode&amp;#123;					&amp;#">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-10
+                    2022-04-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-22
+                    2022-04-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    764
+                    840
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -445,84 +446,146 @@ typedef struct DNode&amp;#123;					&amp;#">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-双链表"><a href="#1-双链表" class="headerlink" title="1.双链表"></a>1.双链表</h1><h2 id="1-1双链表的定义"><a href="#1-1双链表的定义" class="headerlink" title="1.1双链表的定义"></a>1.1双链表的定义</h2><pre class="line-numbers language-none"><code class="language-none">#include &quot;iostream&quot;
+                <h1 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h1><h2 id="树的声明"><a href="#树的声明" class="headerlink" title="树的声明"></a>树的声明</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;stdio.h&gt;
+#include &quot;iostream&quot;
 using namespace std;
-typedef int ElemType;
-typedef struct DNode&#123;					&#x2F;&#x2F;定义双链表结点类型
-    ElemType data;						&#x2F;&#x2F;数据域
-    struct DNode *prior,*next;			&#x2F;&#x2F;前驱和后继指针
-&#125;DNode,*DLinkList;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#x2F;&#x2F;树的声明
+typedef char ElemType;
+typedef struct BiTNode&#123;
+    ElemType data;                      &#x2F;&#x2F;数据域
+    struct BiTNode *lchild,*rchild;     &#x2F;&#x2F;左孩子指针与右孩子指针
+&#125;BiTNode,*BiTree;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="1-2双链表的插入-这里是在p节点之后插入节点s"><a href="#1-2双链表的插入-这里是在p节点之后插入节点s" class="headerlink" title="1.2双链表的插入(这里是在p节点之后插入节点s)"></a>1.2双链表的插入(这里是在p节点之后插入节点s)</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;在p节点之后插入s
-bool InsertNextDNode(DNode *p,DNode *s)&#123;
-    if (p&#x3D;&#x3D;NULL || s&#x3D;&#x3D;NULL)&#123;
-        return false;
+<h2 id="树的赋值"><a href="#树的赋值" class="headerlink" title="树的赋值"></a>树的赋值</h2><pre class="line-numbers language-none"><code class="language-none">BiTree PreCreateTree(BiTree tree)&#123;
+    char ch;
+    cin&gt;&gt;ch;
+    if (ch&#x3D;&#x3D;&#39;#&#39;) return NULL;						&#x2F;&#x2F;这里我们让#视为NULL
+    else&#123;
+        tree &#x3D; (BiTree) malloc(sizeof(BiTNode));	&#x2F;&#x2F;申请一片空间存放数据
+        tree-&gt;data&#x3D;ch;								&#x2F;&#x2F;头节点开始赋值
+        tree-&gt;lchild&#x3D;PreCreateTree(tree-&gt;lchild);	&#x2F;&#x2F;左孩子开始赋值
+        tree-&gt;rchild&#x3D;PreCreateTree(tree-&gt;rchild);	&#x2F;&#x2F;右孩子开始赋值
+        return tree;								&#x2F;&#x2F;返回treee
     &#125;
-    s-&gt;next &#x3D; p-&gt;next;                  &#x2F;&#x2F;将节点s插入到节点p之后
-    if (p-&gt;next!&#x3D;NULL)&#123;					&#x2F;&#x2F;这里判断的是我们的最后一个节点
-        p-&gt;next-&gt;prior &#x3D; s;				&#x2F;&#x2F;要知道最后的一个节点指向的NULL那么他的prior可不存在的
-    &#125;
-    s-&gt;prior &#x3D; p;						&#x2F;&#x2F;因为s在p之后。所以s的前驱得指向p
-    p-&gt;next &#x3D; s;						&#x2F;&#x2F;p的后继得指向s
-    return true;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="1-3双链表的删除-在p节点之后删除"><a href="#1-3双链表的删除-在p节点之后删除" class="headerlink" title="1.3双链表的删除(在p节点之后删除)"></a>1.3双链表的删除(在p节点之后删除)</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;双链表的删除(删除p节点的后继节点)
-bool DeleteNextDNode(DNode *p)&#123;
-    if (p&#x3D;&#x3D;NULL)&#123;                       &#x2F;&#x2F;非空判断
-        return false;
-    &#125;
-    DNode *q &#x3D; p-&gt;next;                 &#x2F;&#x2F;找到p的后继节点
-    if (q&#x3D;&#x3D;NULL)&#123;                       &#x2F;&#x2F;如果为空，那么p就是最后一个节点嘛
-        return false;
-    &#125;
-    p-&gt;next &#x3D; q-&gt;next;					&#x2F;&#x2F;删除q那么p得指向它指向的下一个节点的节点
-    if (q-&gt;next!&#x3D;NULL)&#123;					&#x2F;&#x2F;老规矩最后一个节点的判断
-        q-&gt;next-&gt;prior &#x3D; p;
-    &#125;
-    free(p);
-    return true;
-
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="1-4双链表的遍历"><a href="#1-4双链表的遍历" class="headerlink" title="1.4双链表的遍历"></a>1.4双链表的遍历</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;后遍历
-void PrintHEADlist(DNode *L)&#123;
-    DNode *p &#x3D; L-&gt;next;
-    while (p!&#x3D;NULL)&#123;
-        p&#x3D;p-&gt;next;
-        cout&lt;&lt;&quot;依次向后遍历的值是:&quot;&lt;&lt;p-&gt;data&lt;&lt;endl;
-    &#125;
-&#125;
-
-&#x2F;&#x2F;前遍历 这个L得是最后一个节点
-void PrintBEHINDlist(DNode *L)&#123;
-    while (L!&#x3D;NULL)&#123;
-        L&#x3D;L-&gt;prior;
-        cout&lt;&lt;&quot;依次向前遍历的值是:&quot;&lt;&lt;L-&gt;data&lt;&lt;endl;
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="1-5双链表的摧毁"><a href="#1-5双链表的摧毁" class="headerlink" title="1.5双链表的摧毁"></a>1.5双链表的摧毁</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;摧毁双链表
-void DestoryList(DLinkList &amp;L)&#123;
-    &#x2F;&#x2F;循环找到各个数据节点
-    while (L-&gt;next!&#x3D;NULL)&#123;
-        DeleteNextDNode(L);   &#x2F;&#x2F;调用上面的删除后一个节点
-    &#125;
-    free(L);                  &#x2F;&#x2F;删除完了后面的节点是不是需要释放头节点
-    L&#x3D;NULL;                   &#x2F;&#x2F;头指针得指向NULL 当然我们不考虑prior，因为他本来就是NULL
 &#125;
 
 注释:
-	这里我们得注意一下对于双链表的判断我们都知道头节点。那么如果prior和next都指向头节点head那么这个
-	表是不是为空
-	|---------⬇--⬇--------|
-	[prior]&lt;-[head]-&gt;[next]
-	很容易理解吧
-	
-	当然对于循环单链表我没有给出其他的代码也就是最后一个元素指向的next是头节点L
-	判断为空的话那就不是是否-&gt;next&#x3D;NULL了，要知道循环链表的next是都不会指向NULL的。所以我们的判断条件是
-	 ⬇----------|
-	[head][L]-&gt;next :即头节点的next是否是头指针<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+	1、特别的我们开始进行赋值的时候得注意：
+	头赋值-&gt;左孩子赋值-&gt;左孩子的左孩子节点进行赋值(若为null即为右孩子赋值)
+	2、左&#x2F;右孩子为NULL 返回当前节点的父节点
+	3、举例
+		1、若我们需要赋值的树为
+			A
+		B		C
+      D  E     # #
+    # #	 # #
+    在输入的数据时开始为:ABD##E##c##<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;先序遍历
+void PreOrder(BiTree root)&#123;
+    if (root!&#x3D;NULL)&#123;
+        printf(&quot;%c&quot;,root-&gt;data);
+        PreOrder(root-&gt;lchild);
+        PreOrder(root-&gt;rchild);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;中序遍历
+void InOrder(BiTree root)&#123;
+    if (root!&#x3D;NULL)&#123;
+        InOrder(root-&gt;lchild);
+        printf(&quot;%c&quot;,root-&gt;data);
+        InOrder(root-&gt;rchild);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;后序遍历
+void PostOrder(BiTree tree)&#123;
+    if (tree!&#x3D;NULL)&#123;
+        PostOrder(tree-&gt;lchild);
+        PostOrder(tree-&gt;rchild);
+        printf(&quot;%c&quot;,tree-&gt;data);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="全部代码"><a href="#全部代码" class="headerlink" title="全部代码"></a>全部代码</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;stdio.h&gt;
+#include &quot;iostream&quot;
+using namespace std;
+&#x2F;&#x2F;树的声明
+typedef char ElemType;
+typedef struct BiTNode&#123;
+    ElemType data;                      &#x2F;&#x2F;数据域
+    struct BiTNode *lchild,*rchild;     &#x2F;&#x2F;左孩子指针与右孩子指针
+&#125;BiTNode,*BiTree;
+BiTree PreCreateTree(BiTree tree)&#123;
+    char ch;
+    cin&gt;&gt;ch;
+    if (ch&#x3D;&#x3D;&#39;#&#39;) return NULL;
+    else&#123;
+        tree &#x3D; (BiTree) malloc(sizeof(BiTNode));
+        tree-&gt;data&#x3D;ch;
+        tree-&gt;lchild&#x3D;PreCreateTree(tree-&gt;lchild);
+        tree-&gt;rchild&#x3D;PreCreateTree(tree-&gt;rchild);
+        return tree;
+    &#125;
+&#125;
+&#x2F;&#x2F;先序遍历
+void PreOrder(BiTree root)&#123;
+    if (root!&#x3D;NULL)&#123;
+        printf(&quot;%c&quot;,root-&gt;data);
+        PreOrder(root-&gt;lchild);
+        PreOrder(root-&gt;rchild);
+    &#125;
+&#125;
+&#x2F;&#x2F;中序遍历
+void InOrder(BiTree root)&#123;
+    if (root!&#x3D;NULL)&#123;
+        InOrder(root-&gt;lchild);
+        printf(&quot;%c&quot;,root-&gt;data);
+        InOrder(root-&gt;rchild);
+    &#125;
+&#125;
+&#x2F;&#x2F;后序遍历
+void PostOrder(BiTree tree)&#123;
+    if (tree!&#x3D;NULL)&#123;
+        PostOrder(tree-&gt;lchild);
+        PostOrder(tree-&gt;rchild);
+        printf(&quot;%c&quot;,tree-&gt;data);
+    &#125;
+&#125;
+int main()&#123;
+    BiTree tree;
+    tree&#x3D;NULL;
+    tree&#x3D;PreCreateTree(tree);
+    cout&lt;&lt;&quot;先序遍历&quot;&lt;&lt;endl;
+    PreOrder(tree);
+    cout&lt;&lt;endl;
+    cout&lt;&lt;&quot;中序遍历&quot;&lt;&lt;endl;
+    InOrder(tree);
+    cout&lt;&lt;endl;
+    cout&lt;&lt;&quot;后序遍历&quot;&lt;&lt;endl;
+    PostOrder(tree);
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">输出结果:
+ABE##F##C##
+先序遍历
+ABEFC
+中序遍历
+EBFAC
+后序遍历
+EFBCA
+
+注意:
+	1、如果不能理解注意我们给的赋值函数这里的ABE##F##C##是这样的
+		A
+	  B     C
+    E   F  # #
+   # # # #
+    2、自己慢慢体会，现在可以本子上画一个你喜欢的树，然后根据函数的输入写出它的赋值输入字符，再在你的本子上列出你自己的前序、后序、中序遍历，看是否是和电脑的一模一样。如果是那么你就理解到了这三个遍历的意思和方法并且对上诉代码也已经掌握到了~；如果不是那么还需要看看是哪里还没理解到哦~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -550,7 +613,7 @@ void DestoryList(DLinkList &amp;L)&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shicheng.cool/2022/04/10/DataStructure_DLinkList/">https://shicheng.cool/2022/04/10/DataStructure_DLinkList/</a>
+                    <a href="https://shicheng.cool/2022/04/27/DataStructure_Tree/">https://shicheng.cool/2022/04/27/DataStructure_Tree/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -900,17 +963,18 @@ void DestoryList(DLinkList &amp;L)&#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/12/DataStructure_SqStack/">
+                <a href="/2022/04/27/DataStructure_Tree/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="DataStructure_SqStack">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="DataStructure_Tree">
                         
-                        <span class="card-title">DataStructure_SqStack</span>
+                        <span class="card-title">DataStructure_Tree</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -920,9 +984,9 @@ void DestoryList(DLinkList &amp;L)&#123;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -935,6 +999,7 @@ void DestoryList(DLinkList &amp;L)&#123;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -953,13 +1018,13 @@ void DestoryList(DLinkList &amp;L)&#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/09/DataStructure_Singly%20Linked%20List/">
+                <a href="/2022/04/15/DataStructure_LinkQueue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="DataStructure_Singly Linked List">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="DataStructure_LinkQueue">
                         
-                        <span class="card-title">DataStructure_Singly Linked List</span>
+                        <span class="card-title">DataStructure_LinkQueue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -970,7 +1035,7 @@ void DestoryList(DLinkList &amp;L)&#123;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-15
                             </span>
                         <span class="publish-author">
                             
