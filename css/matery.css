@@ -34,8 +34,8 @@
 }
 
 body {
-    /* background-color: #eaeaea; */
-    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://www.helloimg.com/images/2022/02/28/GVdLLK.png"), url("https://www.helloimg.com/images/2022/02/28/GVdLLK.png") 0px 0px;
+    /* background-color: #eaeaea; */			/*  https://www.helloimg.com/images/2022/02/28/GVdLLK.png  */
+    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url(""), url("") 0px 0px;
     background-attachment: fixed;
     margin: 0;
     color: #7F95D1;
