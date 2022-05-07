@@ -242,7 +242,10 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, rgb(46, 44, 44) 0%, rgb(48, 45, 45) 100%);
+	/*background-image: linear-gradient(to right, rgb(165, 179, 182) 0%, rgb(202, 219, 238) 100%);*/
+	/*background-image: linear-gradient(to right, rgb(46, 44, 44) 0%, rgb(48, 45, 45) 100%);*/
+   background-image: linear-gradient(to right, rgb(46, 44, 44) 0%, rgb(48, 45, 45) 100%);;
+    
 }
 
 .text-color {
@@ -258,7 +261,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, white 0%, white  100%);
     opacity: 0.8;
 }
 
